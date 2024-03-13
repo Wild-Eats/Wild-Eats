@@ -1,0 +1,5 @@
+*, ::before, ::after {}
+
+.hidden {
+    display: none;
+}
