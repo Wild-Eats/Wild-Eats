@@ -1,48 +1,164 @@
 <!DOCTYPE html>
 
 <html lang="fr">
-
-<head>
-
+  <head>
     <title>Wild Eats</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="L'application essentielles des wilders pour bien manger.">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Pierre, Marcelin, Fréd">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="L'application essentielles des wilders pour bien manger."
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Pierre, Marcelin, Fréd" />
 
-    <meta property="og:title" content='Wild Eats'>
-    <meta property="og:image" content='img/app-background.jpg'>
-    <meta property="og:description" content="L'application essentielles des wilders pour bien manger.">
+    <meta property="og:title" content="Wild Eats" />
+    <meta property="og:image" content="img/app-background.jpg" />
+    <meta
+      property="og:description"
+      content="L'application essentielles des wilders pour bien manger."
+    />
 
-    <link rel="shortcut icon" href="img/wildeats.svg" type="image/svg">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="img/wildeats.svg" type="image/svg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header>
       <h1>Wild Eats</h1>
       <nav>
-        <div class="item"><span class="material-symbols-rounded">home</span><span class="label">Accueil</span></div>
-        <div class="item"><span class="material-symbols-rounded">search</span><span class="label">Recherche</span></div>
-        <div class="item"><span class="material-symbols-rounded">menu</span><span class="label">Menu</span></div>
+        <div class="item">
+          <span class="material-symbols-rounded">home</span
+          ><span class="label">Accueil</span>
+        </div>
+        <div class="item">
+          <span class="material-symbols-rounded">search</span
+          ><span class="label">Recherche</span>
+        </div>
+        <div class="item">
+          <span class="material-symbols-rounded">menu</span
+          ><span class="label">Menu</span>
+        </div>
       </nav>
     </header>
 
     <main class="hidden">
       <section>Site catchphrase</section>
       <section>Filter bar for mobile placeholder</section>
-      <section>Filters fields (form)</section>
+      <section>
+        <form>
+          <fieldset>
+            <legend>Choisissez un ou plusieurs types d'établissement :</legend>
+            <div>
+              <input type="checkbox" id="fast-food" name="fast-food" checked />
+              <label for="fast-food">Fast-Food</label>
+            </div>
+            <div>
+              <input type="checkbox" id="burger" name="burger" checked />
+              <label for="burger">Burger</label>
+            </div>
+            <div>
+              <input type="checkbox" id="kebab" name="kebab" checked />
+              <label for="kebab">Kebab</label>
+            </div>
+            <div>
+              <input type="checkbox" id="italian" name="italian" checked />
+              <label for="italian">Italien</label>
+            </div>
+            <div>
+              <input type="checkbox" id="mexican" name="mexican" checked />
+              <label for="mexican">Mexicain</label>
+            </div>
+            <div>
+              <input type="checkbox" id="asian" name="asian" checked />
+              <label for="asian">Asiatique</label>
+            </div>
+            <div>
+              <input type="checkbox" id="african" name="african" checked />
+              <label for="african">Africain</label>
+            </div>
+            <div>
+              <input type="checkbox" id="pizzeria" name="pizzeria" checked />
+              <label for="pizzeria">Pizzeria</label>
+            </div>
+            <div>
+              <input type="checkbox" id="brewery" name="brewery" checked />
+              <label for="brewery">Brasserie</label>
+            </div>
+            <div>
+              <input type="checkbox" id="gastro" name="gastro" checked />
+              <label for="gastro">Gastronomique</label>
+            </div>
+            <div>
+              <input type="checkbox" id="dinner" name="dinner" checked />
+              <label for="dinner">Cafeteria</label>
+            </div>
+            <div>
+              <input type="checkbox" id="vegan" name="vegan" checked />
+              <label for="vegan">Vegan</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Configurez vos options de recherche :</legend>
+
+            <label for="veggieSelect">Végétarien/Vegan ?</label>
+
+            <select id="veggieSelect">
+              <option value="veggie1">Peu importe</option>
+              <option value="veggie2">Quelques plats végé</option>
+              <option value="veggie3">Plusieurs plats/menus végé</option>
+              <option value="veggie4">Vegan ou rien !</option>
+            </select>
+            <label for="budgetSelect">Pour quel budget ?</label>
+
+            <select id="budgetSelect">
+              <option value="budget1">Peu importe</option>
+              <option value="budget2">Pas plus de 30&euro; par personne</option>
+              <option value="budget3">Pas plus de 20&euro; par personne</option>
+              <option value="budget4">Pas plus de 10&euro; par personne</option>
+            </select>
+
+            <label for="proximitySelect"
+              >&Agrave; quelle distance du campus ?</label
+            >
+
+            <select id="proximitySelect">
+              <option value="proximity1">Peu importe</option>
+              <option value="proximity2">
+                Moins de 30 minutes en voitures
+              </option>
+              <option value="proximity3">
+                Moins de 20 minutes en transports en commun
+              </option>
+              <option value="proximity4">Moins de 10 minutes à pied</option>
+            </select>
+            <fieldset>
+              <legend>Modalités de service ?</legend>
+
+              <div>
+                <input type="checkbox" id="spot" name="spot" checked />
+                <label for="spot">Sur place</label>
+              </div>
+              <div>
+                <input type="checkbox" id="takeAway" name="takeAway" checked />
+                <label for="takeAway">&Agrave; emporter</label>
+              </div>
+              <div>
+                <input type="checkbox" id="delivery" name="delivery" />
+                <label for="delivery">Livraison</label>
+              </div>
+            </fieldset>
+          </fieldset>
+        </form>
+      </section>
       <section>Stickers slider placeholder</section>
 
-      
-      
       <section class="restaurants">
-        
         <article class="stickers hidden">
           <header>
             <h2>Grill Steacks</h2>
@@ -52,22 +168,36 @@
             <div class="evaluation">???</div>
             <div class="img-presentation"></div>
           </header>
-          <div class="address">101 Bd Gustave Flaubert, 63000 Clermont-Ferrand</div>
-          <p class="description">Grill Steacks est un restaurant de grill. Viandes cuites au feu de bois pour une viande grillé avec un goût incomparable.</p>
+          <div class="address">
+            101 Bd Gustave Flaubert, 63000 Clermont-Ferrand
+          </div>
+          <p class="description">
+            Grill Steacks est un restaurant de grill. Viandes cuites au feu de
+            bois pour une viande grillé avec un goût incomparable.
+          </p>
           <div class="gallery"></div>
         </article>
 
         <article class="stickers hidden">
           <header>
             <h2>Rapid Diner</h2>
-            <div class="catchphrase">De bons plats rapides aux meilleurs prix</div>
+            <div class="catchphrase">
+              De bons plats rapides aux meilleurs prix
+            </div>
             <div class="tags">Burger, Fast-food</div>
             <div class="price">12€ en moyenne/personne</div>
             <div class="evaluation">???</div>
             <div class="img-presentation"></div>
           </header>
           <div class="address">10 Bd Léon Malfreyt, 63000 Clermont-Ferrand</div>
-          <p class="description">Rapid Diner est dans la lignée des Diners américain mais à la française. Ce restaurant propose des hamburgers avec des ingrédients locaux et adapte ces recettes par rapports à ces ingrédients de proximité. Pour les amateurs de la nourriture végan, Rapid Diner pense également à vous en proposant dans ces menus, différents choix garantis 100% végétarien.</p>
+          <p class="description">
+            Rapid Diner est dans la lignée des Diners américain mais à la
+            française. Ce restaurant propose des hamburgers avec des ingrédients
+            locaux et adapte ces recettes par rapports à ces ingrédients de
+            proximité. Pour les amateurs de la nourriture végan, Rapid Diner
+            pense également à vous en proposant dans ces menus, différents choix
+            garantis 100% végétarien.
+          </p>
           <div class="gallery"></div>
         </article>
 
@@ -81,7 +211,11 @@
             <div class="img-presentation"></div>
           </header>
           <div class="address">52 Rue des Gras, 63000 Clermont-Ferrand</div>
-          <p class="description">Les saveurs des sauces soja, des sushis, et autres sont disponibles près de chez vous. Plusieurs formules disponibles pour être adaptées à tous.</p>
+          <p class="description">
+            Les saveurs des sauces soja, des sushis, et autres sont disponibles
+            près de chez vous. Plusieurs formules disponibles pour être adaptées
+            à tous.
+          </p>
           <div class="gallery"></div>
         </article>
 
@@ -94,8 +228,13 @@
             <div class="evaluation">???</div>
             <div class="img-presentation"></div>
           </header>
-          <div class="address">9 Rue des Vieillards, 63000 Clermont-Ferrand</div>
-          <p class="description">Le mexique s'invite à Clermont-Ferrand et vous partage ses saveurs, ses épices, en quelques mots sa folie.</p>
+          <div class="address">
+            9 Rue des Vieillards, 63000 Clermont-Ferrand
+          </div>
+          <p class="description">
+            Le mexique s'invite à Clermont-Ferrand et vous partage ses saveurs,
+            ses épices, en quelques mots sa folie.
+          </p>
           <div class="gallery"></div>
         </article>
 
@@ -109,7 +248,14 @@
             <div class="img-presentation"></div>
           </header>
           <div class="address">10 Rue Jules Verne, 63100 Clermont-Ferrand</div>
-          <p class="description">L'Endive se lance le défi de concilier le style fort de la restauration française avec la conscience écologique du moment, la nourriture végan. Le restaurant revisite les plats emblématique des Brasseries en utilisant des ingrédients 100% végétarien. Dans cet optique éco-responsable, l'Endive fait beaucoup en matière anti-gaspillage.</p>
+          <p class="description">
+            L'Endive se lance le défi de concilier le style fort de la
+            restauration française avec la conscience écologique du moment, la
+            nourriture végan. Le restaurant revisite les plats emblématique des
+            Brasseries en utilisant des ingrédients 100% végétarien. Dans cet
+            optique éco-responsable, l'Endive fait beaucoup en matière
+            anti-gaspillage.
+          </p>
           <div class="gallery"></div>
         </article>
 
@@ -123,7 +269,10 @@
             <div class="img-presentation"></div>
           </header>
           <div class="address">36 Av. des Paulines, 63100 Clermont-Ferrand</div>
-          <p class="description">Les ingrédients pour les pizzas de chez Mario sont choisis avec soin.</p>
+          <p class="description">
+            Les ingrédients pour les pizzas de chez Mario sont choisis avec
+            soin.
+          </p>
           <div class="gallery"></div>
         </article>
 
@@ -136,8 +285,13 @@
             <div class="evaluation">???</div>
             <div class="img-presentation"></div>
           </header>
-          <div class="address">175 Bd Gustave Flaubert, 63000 Clermont-Ferrand</div>
-          <p class="description">Chez Louis vous propose des plats variés avec des ingrédients frais et faits maison.</p>
+          <div class="address">
+            175 Bd Gustave Flaubert, 63000 Clermont-Ferrand
+          </div>
+          <p class="description">
+            Chez Louis vous propose des plats variés avec des ingrédients frais
+            et faits maison.
+          </p>
           <div class="gallery"></div>
         </article>
 
@@ -151,7 +305,9 @@
             <div class="img-presentation"></div>
           </header>
           <div class="address">16 Rue Claussmann, 63000 Clermont-Ferrand</div>
-          <p class="description">Cuisine innovante à la limite de la cuisine fusion.</p>
+          <p class="description">
+            Cuisine innovante à la limite de la cuisine fusion.
+          </p>
           <div class="gallery"></div>
         </article>
 
@@ -164,11 +320,17 @@
             <div class="evaluation">???</div>
             <div class="img-presentation"></div>
           </header>
-          <div class="address">23 Av. de la Margeride, 63000 Clermont-Ferrand</div>
-          <p class="description">Club Kebab vous propose une sélection des meilleurs kebab de la région ainsi que très bons clubs sandwichs. Le tout avec des ingrédients de qualite.</p>
+          <div class="address">
+            23 Av. de la Margeride, 63000 Clermont-Ferrand
+          </div>
+          <p class="description">
+            Club Kebab vous propose une sélection des meilleurs kebab de la
+            région ainsi que très bons clubs sandwichs. Le tout avec des
+            ingrédients de qualite.
+          </p>
           <div class="gallery"></div>
         </article>
-<article>
+        <article>
           <h2>Antilope Grill</h2>
           <div>
             <img src="img/antilope-01.jpeg" />
@@ -227,7 +389,7 @@
           </div>
           <button>Retour</button>
         </article>
-       
+
         <article>
           <h2>La Casa de Juan</h2>
           <div>
@@ -672,8 +834,7 @@
             <div><img src="img/ffk-04.jpeg" /></div>
           </div>
           <button>Retour</button>
-          </article>
-
+        </article>
       </section>
       <section>(hidden) Stickers stock</section>
     </main>
