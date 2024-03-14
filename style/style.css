@@ -2,6 +2,7 @@
     --primary-color: #fff;
     --secondary-color: #4BA6FF;
     --text-color: #fff;
+    --background-image: url("../img/app-background.jpg");
 }
 
 *, ::before, ::after {
@@ -13,7 +14,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-image: url("../img/app-background.jpg");
+    background-image: var(--background-image);
     background-size: auto 100%;
     background-position: bottom;
 }
@@ -40,23 +41,23 @@ nav {
     bottom: 0;
 }
 
-.items {
+.item {
     padding: 10px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.items span {
+.item span {
     font-size: 24px;
     padding: 5px;
 }
 
-.items .label {
+.item .label {
     display: none;
 }
 
-.items:hover {
+.item:hover {
     background: var(--secondary-color);
     border-radius: 5px;
 }
@@ -74,10 +75,10 @@ nav {
         justify-content: center;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
     }
-    .items {
+    .item {
         width: 100%;
     }
-    .items .label {
+    .item .label {
         display: inline;
     }
 }
@@ -90,10 +91,10 @@ nav {
         flex-direction: row;
         justify-content: flex-end;
     }
-    .items {
+    .item {
         width: auto;
     }
-    .items:hover {
+    .item:hover {
         margin-top: 3px;
         background: transparent;
         border-bottom: 3px solid var(--primary-color);
