@@ -1,28 +1,174 @@
 <!DOCTYPE html>
+
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+
     <title>Wild Eats</title>
-  </head>
-  <body>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="L'application essentielles des wilders pour bien manger.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Pierre, Marcelin, Fréd">
+
+    <meta property="og:title" content='Wild Eats'>
+    <meta property="og:image" content='img/app-background.jpg'>
+    <meta property="og:description" content="L'application essentielles des wilders pour bien manger.">
+
+    <link rel="shortcut icon" href="img/wildeats.svg" type="image/svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+
+<body>
+
     <header>
-      <div>Logo placeholder</div>
-      <div>Title logo placeholder</div>
+      <h1>Wild Eats</h1>
+      <nav>
+        <div class="items item1"><span class="material-symbols-rounded">home</span></div>
+        <div class="items item2"><span class="material-symbols-rounded">search</span></div>
+        <div class="items item3"><span class="material-symbols-rounded">menu</span></div>
+      </nav>
     </header>
-    <nav>
-      <div>Home placeholder</div>
-      <div>Search placeholder</div>
-      <div>Menu placeholder</div>
-    </nav>
-    <main>
+
+    <main class="hidden">
       <section>Site catchphrase</section>
       <section>Filter bar for mobile placeholder</section>
       <section>Filters fields (form)</section>
       <section>Stickers slider placeholder</section>
-      <section>
-        (hidden) Presentation windows stock
-        <article>
+
+      
+      
+      <section class="restaurants">
+        
+        <article class="stickers hidden">
+          <header>
+            <h2>Grill Steacks</h2>
+            <div class="catchphrase">Le choix de la viande de qualité !</div>
+            <div class="tags">Brasserie</div>
+            <div class="price">20€ en moyenne/personne</div>
+            <div class="evaluation">???</div>
+            <div class="img-presentation"></div>
+          </header>
+          <div class="address">101 Bd Gustave Flaubert, 63000 Clermont-Ferrand</div>
+          <p class="description">Grill Steacks est un restaurant de grill. Viandes cuites au feu de bois pour une viande grillé avec un goût incomparable.</p>
+          <div class="gallery"></div>
+        </article>
+
+        <article class="stickers hidden">
+          <header>
+            <h2>Rapid Diner</h2>
+            <div class="catchphrase">De bons plats rapides aux meilleurs prix</div>
+            <div class="tags">Burger, Fast-food</div>
+            <div class="price">12€ en moyenne/personne</div>
+            <div class="evaluation">???</div>
+            <div class="img-presentation"></div>
+          </header>
+          <div class="address">10 Bd Léon Malfreyt, 63000 Clermont-Ferrand</div>
+          <p class="description">Rapid Diner est dans la lignée des Diners américain mais à la française. Ce restaurant propose des hamburgers avec des ingrédients locaux et adapte ces recettes par rapports à ces ingrédients de proximité. Pour les amateurs de la nourriture végan, Rapid Diner pense également à vous en proposant dans ces menus, différents choix garantis 100% végétarien.</p>
+          <div class="gallery"></div>
+        </article>
+
+        <article class="stickers hidden">
+          <header>
+            <h2>Le Fugiyama</h2>
+            <div class="catchphrase">Du Japon dans vos assiettes !</div>
+            <div class="tags">Asiatique</div>
+            <div class="price">15€ en moyenne/personne</div>
+            <div class="evaluation">???</div>
+            <div class="img-presentation"></div>
+          </header>
+          <div class="address">52 Rue des Gras, 63000 Clermont-Ferrand</div>
+          <p class="description">Les saveurs des sauces soja, des sushis, et autres sont disponibles près de chez vous. Plusieurs formules disponibles pour être adaptées à tous.</p>
+          <div class="gallery"></div>
+        </article>
+
+        <article class="stickers hidden">
+          <header>
+            <h2>Sombrero</h2>
+            <div class="catchphrase">Saveurs méxicaines</div>
+            <div class="tags">Mexicain</div>
+            <div class="price">15€ en moyenne/personne</div>
+            <div class="evaluation">???</div>
+            <div class="img-presentation"></div>
+          </header>
+          <div class="address">9 Rue des Vieillards, 63000 Clermont-Ferrand</div>
+          <p class="description">Le mexique s'invite à Clermont-Ferrand et vous partage ses saveurs, ses épices, en quelques mots sa folie.</p>
+          <div class="gallery"></div>
+        </article>
+
+        <article class="stickers hidden">
+          <header>
+            <h2>L'Endive</h2>
+            <div class="catchphrase">La force nous vient de la nature</div>
+            <div class="tags">Brasserie, Vegan</div>
+            <div class="price">18€ en moyenne/personne</div>
+            <div class="evaluation">???</div>
+            <div class="img-presentation"></div>
+          </header>
+          <div class="address">10 Rue Jules Verne, 63100 Clermont-Ferrand</div>
+          <p class="description">L'Endive se lance le défi de concilier le style fort de la restauration française avec la conscience écologique du moment, la nourriture végan. Le restaurant revisite les plats emblématique des Brasseries en utilisant des ingrédients 100% végétarien. Dans cet optique éco-responsable, l'Endive fait beaucoup en matière anti-gaspillage.</p>
+          <div class="gallery"></div>
+        </article>
+
+        <article class="stickers hidden">
+          <header>
+            <h2>Pizza Mario</h2>
+            <div class="catchphrase">La pizza mieut qu'en Italie</div>
+            <div class="tags">Pizzeria</div>
+            <div class="price">12€ en moyenne/personne</div>
+            <div class="evaluation">???</div>
+            <div class="img-presentation"></div>
+          </header>
+          <div class="address">36 Av. des Paulines, 63100 Clermont-Ferrand</div>
+          <p class="description">Les ingrédients pour les pizzas de chez Mario sont choisis avec soin.</p>
+          <div class="gallery"></div>
+        </article>
+
+        <article class="stickers hidden">
+          <header>
+            <h2>Chez Louis</h2>
+            <div class="catchphrase">La cuisine à la Française</div>
+            <div class="tags">Cafétéria</div>
+            <div class="price">14€ en moyenne/personne</div>
+            <div class="evaluation">???</div>
+            <div class="img-presentation"></div>
+          </header>
+          <div class="address">175 Bd Gustave Flaubert, 63000 Clermont-Ferrand</div>
+          <p class="description">Chez Louis vous propose des plats variés avec des ingrédients frais et faits maison.</p>
+          <div class="gallery"></div>
+        </article>
+
+        <article class="stickers hidden">
+          <header>
+            <h2>L'Empereur</h2>
+            <div class="catchphrase">Le chic à la Française</div>
+            <div class="tags">Gastronomique</div>
+            <div class="price">50€ en moyenne/personne</div>
+            <div class="evaluation">???</div>
+            <div class="img-presentation"></div>
+          </header>
+          <div class="address">16 Rue Claussmann, 63000 Clermont-Ferrand</div>
+          <p class="description">Cuisine innovante à la limite de la cuisine fusion.</p>
+          <div class="gallery"></div>
+        </article>
+
+        <article class="stickers hidden">
+          <header>
+            <h2>Club Kebab</h2>
+            <div class="catchphrase">Le meilleur Kebab de la région</div>
+            <div class="tags">Kebab, Burger</div>
+            <div class="price">12€ en moyenne/personne</div>
+            <div class="evaluation">???</div>
+            <div class="img-presentation"></div>
+          </header>
+          <div class="address">23 Av. de la Margeride, 63000 Clermont-Ferrand</div>
+          <p class="description">Club Kebab vous propose une sélection des meilleurs kebab de la région ainsi que très bons clubs sandwichs. Le tout avec des ingrédients de qualite.</p>
+          <div class="gallery"></div>
+        </article>
+<article>
           <h2>Antilope Grill</h2>
           <div>
             <img src="img/antilope-01.jpeg" />
@@ -81,6 +227,7 @@
           </div>
           <button>Retour</button>
         </article>
+       
         <article>
           <h2>La Casa de Juan</h2>
           <div>
@@ -525,7 +672,8 @@
             <div><img src="img/ffk-04.jpeg" /></div>
           </div>
           <button>Retour</button>
-        </article>
+          </article>
+
       </section>
       <section>(hidden) Stickers stock</section>
     </main>
