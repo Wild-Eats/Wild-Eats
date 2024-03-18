@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 
 <html lang="fr">
-
-<head>
-
+  <head>
     <title>Wild Eats</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="L'application essentielles des wilders pour bien manger.">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Pierre, Marcelin, Fréd">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="L'application essentielle des wilders pour bien manger."
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Pierre, Marcelin, Fréd" />
 
-    <meta property="og:title" content='Wild Eats'>
-    <meta property="og:image" content='img/app-background.jpg'>
-    <meta property="og:description" content="L'application essentielles des wilders pour bien manger.">
+    <meta property="og:title" content="Wild Eats" />
+    <meta property="og:image" content="img/app-background.jpg" />
+    <meta
+      property="og:description"
+      content="L'application essentielle des wilders pour bien manger."
+    />
 
-    <link rel="shortcut icon" href="img/wildeats.svg" type="image/svg">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="img/wildeats.svg" type="image/svg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header>
-      <h1>Wild Eats</h1>
+      <div>Wild Eats logo placeholder</div>
+      <p>Wild Eats text-logo placeholder</p>
       <nav>
-        <div class="item"><span class="material-symbols-rounded">home</span><span class="label">Accueil</span></div>
-        <div class="item"><span class="material-symbols-rounded">search</span><span class="label">Recherche</span></div>
-        <div class="item"><span class="material-symbols-rounded">menu</span><span class="label">Menu</span></div>
+        <div class="item">
+          <span class="material-symbols-rounded">home</span
+          ><span class="label">Accueil</span>
+        </div>
+        <div class="item">
+          <span class="material-symbols-rounded">search</span
+          ><span class="label">Recherche</span>
+        </div>
+        <div class="item">
+          <span class="material-symbols-rounded">menu</span
+          ><span class="label">Menu</span>
+        </div>
       </nav>
     </header>
 
     <main>
+<<<<<<< HEAD
       <section class="hidden">Site catchphrase</section>
       <section class="hidden">Filter bar for mobile placeholder</section>
       <section class="hidden">Filters fields (form)</section>
@@ -46,6 +62,245 @@
       <section class="restaurants hidden">
         
         <article class="stickers hidden">
+=======
+      <section id="catchphrase" class="hidden">
+        <h1>L'application essentielle des wilders pour bien manger&nbsp;!</h1>
+      </section>
+      <section id="mobileFilterBar" class="hidden hiddenMobile">
+        Revenir aux options de recherche
+      </section>
+      <section id="filterForm">
+        <fieldset id="restaurantTypes">
+          <legend>Choisissez un ou plusieurs types d'établissement :</legend>
+          <div>
+            <input type="checkbox" id="fast-food" name="fast-food" />
+            <label for="fast-food">Fast-Food</label>
+          </div>
+          <div>
+            <input type="checkbox" id="burger" name="burger" />
+            <label for="burger">Burger</label>
+          </div>
+          <div>
+            <input type="checkbox" id="kebab" name="kebab" />
+            <label for="kebab">Kebab</label>
+          </div>
+          <div>
+            <input type="checkbox" id="italian" name="italian" />
+            <label for="italian">Italien</label>
+          </div>
+          <div>
+            <input type="checkbox" id="mexican" name="mexican" />
+            <label for="mexican">Mexicain</label>
+          </div>
+          <div>
+            <input type="checkbox" id="asian" name="asian" />
+            <label for="asian">Asiatique</label>
+          </div>
+          <div>
+            <input type="checkbox" id="african" name="african" />
+            <label for="african">Africain</label>
+          </div>
+          <div>
+            <input type="checkbox" id="pizzeria" name="pizzeria" />
+            <label for="pizzeria">Pizzeria</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brewery" name="brewery" />
+            <label for="brewery">Brasserie</label>
+          </div>
+          <div>
+            <input type="checkbox" id="gastro" name="gastro" />
+            <label for="gastro">Gastronomique</label>
+          </div>
+          <div>
+            <input type="checkbox" id="diner" name="diner" />
+            <label for="diner">Cafétéria</label>
+          </div>
+          <div>
+            <input type="checkbox" id="vegan" name="vegan" />
+            <label for="vegan">Vegan</label>
+          </div>
+        </fieldset>
+
+        <fieldset id="filterOptions">
+          <legend>Configurez vos options de recherche :</legend>
+          <div>
+            <label for="veggieSelect">Végétarien/Vegan ?</label>
+
+            <select id="veggieSelect">
+              <option value="veggie1">Peu importe</option>
+              <option value="veggie2">Quelques plats végé</option>
+              <option value="veggie3">Plusieurs plats/menus végé</option>
+              <option value="veggie4">Vegan ou rien !</option>
+            </select>
+          </div>
+          <div>
+            <label for="budgetSelect">Pour quel budget ?</label>
+
+            <select id="budgetSelect">
+              <option value="budget1">Peu importe</option>
+              <option value="budget2">Moins de 30&euro; par personne</option>
+              <option value="budget3">Moins de 20&euro; par personne</option>
+              <option value="budget4">Moins de 10&euro; par personne</option>
+            </select>
+          </div>
+          <div>
+            <label for="proximitySelect"
+              >&Agrave; quelle distance du campus ?</label
+            >
+
+            <select id="proximitySelect">
+              <option value="proximity1">Peu importe</option>
+              <option value="proximity2">Moins de 30min (voiture)</option>
+              <option value="proximity3">Moins de 20min (tram/bus)</option>
+              <option value="proximity4">Moins de 10min (à pied)</option>
+            </select>
+          </div>
+          <fieldset id="modalities">
+            <legend>Modalités de service ?</legend>
+
+            <div>
+              <input type="checkbox" id="spot" name="spot" />
+              <label for="spot">Sur place</label>
+            </div>
+            <div>
+              <input type="checkbox" id="takeAway" name="takeAway" />
+              <label for="takeAway">&Agrave; emporter</label>
+            </div>
+            <div>
+              <input type="checkbox" id="delivery" name="delivery" />
+              <label for="delivery">Livraison</label>
+            </div>
+          </fieldset>
+          <input
+            id="searchButton"
+            type="submit"
+            value="Lancer la recherche&nbsp;!"
+          />
+        </fieldset>
+      </section>
+      <section id="stickersSlider" class="hiddenMobile">
+        <div id="leftStickerSpot">
+          <button id="leftSticker" class="arrow">&#11164;</button>
+        </div>
+
+        <div id="rightStickerSpot">
+          <button id="rightSticker" class="arrow">&#11166;</button>
+        </div>
+
+        <div id="stickersGrid">
+          <div class="sticker slot1" id="antilopeSticker">
+            <img src="img/antilope-01.jpeg" />
+            <p>Antilope Grill</p>
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(658 avis)</p>
+            <p>
+              &ldquo; Venez déguster les meilleurs plats de l'ouest
+              sauvage&nbsp;! &rdquo;
+            </p>
+            <p>Cliquez pour plus d'informations&nbsp;!</p>
+          </div>
+
+          <div class="sticker slot2" id="casaSticker">
+            <img src="img/casa-01.jpg" />
+            <p>La Casa de Juan</p>
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(658 avis)</p>
+            <p>&ldquo; Le Mexique au bout de VOTRE rue&nbsp;! &rdquo;</p>
+            <p>Cliquez pour plus d'informations&nbsp;!</p>
+          </div>
+
+          <div class="sticker slot3" id="nonabatSticker">
+            <img src="img/nonabat-01.jpeg" />
+            <p>Le Non-Abattoir</p>
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(658 avis)</p>
+            <p>
+              &ldquo; Vous détestez la cruauté envers les animaux&nbsp;? Nous
+              aussi. &rdquo;
+            </p>
+            <p>Cliquez pour plus d'informations&nbsp;!</p>
+          </div>
+
+          <div class="sticker slot4" id="kingSticker">
+            <img src="img/king-01.jpeg" />
+            <p>Le King's Pub</p>
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(658 avis)</p>
+            <p>
+              &ldquo; Quoi de plus naturel qu'une pub pour un pub&nbsp;? &rdquo;
+            </p>
+            <p>Cliquez pour plus d'informations&nbsp;!</p>
+          </div>
+
+          <div class="sticker slot5" id="greenSticker">
+            <img src="img/green-01.jpeg" />
+            <p>MacGreen</p>
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(658 avis)</p>
+            <p>
+              &ldquo; Ce n'est pas parce qu'on est pressé qu'on doit manger de
+              la viande&nbsp;! &rdquo;
+            </p>
+            <p>Cliquez pour plus d'informations&nbsp;!</p>
+          </div>
+
+          <div class="sticker slot6" id="schnellSticker">
+            <img src="img/schnell-01.jpeg" />
+            <p>Schnell</p>
+            <p>&bigstar;&bigstar;</p>
+            <p>(658 avis)</p>
+            <p>&ldquo; J'ai pas le time&nbsp;!!!! &rdquo;</p>
+            <p>Cliquez pour plus d'informations&nbsp;!</p>
+          </div>
+
+          <div class="sticker slot7" id="jackpotSticker">
+            <img src="img/jackpot-01.jpg" />
+            <p>Cafeteria Jackpot</p>
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(658 avis)</p>
+            <p>
+              &ldquo; &Ccedil;a ne coute pas plus cher de bien manger. &rdquo;
+            </p>
+            <p>Cliquez pour plus d'informations&nbsp;!</p>
+          </div>
+
+          <div class="sticker slot8" id="courseSticker">
+            <img src="img/course-01.jpg" />
+            <p>La Course</p>
+            <p>&bigstar;&bigstar;&bigstar;</p>
+            <p>(658 avis)</p>
+            <p>&ldquo; La bonne bidoche&nbsp;? C'est là. &rdquo;</p>
+            <p>Cliquez pour plus d'informations&nbsp;!</p>
+          </div>
+
+          <div class="sticker slot9" id="lotusSticker">
+            <img src="img/lotus-01.jpeg" />
+            <p>Le Lotus Bleu</p>
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(658 avis)</p>
+            <p>
+              &ldquo; Lao-Tzeu l'a dit&nbsp;: il faut trouver la voie... &rdquo;
+            </p>
+            <p>Cliquez pour plus d'informations&nbsp;!</p>
+          </div>
+
+          <div class="sticker slot10" id="bamacoSticker">
+            <img src="img/bamaco-01.jpg" />
+            <p>Le Dimanche à Bamaco</p>
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(658 avis)</p>
+            <p>
+              &ldquo; Spécialités du Mali et de toute l'Afrique&nbsp;! &rdquo;
+            </p>
+            <p>Cliquez pour plus d'informations&nbsp;!</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="restaurants hidden hiddenMobile">
+        <article class="presentation">
+>>>>>>> 2f70f70a8dbb99d9795b3ec6f5a0dd7273326520
           <header>
             <h2>Grill Steacks</h2>
             <div class="catchphrase">Le choix de la viande de qualité !</div>
@@ -54,26 +309,40 @@
             <div class="evaluation">???</div>
             <div class="img-presentation"></div>
           </header>
-          <div class="address">101 Bd Gustave Flaubert, 63000 Clermont-Ferrand</div>
-          <p class="description">Grill Steacks est un restaurant de grill. Viandes cuites au feu de bois pour une viande grillé avec un goût incomparable.</p>
+          <div class="address">
+            101 Bd Gustave Flaubert, 63000 Clermont-Ferrand
+          </div>
+          <p class="description">
+            Grill Steacks est un restaurant de grill. Viandes cuites au feu de
+            bois pour une viande grillé avec un goût incomparable.
+          </p>
           <div class="gallery"></div>
         </article>
 
-        <article class="stickers hidden">
+        <article class="presentation">
           <header>
             <h2>Rapid Diner</h2>
-            <div class="catchphrase">De bons plats rapides aux meilleurs prix</div>
+            <div class="catchphrase">
+              De bons plats rapides aux meilleurs prix
+            </div>
             <div class="tags">Burger, Fast-food</div>
             <div class="price">12€ en moyenne/personne</div>
             <div class="evaluation">???</div>
             <div class="img-presentation"></div>
           </header>
           <div class="address">10 Bd Léon Malfreyt, 63000 Clermont-Ferrand</div>
-          <p class="description">Rapid Diner est dans la lignée des Diners américain mais à la française. Ce restaurant propose des hamburgers avec des ingrédients locaux et adapte ces recettes par rapports à ces ingrédients de proximité. Pour les amateurs de la nourriture végan, Rapid Diner pense également à vous en proposant dans ces menus, différents choix garantis 100% végétarien.</p>
+          <p class="description">
+            Rapid Diner est dans la lignée des Diners américain mais à la
+            française. Ce restaurant propose des hamburgers avec des ingrédients
+            locaux et adapte ces recettes par rapports à ces ingrédients de
+            proximité. Pour les amateurs de la nourriture végan, Rapid Diner
+            pense également à vous en proposant dans ces menus, différents choix
+            garantis 100% végétarien.
+          </p>
           <div class="gallery"></div>
         </article>
 
-        <article class="stickers hidden">
+        <article class="presentation">
           <header>
             <h2>Le Fugiyama</h2>
             <div class="catchphrase">Du Japon dans vos assiettes !</div>
@@ -83,11 +352,15 @@
             <div class="img-presentation"></div>
           </header>
           <div class="address">52 Rue des Gras, 63000 Clermont-Ferrand</div>
-          <p class="description">Les saveurs des sauces soja, des sushis, et autres sont disponibles près de chez vous. Plusieurs formules disponibles pour être adaptées à tous.</p>
+          <p class="description">
+            Les saveurs des sauces soja, des sushis, et autres sont disponibles
+            près de chez vous. Plusieurs formules disponibles pour être adaptées
+            à tous.
+          </p>
           <div class="gallery"></div>
         </article>
 
-        <article class="stickers hidden">
+        <article class="presentation">
           <header>
             <h2>Sombrero</h2>
             <div class="catchphrase">Saveurs méxicaines</div>
@@ -96,12 +369,17 @@
             <div class="evaluation">???</div>
             <div class="img-presentation"></div>
           </header>
-          <div class="address">9 Rue des Vieillards, 63000 Clermont-Ferrand</div>
-          <p class="description">Le mexique s'invite à Clermont-Ferrand et vous partage ses saveurs, ses épices, en quelques mots sa folie.</p>
+          <div class="address">
+            9 Rue des Vieillards, 63000 Clermont-Ferrand
+          </div>
+          <p class="description">
+            Le mexique s'invite à Clermont-Ferrand et vous partage ses saveurs,
+            ses épices, en quelques mots sa folie.
+          </p>
           <div class="gallery"></div>
         </article>
 
-        <article class="stickers hidden">
+        <article class="presentation">
           <header>
             <h2>L'Endive</h2>
             <div class="catchphrase">La force nous vient de la nature</div>
@@ -111,11 +389,18 @@
             <div class="img-presentation"></div>
           </header>
           <div class="address">10 Rue Jules Verne, 63100 Clermont-Ferrand</div>
-          <p class="description">L'Endive se lance le défi de concilier le style fort de la restauration française avec la conscience écologique du moment, la nourriture végan. Le restaurant revisite les plats emblématique des Brasseries en utilisant des ingrédients 100% végétarien. Dans cet optique éco-responsable, l'Endive fait beaucoup en matière anti-gaspillage.</p>
+          <p class="description">
+            L'Endive se lance le défi de concilier le style fort de la
+            restauration française avec la conscience écologique du moment, la
+            nourriture végan. Le restaurant revisite les plats emblématique des
+            Brasseries en utilisant des ingrédients 100% végétarien. Dans cet
+            optique éco-responsable, l'Endive fait beaucoup en matière
+            anti-gaspillage.
+          </p>
           <div class="gallery"></div>
         </article>
 
-        <article class="stickers hidden">
+        <article class="presentation">
           <header>
             <h2>Pizza Mario</h2>
             <div class="catchphrase">La pizza mieut qu'en Italie</div>
@@ -125,11 +410,14 @@
             <div class="img-presentation"></div>
           </header>
           <div class="address">36 Av. des Paulines, 63100 Clermont-Ferrand</div>
-          <p class="description">Les ingrédients pour les pizzas de chez Mario sont choisis avec soin.</p>
+          <p class="description">
+            Les ingrédients pour les pizzas de chez Mario sont choisis avec
+            soin.
+          </p>
           <div class="gallery"></div>
         </article>
 
-        <article class="stickers hidden">
+        <article class="presentation">
           <header>
             <h2>Chez Louis</h2>
             <div class="catchphrase">La cuisine à la Française</div>
@@ -138,12 +426,17 @@
             <div class="evaluation">???</div>
             <div class="img-presentation"></div>
           </header>
-          <div class="address">175 Bd Gustave Flaubert, 63000 Clermont-Ferrand</div>
-          <p class="description">Chez Louis vous propose des plats variés avec des ingrédients frais et faits maison.</p>
+          <div class="address">
+            175 Bd Gustave Flaubert, 63000 Clermont-Ferrand
+          </div>
+          <p class="description">
+            Chez Louis vous propose des plats variés avec des ingrédients frais
+            et faits maison.
+          </p>
           <div class="gallery"></div>
         </article>
 
-        <article class="stickers hidden">
+        <article class="presentation">
           <header>
             <h2>L'Empereur</h2>
             <div class="catchphrase">Le chic à la Française</div>
@@ -153,11 +446,13 @@
             <div class="img-presentation"></div>
           </header>
           <div class="address">16 Rue Claussmann, 63000 Clermont-Ferrand</div>
-          <p class="description">Cuisine innovante à la limite de la cuisine fusion.</p>
+          <p class="description">
+            Cuisine innovante à la limite de la cuisine fusion.
+          </p>
           <div class="gallery"></div>
         </article>
 
-        <article class="stickers hidden">
+        <article class="presentation">
           <header>
             <h2>Club Kebab</h2>
             <div class="catchphrase">Le meilleur Kebab de la région</div>
@@ -166,29 +461,44 @@
             <div class="evaluation">???</div>
             <div class="img-presentation"></div>
           </header>
-          <div class="address">23 Av. de la Margeride, 63000 Clermont-Ferrand</div>
-          <p class="description">Club Kebab vous propose une sélection des meilleurs kebab de la région ainsi que très bons clubs sandwichs. Le tout avec des ingrédients de qualite.</p>
+          <div class="address">
+            23 Av. de la Margeride, 63000 Clermont-Ferrand
+          </div>
+          <p class="description">
+            Club Kebab vous propose une sélection des meilleurs kebab de la
+            région ainsi que très bons clubs sandwichs. Le tout avec des
+            ingrédients de qualite.
+          </p>
           <div class="gallery"></div>
         </article>
-<article>
+        <article id="antilopeArticle" class="presentation">
           <h2>Antilope Grill</h2>
-          <div>
+          <div class="general">
             <img src="img/antilope-01.jpeg" />
             <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(658 avis)</p>
+            <p>
+              &ldquo; Venez déguster les meilleurs plats de l'ouest
+              sauvage&nbsp;! &rdquo;
+            </p>
           </div>
-          <div>
-            <h3>Venez déguster les meilleurs plats de l'ouest sauvage !</h3>
-            <p>Adresse : 111 Bd Gustave Flaubert, 63000 Clermont-Ferrand</p>
+
+          <div class="infos">
+            <p><span>Tags :</span> Brasserie, Burger</p>
+            <p>
+              <span>Adresse :</span> 111 Bd Gustave Flaubert, 63000
+              Clermont-Ferrand
+            </p>
             <p>&#128382; 06 39 49 39 49</p>
             <p>
-              Horaires d'ouverture : 7 jours sur 7, de 11h à 15h, puis de 18h à
-              23h
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
             </p>
-            <p>Service : Sur place</p>
-            <p>Prix : Menus à partir de 15&euro;</p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 15&euro;</p>
             <p>Propose quelques plats végétariens</p>
           </div>
-          <div>
+          <div class="presentationText">
             <p>
               Bienvenue chez Antilope Grill, le restaurant qui fleure bon
               l'ouest sauvage ! Si vous avez toujours rêvé de déguster les
@@ -222,15 +532,15 @@
               américain !
             </p>
           </div>
-          <div class="grid">
+          <div class="grid hiddenMobile">
             <div class="display"><img src="img/antilope-02.jpeg" /></div>
             <div><img src="img/antilope-03.jpeg" /></div>
             <div><img src="img/antilope-04.jpeg" /></div>
           </div>
-          <button>Retour</button>
+          <button class="returnButton">Retour</button>
         </article>
-       
-        <article>
+
+        <article id="casaArticle" class="presentation">
           <h2>La Casa de Juan</h2>
           <div>
             <img src="img/casa-01.jpg" />
@@ -238,14 +548,20 @@
           </div>
           <div>
             <h3>Le Mexique au bout de VOTRE rue !</h3>
-            <p>Adresse : 20 rue de la Gantière, 63000 Clermont-Ferrand</p>
+            <p>
+              <span>Adresse :</span> 20 rue de la Gantière, 63000
+              Clermont-Ferrand
+            </p>
             <p>&#128382; 06 39 49 39 49</p>
             <p>
-              Horaires d'ouverture : Du lundi au vendredi, de 11h à 15h, puis de
-              18h à 23h
+              <span>Horaires d'ouverture :</span> Du lundi au vendredi, de 11h à
+              15h, puis de 18h à 23h
             </p>
-            <p>Service : Sur place, à emporter, ou livraisons possibles</p>
-            <p>Prix : Des menus à partir de 8&euro;50</p>
+            <p>
+              <span>Service :</span> Sur place, à emporter, ou livraisons
+              possibles
+            </p>
+            <p><span>Prix :</span> Des menus à partir de 8&euro;50</p>
             <p>Propose plusieurs menus végétariens et vegans</p>
           </div>
           <div>
@@ -276,7 +592,7 @@
           </div>
           <button>Retour</button>
         </article>
-        <article>
+        <article id="nonabatArticle" class="presentation">
           <h2>Le Non-Abattoir</h2>
           <div>
             <img src="img/nonabat-01.jpeg" />
@@ -317,7 +633,7 @@
           </div>
           <button>Retour</button>
         </article>
-        <article>
+        <article id="kingArticle" class="presentation">
           <h2>Le King's Pub</h2>
           <div>
             <img src="img/king-01.jpeg" />
@@ -356,7 +672,7 @@
           </div>
           <button>Retour</button>
         </article>
-        <article>
+        <article id="greenArticle" class="presentation">
           <h2>MacGreen</h2>
           <div>
             <img src="img/green-01.jpeg" />
@@ -397,7 +713,7 @@
           </div>
           <button>Retour</button>
         </article>
-        <article>
+        <article id="schnellArticle" class="presentation">
           <h2>Schnell</h2>
           <div>
             <img src="img/schnell-01.jpeg" />
@@ -430,7 +746,7 @@
           </div>
           <button>Retour</button>
         </article>
-        <article>
+        <article id="jackpotArticle" class="presentation">
           <h2>Cafeteria Jackpot</h2>
           <div>
             <img src="img/jackpot-01.jpg" />
@@ -476,7 +792,7 @@
           </div>
           <button>Retour</button>
         </article>
-        <article>
+        <article id="courseArticle" class="presentation">
           <h2>La Course</h2>
           <div>
             <img src="img/course-01.jpg" />
@@ -519,7 +835,7 @@
           </div>
           <button>Retour</button>
         </article>
-        <article>
+        <article id="lotusArticle" class="presentation">
           <h2>Le Lotus Bleu</h2>
           <div>
             <img src="img/lotus-01.jpeg" />
@@ -553,7 +869,7 @@
           </div>
           <button>Retour</button>
         </article>
-        <article>
+        <article id="bamacoArticle" class="presentation">
           <h2>Le dimanche à Bamaco</h2>
           <div>
             <img src="img/bamaco-01.jpg" />
@@ -595,7 +911,7 @@
           </div>
           <button>Retour</button>
         </article>
-        <article>
+        <article id="luigiArticle" class="presentation">
           <h2>L.U.I.G.I.</h2>
           <div>
             <img src="img/luigi-01.jpeg" />
@@ -638,7 +954,7 @@
           </div>
           <button>Retour</button>
         </article>
-        <article>
+        <article id="ffkArticle" class="presentation">
           <h2>Fat & Furious Kebab</h2>
           <div>
             <img src="img/ffk-01.jpg" />
@@ -674,11 +990,602 @@
             <div><img src="img/ffk-04.jpeg" /></div>
           </div>
           <button>Retour</button>
-          </article>
+        </article>
+        <article class="presentation">
+          <h2>La Grange Africaine</h2>
+          <div>
+            <img
+              src="img/LaGrangeAfricaine.jpg"
+              alt="La Grange Africaine"
+              width="200"
+            />
+            <p>***** (65 avis)</p>
+          </div>
+          <div>
+            <h3>La meilleure cuisine Africaine à Clermont-Ferrand</h3>
+            <p>4 Pl. du Marché aux Poissons, 63000 Clermont-Ferrand</p>
+            <p>Service à l'africaine (feuilles de bananier)</p>
+            <p>Entre 08 et 12 Euros</p>
+            <p>Pas de menus végétariens</p>
+          </div>
+          <div>
+            <p>Bien manger pour la santé</p>
+          </div>
+          <div class="grid">
+            <div class="display"><img /></div>
+            <div><img /></div>
+            <div><img /></div>
+          </div>
+          <button>Retour</button>
+        </article>
 
+        <article class="presentation">
+          <h2>Pékin Express</h2>
+          <div>
+            <img src="img/PékinExpress.jpg" alt="Pékin Express" width="200" />
+            <p>***** (29 avis)</p>
+          </div>
+          <div>
+            <h3>La meilleure cuisine Asiatique à Clermont-Ferrand</h3>
+            <p>5 bd Gergovia, 63000 Clermont Ferrand</p>
+            <p>Service « plat sur table »</p>
+            <p>Entre 11 et 14 Euros</p>
+            <p>Menus végétariens sur commande</p>
+          </div>
+          <div>
+            <p>Plats locaux</p>
+          </div>
+          <div class="grid">
+            <div class="display"><img /></div>
+            <div><img /></div>
+            <div><img /></div>
+          </div>
+          <button>Retour</button>
+        </article>
+
+        <article class="presentation">
+          <h2>Le Bistrot d'à Côté</h2>
+          <div>
+            <img src="img/Bistro.jpg" alt="Le Bistro" width="200" />
+            <p>***** (696 avis)</p>
+          </div>
+          <div>
+            <h3>Cuisine Française et Européenn</h3>
+            <p>16 rue des minimes, 63000, Clermont</p>
+            <p>Service à la française et à l’assiette</p>
+            <p>Entre 12 et 22 Euros</p>
+            <p>Présence de plats/menus végétariens</p>
+          </div>
+          <div>
+            <p>Bon accueil et service impécable</p>
+          </div>
+          <div class="grid">
+            <div class="display"><img /></div>
+            <div><img /></div>
+            <div><img /></div>
+          </div>
+          <button>Retour</button>
+        </article>
+
+        <article class="presentation">
+          <h2>La Criée</h2>
+          <div>
+            <img src="img/LaCriée.jpg" alt="La Criée" width="200" />
+            <p>***** (648 avis)</p>
+          </div>
+          <div>
+            <h3>Cuisine Française, Fruits de mer et poisson</h3>
+            <p>
+              21 Rue de l'Eminée Av. Ernest Cristal, 63000, Clermont-Ferrand
+            </p>
+            <p>Service à la française et à l’assiette</p>
+            <p>Entre 18 et 20 Euros</p>
+            <p>menus végétariens à la demande</p>
+          </div>
+          <div>
+            <p>Endroit très agréable et joli cadre</p>
+          </div>
+          <div class="grid">
+            <div class="display"><img /></div>
+            <div><img /></div>
+            <div><img /></div>
+          </div>
+          <button>Retour</button>
+        </article>
+
+        <article class="presentation">
+          <h2>Le Kitchen</h2>
+          <div>
+            <img src="img/LeKitchen.jpg" alt="Le Kitchen" width="200" />
+            <p>***** (514 avis)</p>
+          </div>
+          <div>
+            <h3>Cuisine Française, Européenne</h3>
+            <p>29 Rue des Chaussetiers, 63000, Clermont-Ferrand</p>
+            <p>Service à la française et à l’assiette</p>
+            <p>Entre 14 et 18 Euros</p>
+            <p>Pas de menus végétariens</p>
+          </div>
+          <div>
+            <p>Endroit chaleureux et plats copieux</p>
+          </div>
+          <div class="grid">
+            <div class="display"><img /></div>
+            <div><img /></div>
+            <div><img /></div>
+          </div>
+          <button>Retour</button>
+        </article>
+
+        <article class="presentation">
+          <h2>L'Etoile de Fès</h2>
+          <div>
+            <img
+              src="img/LEtoiledeFès.jpeg"
+              alt="L'Etoile de Fès"
+              width="200"
+            />
+            <p>***** (194 avis)</p>
+          </div>
+          <div>
+            <h3>Méditerranéen, Moyen-Orient, Marocain</h3>
+            <p>10 r Ste Rose, 63000 Clermont Ferrand</p>
+            <p>Service à l'anglaise et plats à emporter</p>
+            <p>Entre 08 et 12 Euros</p>
+            <p>Pas de menus végétariens</p>
+          </div>
+          <div>
+            <p>Endroit chaleureux et plats à emporter</p>
+          </div>
+          <div class="grid">
+            <div class="display"><img /></div>
+            <div><img /></div>
+            <div><img /></div>
+          </div>
+          <button>Retour</button>
+        </article>
+
+        <article class="presentation">
+          <h2>Eat Salad</h2>
+          <div>
+            <img src="img/EatSalad.jpg" alt="Eat Salad" width="200" />
+            <p>***** (565 avis)</p>
+          </div>
+          <div>
+            <h3>Restaurant salade sur mesure, bar à salade à proximité</h3>
+            <p>16 rue Lucie et Raymond Aubrac, 63100 Clermont Ferrand</p>
+            <p>Service à l’américaine et plas à emporter</p>
+            <p>Entre 08 et 14 Euros</p>
+            <p>Présence de plats/menus végétariens</p>
+          </div>
+          <div>
+            <p>
+              Eat Salad vous propose des salades fraîches et variées, avec des
+            </p>
+            <p>
+              ingrédients frais, de qualité et de teneur élevée en vitamines et
+              oligoéléments.
+            </p>
+          </div>
+          <div class="grid">
+            <div class="display"><img /></div>
+            <div><img /></div>
+            <div><img /></div>
+          </div>
+          <button>Retour</button>
+        </article>
+
+        <article class="presentation">
+          <h2>Km Burger</h2>
+          <div>
+            <img src="img/KmBurger.jpg" alt="Km Burger" width="200" />
+            <p>***** (350 avis)</p>
+          </div>
+          <div>
+            <h3>
+              Nous vous proposons des burgers authentiques 100% Fait Maison avec
+              des produits frais, locaux
+            </h3>
+            <p>48 rue Jules Guesde, 63100 Clermont Ferrand</p>
+            <p>Service à l'anglaise</p>
+            <p>Entre 08 et 12 Euros</p>
+            <p>Présence de plats/menus végétariens</p>
+          </div>
+          <div>
+            <p>
+              Retrouvez et Commandez plus rapidement vos produits McDonald's
+              préférés : Produits de Qualité
+            </p>
+            <p>Possibilité de livraison à domicile</p>
+          </div>
+          <div class="grid">
+            <div class="display"><img /></div>
+            <div><img /></div>
+            <div><img /></div>
+          </div>
+          <button>Retour</button>
+        </article>
+
+        <article class="presentation">
+          <h2>La Gourmandise</h2>
+          <div>
+            <img src="img/LaGourmandise.jpg" alt="La Gourmandise" width="200" />
+            <p>***** (1249 avis)</p>
+          </div>
+          <div>
+            <h3>Cuisine Française, Européenne</h3>
+            <p>4 Pl. du Marché aux Poissons, 63000 Clermont-Ferrand</p>
+            <p>Service à la française et à l’assiette</p>
+            <p>Entre 12 et 18 Euros</p>
+            <p>Présence de plats/menus végétariens</p>
+          </div>
+          <div>
+            <p>
+              La Gourmandine est un restaurant à vin mêlant finesse et tradition
+              au cœur de Clermont-Ferrand.
+            </p>
+          </div>
+          <div class="grid">
+            <div class="display"><img /></div>
+            <div><img /></div>
+            <div><img /></div>
+          </div>
+          <button>Retour</button>
+        </article>
+
+        <article class="presentation">
+          <h2>Restaurant 62</h2>
+          <div>
+            <img src="img/Restaurant62.jpg" alt="Restaurant 62" width="200" />
+            <p>***** (788 avis)</p>
+          </div>
+          <div>
+            <h3>
+              Une cuisine instinctive et créative dans un bistrot élégant au
+              coeur de Clermont-Ferrand
+            </h3>
+            <p>62 rue Fontgiève 63000 CLERMONT-FERRAND</p>
+            <p>Service à la française et à l’assiette</p>
+            <p>Entre 12 et 19 Euros</p>
+            <p>Présence de plats/menus végétariens ???</p>
+          </div>
+          <div>
+            <p>
+              Une cuisine sans frontière inspirée par les produits de saison
+            </p>
+          </div>
+          <div class="grid">
+            <div class="display"><img /></div>
+            <div><img /></div>
+            <div><img /></div>
+          </div>
+          <button>Retour</button>
+        </article>
+
+        <article class="presentation">
+          <h2>Terres Latines</h2>
+          <div>
+            <img src="img/TerresLatines.jpg" alt="Terres Latines" width="200" />
+            <p>***** (1495 avis)</p>
+          </div>
+          <div>
+            <h3>
+              Top pour diner à l'abri du vent ou de le pluie tout en étant à
+              l'extérieur
+            </h3>
+            <p>12 boulevard Desaix, 63000, Clermont-Ferrand France</p>
+            <p>Service à la française et à l’assiette</p>
+            <p>Entre 14 et 19 Euros</p>
+            <p>Présence de plats/menus végétariens</p>
+          </div>
+          <div>
+            <p>Cuisine Italienne, Espagnole</p>
+          </div>
+          <div class="grid">
+            <div class="display"><img /></div>
+            <div><img /></div>
+            <div><img /></div>
+          </div>
+          <button>Retour</button>
+        </article>
       </section>
+      <section class="hidden hiddenMobile">
+        <div class="sticker" id="steaksSticker">
+          <img />
+          <p>Grill Steaks</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(125 avis)</p>
+          <p>Le choix de la viande de qualité&nbsp;!</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="rapidSticker">
+          <img />
+          <p>Rapid Diner</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(1337 avis)</p>
+          <p>De bons plats rapides aux meilleurs prix.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="fugiyamaSticker">
+          <img />
+          <p>Le Fugiyama</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(6145 avis)</p>
+          <p>Du Japon dans vos assiettes&nbsp;!</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="sombreroSticker">
+          <img />
+          <p>Sombrero</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(123 avis)</p>
+          <p>Saveurs méxicaines.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="endiveSticker">
+          <img />
+          <p>L'Endive</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(800 avis)</p>
+          <p>La force nous vient de la nature.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="marioSticker">
+          <img />
+          <p>Pizza Mario</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(99 avis)</p>
+          <p>La pizza mieux qu'en Italie.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="louisSticker">
+          <img />
+          <p>Chez Louis</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(498 avis)</p>
+          <p>La cuisine à la Française.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="empereurSticker">
+          <img />
+          <p>L'Empereur</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(4000 avis)</p>
+          <p>Le chic à la Française.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="clubSticker">
+          <img />
+          <p>Club Kebab</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(987 avis)</p>
+          <p>Le meilleur Kebab de la région.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <!-- <div class="sticker" id="antilopeSticker">
+          <img src="img/antilope-01.jpeg" />
+          <p>Antilope Grill</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(658 avis)</p>
+          <p>
+            &ldquo; Venez déguster les meilleurs plats de l'ouest sauvage&nbsp;!
+            &rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="casaSticker">
+          <img src="img/casa-01.jpg" />
+          <p>La Casa de Juan</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(1215 avis)</p>
+          <p>&ldquo; Le Mexique au bout de VOTRE rue&nbsp;! &rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="nonabatSticker">
+          <img src="img/nonabat-01.jpeg" />
+          <p>Le Non-Abattoir</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(29 avis)</p>
+          <p>
+            &ldquo; Vous détestez la cruauté envers les animaux&nbsp;? Nous aussi.
+            &rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="kingSticker">
+          <img src="img/king-01.jpeg" />
+          <p>Le King's Pub</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(745 avis)</p>
+          <p>&ldquo; Quoi de plus naturel qu'une pub pour un pub&nbsp;? &rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="greenSticker">
+          <img src="img/green-01.jpeg" />
+          <p>MacGreen</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(255 avis)</p>
+          <p>
+            &ldquo; Ce n'est pas parce qu'on est pressé qu'on doit manger de
+            la viande&nbsp;! &rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="schnellSticker">
+          <img src="img/schnell-01.jpeg" />
+          <p>Schnell</p>
+          <p>&bigstar;&bigstar;</p>
+          <p>(666 avis)</p>
+          <p>&ldquo; J'ai pas le time&nbsp;!!!! &rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="jackpotSticker">
+          <img src="img/jackpot-01.jpg" />
+          <p>Cafeteria Jackpot</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(7777 avis)</p>
+          <p>
+            &ldquo; &Ccedil;a ne coute pas plus cher de bien manger. &rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="courseSticker">
+          <img src="img/course-01.jpg" />
+          <p>La Course</p>
+          <p>&bigstar;&bigstar;&bigstar;</p>
+          <p>(1320 avis)</p>
+          <p>&ldquo; La bonne bidoche&nbsp;? C'est là. &rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="lotusSticker">
+          <img src="img/lotus-01.jpeg" />
+          <p>Le Lotus Bleu</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(2467 avis)</p>
+          <p>&ldquo; Lao-Tzeu l'a dit&nbsp;: il faut trouver la voie... &rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="bamacoSticker">
+          <img src="img/bamaco-01.jpg" />
+          <p>Le Dimanche à Bamaco</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(813 avis)</p>
+          <p>&ldquo; Spécialités du Mali et de toute l'Afrique&nbsp;! &rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div> -->
+
+        <div class="sticker" id="luigiSticker">
+          <img src="img/luigi-01.jpeg" />
+          <p>L.U.I.G.I.</p>
+          <p>(3112 avis)</p>
+          <p>&bigstar;&bigstar;</p>
+          <p>Elle. Hue. Hi. Jet. Hi.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="ffkSticker">
+          <img src="img/ffk-01.jpg" />
+          <p>Fat & Furious Kebab</p>
+          <p>(113 avis)</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>Salade tomate oignon, chef.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="grangeSticker">
+          <img src="img/LaGrangeAfricaine.jpg" />
+          <p>La Grange Africaine</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(65 avis)</p>
+          <p>La meilleure cuisine Africaine&nbsp;!</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="pekinSticker">
+          <img src="img/PékinExpress.jpg" />
+          <p>Pékin Express</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(29 avis)</p>
+          <p>Meilleure cuisine Asiatique de Clermont-Ferrand.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="bistrotSticker">
+          <img src="img/Bistro.jpg" />
+          <p>Le Bistrot d'à Côté</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(696 avis)</p>
+          <p>Cuisine Française et Européenne.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="crieeSticker">
+          <img src="img/LaCriée.jpg" />
+          <p>La Criée Clermont Ferrand</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(648 avis)</p>
+          <p>Cuisine Française, Fruits de mer et poisson.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="kitchenSticker">
+          <img src="img/LeKitchen.jpg" />
+          <p>Le Kitchen</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(514 avis)</p>
+          <p>Cuisine Française et Européenne.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="etoileSticker">
+          <img src="img/LEtoiledeFès.jpeg" />
+          <p>L'Etoile de Fès</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(194 avis)</p>
+          <p>Méditerranée. Moyen-Orient. Maroc.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="saladSticker">
+          <img src="img/EatSalad.jpg" />
+          <p>Eat Salad</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(565 avis)</p>
+          <p>Bar à salade sur mesure&nbsp;!</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="kmburgerSticker">
+          <img src="img/KmBurger.jpg" />
+          <p>Km Burger</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(350 avis)</p>
+          <p>
+            Burgers Authentiques 100% Faits Maison&nbsp;! Produits frais et
+            locaux garantis.
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="gourmandiseSticker">
+          <img src="img/LaGourmandise.jpg" />
+          <p>La Gourmandise</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(1249 avis)</p>
+          <p>Cuisine Française et Européenne.</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="soixanteSticker">
+          <img src="img/Restaurant62.jpg" />
+          <p>Restaurant 62</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(788 avis)</p>
+          <p>
+            Une cuisine instinctive et créative dans un bistrot élégant au coeur
+            de Clermont-Ferrand.
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="latinesSticker">
+          <img src="img/TerresLatines.jpg" />
+          <p>Terres Latines</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(1495 avis)</p>
+          <p>
+            Top pour diner à l'abri du vent ou de la pluie, tout en étant à
+            l'extérieur.
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+      </section>
+<<<<<<< HEAD
       <section class="hidden">(hidden) Stickers stock</section>
     </main>
     <footer class="hidden">Footer placeholder</footer>
+=======
+    </main>
+    <footer class="hidden hiddenMobile">Footer placeholder</footer>
+    <script src="main.js"></script>
+>>>>>>> 2f70f70a8dbb99d9795b3ec6f5a0dd7273326520
   </body>
 </html>

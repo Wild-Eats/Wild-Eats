@@ -1,130 +1,664 @@
+/* Layout Setup
+   ------------
+   ------------ */
+
 :root {
-    --primary-color: #fff;
-    --secondary-color: #4BA6FF;
-    --text-color: #fff;
-    --background-image: url("../img/app-background.jpg");
+  --primary-color: #ffffffe7;
+  --secondary-color: #4ba6ff;
+  --primary-text-color: #000;
+  --secondary-text-color: #fff;
+  --background-image: url("../img/app-background.jpg");
+  --main-font: sans-serif;
 }
 
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    width: 100vw;
-    height: 100vh;
-    background-image: var(--background-image);
-    background-size: auto 100%;
-    background-position: bottom;
-}
-
-header {
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    background: var(--secondary-color);
-    color: var(--text-color);
-    text-align: center;
-}
-
-nav {
-    width: 100%;
-    height: auto;
-    margin-left: -10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-}
-
-.item {
-    padding: 10px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.item span {
-    font-size: 24px;
-    padding: 5px;
-}
-
-.item .label {
-    display: none;
-}
-
-.item:hover {
-    background: var(--secondary-color);
-    border-radius: 5px;
-}
-
-.slider {
-    width: 90%;
-    height: 500px;
-    background: var(--primary-color);
-    border-radius: 10px;
-    position: absolute;
-    bottom: 75px;
-    left: 5%;
-}
-
-.slider::before {
-    content: '';
-    width: 90%;
-    height: 90%;
-    background: #fff;
-    background: var(--secondary-color);
-    position: absolute;
-    top: 5%;
-    left: 5%;
-}
-
-.hidden {
-    display: none;
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (width >= 1024px) {
-    nav {
-        width: auto;
-        height: 100%;
-        right: 0;
-        flex-direction: column;
-        justify-content: center;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
-    }
-    .item {
-        width: 100%;
-    }
-    .item .label {
-        display: inline;
-    }
+  .hidden {
+    display: none;
+  }
 }
 
-@media screen and (width >= 1200px) {
-    nav {
-        width: 100%;
-        height: 50px;
-        top: 0;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    .item {
-        width: auto;
-    }
-    .item:hover {
-        margin-top: 3px;
-        background: transparent;
-        border-bottom: 3px solid var(--primary-color);
-        border-radius: 10px;
-    }
+@media screen and (width < 1024px) {
+  .hiddenMobile {
+    display: none;
+  }
 }
 
-@media screen and (width >= 1550px) {
-    body {
-        background-size: 100% auto;
-    }    
+/* Body Layout
+   -----------
+   ----------- */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: var(--background-image);
+  background-size: auto 100%;
+  background-position: bottom;
+  font-family: var(--main-font);
+}
+
+/* Body Layout (Desktop)
+   --------------------- */
+
+@media screen and (width > 1200px) {
+  body {
+    background-size: 100% auto;
+  }
+}
+
+/* Header Layout
+   -------------
+   ------------- */
+
+header {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background: var(--secondary-color);
+  color: var(--secondary-text-color);
+  text-align: center;
+}
+
+/* Header Layout (Mobile)
+   ---------------------- */
+
+@media screen and (width < 1024px) {
+  header {
+    height: 25%;
+  }
+}
+
+/* Nav Layout
+   ----------
+   ---------- */
+
+nav {
+  width: 100%;
+  height: auto;
+  margin-left: -10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.item {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item span {
+  font-size: 24px;
+  padding: 5px;
+}
+
+.item .label {
+  display: none;
+}
+
+.item:hover {
+  background: var(--secondary-color);
+  border-radius: 5px;
+}
+
+/* Nav Layout (Tablet)
+   ------------------- */
+
+@media screen and (width >= 1024px) {
+  nav {
+    width: auto;
+    height: 100%;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  }
+  .item {
+    width: 100%;
+  }
+  .item .label {
+    display: inline;
+  }
+}
+
+/* Nav Layout (Desktop)
+   -------------------- */
+
+@media screen and (width > 1200px) {
+  nav {
+    width: 100%;
+    height: 50px;
+    top: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .item {
+    width: auto;
+  }
+  .item:hover {
+    margin-top: 3px;
+    background: transparent;
+    border-bottom: 3px solid var(--primary-color);
+    border-radius: 10px;
+  }
+}
+
+/* Main Mobile Layout
+  -------------------
+  ------------------- */
+
+@media screen and (width < 1024px) {
+  #catchphrase {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  }
+}
+
+/* Mobile Filter Bar Layout
+   ------------------------
+   ------------------------ */
+
+@media screen and (width < 1024px) {
+  #mobileFilterBar {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  }
+}
+
+/* Filter Form Layout
+   ------------------
+   ------------------ */
+
+/* Filter Form Layout (Mobile)
+   --------------------------- */
+
+@media screen and (width < 1024px) {
+  #filterForm {
+    background-color: var(--primary-color);
+    margin: 1rem;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 0.8fr 1fr;
+    border-radius: 1rem;
+  }
+
+  fieldset {
+    border-radius: 1rem;
+  }
+
+  #filterForm.hiddenMobile {
+    display: none;
+  }
+
+  #restaurantTypes {
+    grid-area: left;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    margin: 0.5rem;
+  }
+
+  #restaurantTypes div {
+    margin-bottom: 0.5rem;
+  }
+
+  #filterOptions {
+    grid-area: right;
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+  }
+
+  #filterOptions select {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #modalities {
+    padding-top: 0.5rem;
+  }
+
+  #modalities div {
+    padding: 0 0 0.5rem 0.5rem;
+  }
+
+  #searchButton {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0 0.4rem 0;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 1rem;
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  }
+}
+
+/* Filter Form Layout (Tablet)
+   --------------------------- */
+
+@media screen and (width >= 1024px) {
+  #filterForm {
+    background-color: var(--primary-color);
+    margin: 3rem;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.3rem;
+  }
+
+  #restaurantTypes {
+    grid-area: left;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  #restaurantTypes div {
+    margin-bottom: 0.5rem;
+  }
+
+  #filterOptions {
+    grid-area: right;
+    padding: 1rem;
+    margin: 1rem 1rem 1rem 0;
+  }
+}
+
+/* Stickers Slider Layout
+  -----------------------
+  ----------------------- */
+
+/* Stickers Slider Layout (Mobile)
+  -------------------------------- */
+
+@media screen and (width < 1024px) {
+  #stickersSlider {
+    display: grid;
+    grid-template-columns: 15% 1fr 15%;
+    gap: 0.2rem;
+    margin-top: 1rem;
+  }
+
+  #stickersSlider.hiddenMobile {
+    display: none;
+  }
+
+  #leftStickerSpot,
+  #rightStickerSpot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #leftStickerSpot {
+    grid-row: 1 / span 3;
+    grid-column: 1;
+  }
+
+  #rightStickerSpot {
+    grid-row: 1 / span 3;
+    grid-column: 3;
+  }
+
+  #stickersSlider button.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 650;
+    background-color: var(--secondary-color);
+    border: 0.15rem solid var(--secondary-color);
+    color: var(--secondary-text-color);
+  }
+
+  #stickersSlider button.arrow:hover {
+    background-color: var(--secondary-text-color);
+    border: 0.15rem solid var(--secondary-text-color);
+    color: var(--secondary-color);
+  }
+
+  #stickersGrid {
+    display: grid;
+    grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h" "i" "j";
+    grid-template-columns: 1fr;
+  }
+
+  .slot1 {
+    grid-area: a;
+  }
+
+  .slot2 {
+    grid-area: b;
+    display: none;
+  }
+
+  .slot3 {
+    grid-area: c;
+    display: none;
+  }
+
+  .slot4 {
+    grid-area: d;
+    display: none;
+  }
+
+  .slot5 {
+    grid-area: e;
+    display: none;
+  }
+
+  .slot6 {
+    grid-area: f;
+    display: none;
+  }
+
+  .slot7 {
+    grid-area: g;
+    display: none;
+  }
+
+  .slot8 {
+    grid-area: h;
+    display: none;
+  }
+
+  .slot9 {
+    grid-area: i;
+    display: none;
+  }
+
+  .slot10 {
+    grid-area: j;
+    display: none;
+  }
+
+  .sticker {
+    background-color: var(--primary-color);
+    height: 26rem;
+    border-radius: 1rem;
+  }
+
+  .sticker p {
+    text-align: center;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .sticker p:nth-of-type(1) {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .sticker p:nth-of-type(2) {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+  }
+
+  .sticker p:nth-of-type(3) {
+    font-style: italic;
+  }
+
+  .sticker p:nth-of-type(4) {
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .sticker p:nth-of-type(5) {
+    font-style: italic;
+  }
+
+  .sticker img {
+    width: 100%;
+    padding: 0 1rem 0.5rem 1rem;
+  }
+}
+
+/* Stickers Slider Layout (Tablet)
+  -------------------------------- */
+
+@media screen and (width >= 1024px) {
+  #stickersSlider {
+    display: grid;
+    grid-template-columns: 0.09fr 1fr 0.09fr;
+  }
+
+  #stickersSlider.hidden {
+    display: grid;
+    grid-template-columns: 0.09fr 1fr 0.09fr;
+  }
+
+  #leftStickerSpot,
+  #rightStickerSpot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #leftStickerSpot {
+    grid-row: 1 / span 3;
+    grid-column: 1;
+  }
+
+  #rightStickerSpot {
+    grid-row: 1 / span 3;
+    grid-column: 3;
+  }
+
+  #stickersSlider button.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 650;
+    background-color: var(--secondary-color);
+    border: 0.15rem solid var(--secondary-color);
+    color: var(--secondary-text-color);
+  }
+
+  #stickersSlider button.arrow:hover {
+    background-color: var(--secondary-text-color);
+    border: 0.15rem solid var(--secondary-text-color);
+    color: var(--secondary-color);
+  }
+
+  #stickersGrid {
+    display: grid;
+    grid-template-areas: "a b c d e" "f g h i j";
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+
+  .slot1 {
+    grid-area: a;
+  }
+
+  .slot2 {
+    grid-area: b;
+  }
+
+  .slot3 {
+    grid-area: c;
+  }
+
+  .slot4 {
+    grid-area: d;
+  }
+
+  .slot5 {
+    grid-area: e;
+  }
+
+  .slot6 {
+    grid-area: f;
+    display: none;
+  }
+
+  .slot7 {
+    grid-area: g;
+    display: none;
+  }
+
+  .slot8 {
+    grid-area: h;
+    display: none;
+  }
+
+  .slot9 {
+    grid-area: i;
+    display: none;
+  }
+
+  .slot10 {
+    grid-area: j;
+    display: none;
+  }
+
+  .sticker {
+    background-color: var(--primary-color);
+    height: 25rem;
+    border-radius: 1rem;
+  }
+
+  .sticker p {
+    text-align: center;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .sticker p:nth-of-type(1) {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .sticker p:nth-of-type(2) {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+  }
+
+  .sticker p:nth-of-type(3) {
+    font-style: italic;
+  }
+
+  .sticker p:nth-of-type(4) {
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .sticker p:nth-of-type(5) {
+    font-style: italic;
+  }
+
+  .sticker img {
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+  }
+}
+
+/* Presentation Window Layout
+   --------------------------
+   -------------------------- */
+
+/* Presentation Window Layout (Mobile)
+   ----------------------------------- */
+
+@media screen and (width < 1024px) {
+  #presentationWindow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 85%;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    margin: auto;
+    padding: 1rem;
+  }
+
+  #presentationWindow article {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #presentationWindow article img {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .general p:nth-of-type(1) {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+  }
+
+  .general p:nth-of-type(2) {
+    font-style: italic;
+  }
+
+  .general p:nth-of-type(3) {
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .infos {
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .infos span {
+    font-weight: 600;
+  }
+
+  .presentationText {
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    overflow: auto;
+  }
+
+  #presentationWindow button {
+    margin-top: 0.5rem;
+    padding: 0.3rem 0 0.4rem 0;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 1rem;
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  }
 }
