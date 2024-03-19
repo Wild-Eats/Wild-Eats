@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 
 <html lang="fr">
+
   <head>
+
     <title>Wild Eats</title>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="L'application essentielle des wilders pour bien manger."
-    />
+    <meta name="description" content="L'application essentielle des wilders pour bien manger." />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Pierre, Marcelin, Fréd" />
 
     <meta property="og:title" content="Wild Eats" />
     <meta property="og:image" content="img/app-background.jpg" />
-    <meta
-      property="og:description"
-      content="L'application essentielle des wilders pour bien manger."
-    />
+    <meta property="og:description" content="L'application essentielle des wilders pour bien manger." />
 
     <link rel="shortcut icon" href="img/wildeats.svg" type="image/svg" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
     <link rel="stylesheet" href="style/style.css" />
+
   </head>
 
   <body>
+
     <header>
-      <div>Wild Eats logo placeholder</div>
-      <p>Wild Eats text-logo placeholder</p>
+
+      <div><img src="img/wildeats.svg" alt="Wild Eats icon" class="app-icon"></div>
+      <div><img src="img/wildeats-text.svg" alt="Wild Eats icon text" class="app-icon-text"></div>
+
       <nav>
         <div class="item">
-          <span class="material-symbols-rounded">home</span
-          ><span class="label">Accueil</span>
+          <span class="material-symbols-rounded">home</span>
+          <span class="label">Accueil</span>
         </div>
         <div class="item">
-          <span class="material-symbols-rounded">search</span
-          ><span class="label">Recherche</span>
+          <span class="material-symbols-rounded">search</span>
+          <span class="label">Recherche</span>
         </div>
         <div class="item">
-          <span class="material-symbols-rounded">menu</span
-          ><span class="label">Menu</span>
+          <span class="material-symbols-rounded">menu</span>
+          <span class="label">Menu</span>
         </div>
       </nav>
+
     </header>
 
     <main>
+
       <section id="catchphrase" class="hidden">
         <h1>L'application essentielle des wilders pour bien manger&nbsp;!</h1>
       </section>
+
       <section id="mobileFilterBar" class="hidden hiddenMobile">
         Revenir aux options de recherche
       </section>
+
       <section id="filterForm">
         <fieldset id="restaurantTypes">
           <legend>Choisissez un ou plusieurs types d'établissement :</legend>
@@ -112,7 +113,6 @@
           <legend>Configurez vos options de recherche :</legend>
           <div>
             <label for="veggieSelect">Végétarien/Vegan ?</label>
-
             <select id="veggieSelect">
               <option value="veggie1">Peu importe</option>
               <option value="veggie2">Quelques plats végé</option>
@@ -122,7 +122,6 @@
           </div>
           <div>
             <label for="budgetSelect">Pour quel budget ?</label>
-
             <select id="budgetSelect">
               <option value="budget1">Peu importe</option>
               <option value="budget2">Moins de 30&euro; par personne</option>
@@ -131,10 +130,7 @@
             </select>
           </div>
           <div>
-            <label for="proximitySelect"
-              >&Agrave; quelle distance du campus ?</label
-            >
-
+            <label for="proximitySelect">&Agrave; quelle distance du campus ?</label>
             <select id="proximitySelect">
               <option value="proximity1">Peu importe</option>
               <option value="proximity2">Moins de 30min (voiture)</option>
@@ -144,7 +140,6 @@
           </div>
           <fieldset id="modalities">
             <legend>Modalités de service ?</legend>
-
             <div>
               <input type="checkbox" id="spot" name="spot" />
               <label for="spot">Sur place</label>
@@ -158,35 +153,26 @@
               <label for="delivery">Livraison</label>
             </div>
           </fieldset>
-          <input
-            id="searchButton"
-            type="submit"
-            value="Lancer la recherche&nbsp;!"
-          />
+          <input id="searchButton" type="submit" value="Lancer la recherche&nbsp;!" />
         </fieldset>
       </section>
+
       <section id="stickersSlider" class="hiddenMobile">
         <div id="leftStickerSpot">
           <button id="leftSticker" class="arrow">&#11164;</button>
         </div>
-
         <div id="rightStickerSpot">
           <button id="rightSticker" class="arrow">&#11166;</button>
         </div>
-
         <div id="stickersGrid">
           <div class="sticker slot1" id="antilopeSticker">
             <img src="img/antilope-01.jpeg" />
             <p>Antilope Grill</p>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(658 avis)</p>
-            <p>
-              &ldquo; Venez déguster les meilleurs plats de l'ouest
-              sauvage&nbsp;! &rdquo;
-            </p>
+            <p>&ldquo; Venez déguster les meilleurs plats de l'ouest sauvage&nbsp;! &rdquo;</p>
             <p>Cliquez pour plus d'informations&nbsp;!</p>
           </div>
-
           <div class="sticker slot2" id="casaSticker">
             <img src="img/casa-01.jpg" />
             <p>La Casa de Juan</p>
@@ -195,42 +181,30 @@
             <p>&ldquo; Le Mexique au bout de VOTRE rue&nbsp;! &rdquo;</p>
             <p>Cliquez pour plus d'informations&nbsp;!</p>
           </div>
-
           <div class="sticker slot3" id="nonabatSticker">
             <img src="img/nonabat-01.jpeg" />
             <p>Le Non-Abattoir</p>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(658 avis)</p>
-            <p>
-              &ldquo; Vous détestez la cruauté envers les animaux&nbsp;? Nous
-              aussi. &rdquo;
-            </p>
+            <p>&ldquo; Vous détestez la cruauté envers les animaux&nbsp;? Nous aussi. &rdquo;</p>
             <p>Cliquez pour plus d'informations&nbsp;!</p>
           </div>
-
           <div class="sticker slot4" id="kingSticker">
             <img src="img/king-01.jpeg" />
             <p>Le King's Pub</p>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(658 avis)</p>
-            <p>
-              &ldquo; Quoi de plus naturel qu'une pub pour un pub&nbsp;? &rdquo;
-            </p>
+            <p>&ldquo; Quoi de plus naturel qu'une pub pour un pub&nbsp;? &rdquo;</p>
             <p>Cliquez pour plus d'informations&nbsp;!</p>
           </div>
-
           <div class="sticker slot5" id="greenSticker">
             <img src="img/green-01.jpeg" />
             <p>MacGreen</p>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(658 avis)</p>
-            <p>
-              &ldquo; Ce n'est pas parce qu'on est pressé qu'on doit manger de
-              la viande&nbsp;! &rdquo;
-            </p>
+            <p>&ldquo; Ce n'est pas parce qu'on est pressé qu'on doit manger de la viande&nbsp;! &rdquo;</p>
             <p>Cliquez pour plus d'informations&nbsp;!</p>
           </div>
-
           <div class="sticker slot6" id="schnellSticker">
             <img src="img/schnell-01.jpeg" />
             <p>Schnell</p>
@@ -239,18 +213,14 @@
             <p>&ldquo; J'ai pas le time&nbsp;!!!! &rdquo;</p>
             <p>Cliquez pour plus d'informations&nbsp;!</p>
           </div>
-
           <div class="sticker slot7" id="jackpotSticker">
             <img src="img/jackpot-01.jpg" />
             <p>Cafeteria Jackpot</p>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(658 avis)</p>
-            <p>
-              &ldquo; &Ccedil;a ne coute pas plus cher de bien manger. &rdquo;
-            </p>
+            <p>&ldquo; &Ccedil;a ne coute pas plus cher de bien manger. &rdquo;</p>
             <p>Cliquez pour plus d'informations&nbsp;!</p>
           </div>
-
           <div class="sticker slot8" id="courseSticker">
             <img src="img/course-01.jpg" />
             <p>La Course</p>
@@ -259,26 +229,20 @@
             <p>&ldquo; La bonne bidoche&nbsp;? C'est là. &rdquo;</p>
             <p>Cliquez pour plus d'informations&nbsp;!</p>
           </div>
-
           <div class="sticker slot9" id="lotusSticker">
             <img src="img/lotus-01.jpeg" />
             <p>Le Lotus Bleu</p>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(658 avis)</p>
-            <p>
-              &ldquo; Lao-Tzeu l'a dit&nbsp;: il faut trouver la voie... &rdquo;
-            </p>
+            <p>&ldquo; Lao-Tzeu l'a dit&nbsp;: il faut trouver la voie... &rdquo;</p>
             <p>Cliquez pour plus d'informations&nbsp;!</p>
           </div>
-
           <div class="sticker slot10" id="bamacoSticker">
             <img src="img/bamaco-01.jpg" />
             <p>Le Dimanche à Bamaco</p>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(658 avis)</p>
-            <p>
-              &ldquo; Spécialités du Mali et de toute l'Afrique&nbsp;! &rdquo;
-            </p>
+            <p>&ldquo; Spécialités du Mali et de toute l'Afrique&nbsp;! &rdquo;</p>
             <p>Cliquez pour plus d'informations&nbsp;!</p>
           </div>
         </div>
@@ -288,38 +252,27 @@
         <article id="steaksArticle" class="presentation">
           <h2>Grill Steaks</h2>
           <div class="general">
-            <img src="" />
-            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
-            <p>(? avis)</p>
-            <p>
-              &ldquo;&nbsp;Le choix de la viande de qualité&nbsp;!&nbsp;&rdquo;
-            </p>
+            <img src="img/grill-steack1.png" alt="Image du restaurant Grill Steaks"/>
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(253 avis)</p>
+            <p>&ldquo;&nbsp;Le choix de la viande de qualité&nbsp;!&nbsp;&rdquo;</p>
           </div>
           <div class="infos">
             <p><span>Tags :</span> Brasserie</p>
-            <p>
-              <span>Adresse :</span> 101 Bd Gustave Flaubert, 63000
-              Clermont-Ferrand
-            </p>
+            <p><span>Adresse :</span> 101 Bd Gustave Flaubert, 63000 Clermont-Ferrand</p>
             <p>&#128382; 06 39 49 39 49</p>
-            <p>
-              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
-              puis de 18h à 23h
-            </p>
+            <p><span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h, puis de 18h à 23h</p>
             <p><span>Service :</span> Sur place</p>
             <p><span>Prix :</span> Menus à partir de 15&euro;</p>
             <p>Pas de plats végétariens</p>
           </div>
           <div class="presentationText">
-            <p>
-              Grill Steaks est un restaurant de grill. Viandes cuites au feu de
-              bois pour une viande grillé avec un goût incomparable.
-            </p>
+            <p>Grill Steaks est un restaurant de grill. Viandes cuites au feu de bois pour une viande grillé avec un goût incomparable.</p>
           </div>
           <div class="imageGrid hiddenMobile">
-            <div class="spot1"><img src="" /></div>
-            <div class="spot2"><img src="" /></div>
-            <div class="spot3"><img src="" /></div>
+            <div class="spot1"><img src="img/grill-steack2.png" alt="Image du restaurant Grill Steaks"/></div>
+            <div class="spot2"><img src="img/grill-steack3.png" alt="Image du restaurant Grill Steaks"/></div>
+            <div class="spot3"><img src="img/grill-steack4.png" alt="Image du restaurant Grill Steaks"/></div>
           </div>
           <button class="returnButton">Retour</button>
         </article>
@@ -327,45 +280,27 @@
         <article id="rapidArticle" class="presentation">
           <h2>Rapid Diner</h2>
           <div class="general">
-            <img src="" />
-            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
-            <p>(? avis)</p>
-            <p>
-              &ldquo;&nbsp;De bons plats rapides aux meilleurs
-              prix.&nbsp;&rdquo;
-            </p>
+            <img src="img/rapid-diner1.png" alt="Image du restaurant Rapid Diner"/>
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(150 avis)</p>
+            <p>&ldquo;&nbsp;De bons plats rapides aux meilleurs prix.&nbsp;&rdquo;</p>
           </div>
           <div class="infos">
             <p><span>Tags :</span> Burger, Fast-food</p>
-            <p>
-              <span>Adresse :</span> 10 Bd Léon Malfreyt, 63000 Clermont-Ferrand
-            </p>
+            <p><span>Adresse :</span> 10 Bd Léon Malfreyt, 63000 Clermont-Ferrand</p>
             <p>&#128382; 06 39 49 39 49</p>
-            <p>
-              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
-              puis de 18h à 23h
-            </p>
-            <p>
-              <span>Service :</span> Sur place, à emporter, ou livraisons
-              possibles
-            </p>
+            <p><span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h, puis de 18h à 23h</p>
+            <p><span>Service :</span> Sur place, à emporter, ou livraisons possibles</p>
             <p><span>Prix :</span> Menus à partir de 10&euro;</p>
             <p>Propose plusieurs menus végétariens et vegans</p>
           </div>
           <div class="presentationText">
-            <p>
-              Rapid Diner est dans la lignée des Diners américains, mais à la
-              française. Ce restaurant propose des hamburgers avec des
-              ingrédients locaux et adapte ses recettes par rapports à ces
-              ingrédients de proximité. Pour les amateurs de la nourriture
-              vegan, Rapid Diner pense également à vous en proposant dans ces
-              menus, différents choix garantis 100% végétarien.
-            </p>
+            <p>Rapid Diner est dans la lignée des Diners américains, mais à la française. Ce restaurant propose des hamburgers avec des ingrédients locaux et adapte ses recettes par rapports à ces ingrédients de proximité. Pour les amateurs de la nourriture vegan, Rapid Diner pense également à vous en proposant dans ces menus, différents choix garantis 100% végétarien.</p>
           </div>
           <div class="imageGrid hiddenMobile">
-            <div class="spot1"><img src="" /></div>
-            <div class="spot2"><img src="" /></div>
-            <div class="spot3"><img src="" /></div>
+            <div class="spot1"><img src="img/rapid-diner2.png" alt="Image du restaurant Rapid Diner"/></div>
+            <div class="spot2"><img src="img/rapid-diner3.png" alt="Image du restaurant Rapid Diner"/></div>
+            <div class="spot3"><img src="img/rapid-diner4.png" alt="Image du restaurant Rapid Diner"/></div>
           </div>
           <button class="returnButton">Retour</button>
         </article>
@@ -373,36 +308,27 @@
         <article id="fugiyamaArticle" class="presentation">
           <h2>Le Fugiyama</h2>
           <div class="general">
-            <img src="" />
+            <img src="img/fugiyama1.png" alt="Image du restaurant Le Fugiyama"/>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
-            <p>(? avis)</p>
+            <p>(582 avis)</p>
             <p>&ldquo;&nbsp;Du Japon dans vos assiettes&nbsp;!&nbsp;&rdquo;</p>
           </div>
           <div class="infos">
             <p><span>Tags :</span> Gastronomique, Asiatique</p>
-            <p>
-              <span>Adresse :</span> 52 Rue des Gras, 63000 Clermont-Ferrand
-            </p>
+            <p><span>Adresse :</span> 52 Rue des Gras, 63000 Clermont-Ferrand</p>
             <p>&#128382; 06 39 49 39 49</p>
-            <p>
-              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
-              puis de 18h à 23h
-            </p>
+            <p><span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h, puis de 18h à 23h</p>
             <p><span>Service :</span> Sur place</p>
-            <p><span>Prix :</span> Menus à partir de 10&euro;</p>
+            <p><span>Prix :</span> Menus à partir de 20&euro;</p>
             <p>Propose quelques plats végétariens</p>
           </div>
           <div class="presentationText">
-            <p>
-              Les saveurs des sauces soja, des sushis, et autres sont
-              disponibles près de chez vous. Plusieurs formules disponibles pour
-              être adaptées à tous.
-            </p>
+            <p>Les saveurs des sauces soja, des sushis, et autres sont disponibles près de chez vous. Plusieurs formules disponibles pour être adaptées à tous.</p>
           </div>
           <div class="imageGrid hiddenMobile">
-            <div class="spot1"><img src="" /></div>
-            <div class="spot2"><img src="" /></div>
-            <div class="spot3"><img src="" /></div>
+            <div class="spot1"><img src="img/fugiyama2.png" alt="Image du restaurant Le Fugiyama"/></div>
+            <div class="spot2"><img src="img/fugiyama3.png" alt="Image du restaurant Le Fugiyama"/></div>
+            <div class="spot3"><img src="img/fugiyama4.png" alt="Image du restaurant Le Fugiyama"/></div>
           </div>
           <button class="returnButton">Retour</button>
         </article>
@@ -410,36 +336,27 @@
         <article id="sombreroArticle" class="presentation">
           <h2>Sombrero</h2>
           <div class="general">
-            <img src="" />
+            <img src="img/sombrero1.png" alt="Image du restaurant Le Sombrero"/>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(? avis)</p>
             <p>&ldquo;&nbsp;Saveurs méxicaines.&nbsp;&rdquo;</p>
           </div>
           <div class="infos">
             <p><span>Tags :</span> Gastronomique, Mexicain</p>
-            <p>
-              <span>Adresse :</span> 9 Rue des Vieillards, 63000
-              Clermont-Ferrand
-            </p>
+            <p><span>Adresse :</span> 9 Rue des Vieillards, 63000 Clermont-Ferrand</p>
             <p>&#128382; 06 39 49 39 49</p>
-            <p>
-              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
-              puis de 18h à 23h
-            </p>
+            <p><span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h, puis de 18h à 23h</p>
             <p><span>Service :</span> Sur place</p>
             <p><span>Prix :</span> Menus à partir de 10&euro;</p>
             <p>Propose quelques plats végétariens</p>
           </div>
           <div class="presentationText">
-            <p>
-              Le mexique s'invite à Clermont-Ferrand et vous partage ses
-              saveurs, ses épices, en quelques mots&nbsp;: sa folie.
-            </p>
+            <p>Le mexique s'invite à Clermont-Ferrand et vous partage ses saveurs, ses épices, en quelques mots&nbsp;: sa folie.</p>
           </div>
           <div class="imageGrid hiddenMobile">
-            <div class="spot1"><img src="" /></div>
-            <div class="spot2"><img src="" /></div>
-            <div class="spot3"><img src="" /></div>
+            <div class="spot1"><img src="img/sombrero2.png" alt="Image du restaurant Le Sombrero"/></div>
+            <div class="spot2"><img src="img/sombrero3.png" alt="Image du restaurant Le Sombrero"/></div>
+            <div class="spot3"><img src="img/sombrero4.png" alt="Image du restaurant Le Sombrero"/></div>
           </div>
           <button class="returnButton">Retour</button>
         </article>
@@ -447,39 +364,27 @@
         <article id="endiveArticle" class="presentation">
           <h2>L'Endive</h2>
           <div class="general">
-            <img src="" />
+            <img src="img/endive1.png" alt="Image du restaurant L\'Endive"/>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(? avis)</p>
             <p>&ldquo;&nbsp;La force nous vient de la nature.&nbsp;&rdquo;</p>
           </div>
           <div class="infos">
             <p><span>Tags :</span> Brasserie, Vegan</p>
-            <p>
-              <span>Adresse :</span> 10 Rue Jules Verne, 63100 Clermont-Ferrand
-            </p>
+            <p><span>Adresse :</span> 10 Rue Jules Verne, 63100 Clermont-Ferrand</p>
             <p>&#128382; 06 39 49 39 49</p>
-            <p>
-              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
-              puis de 18h à 23h
-            </p>
+            <p><span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h, puis de 18h à 23h</p>
             <p><span>Service :</span> Sur place</p>
             <p><span>Prix :</span> Menus à partir de 15&euro;</p>
             <p>Plats et menus vegans uniquement</p>
           </div>
           <div class="presentationText">
-            <p>
-              L'Endive se lance le défi de concilier le style fort de la
-              restauration française avec la conscience écologique du moment, la
-              nourriture végan. Le restaurant revisite les plats emblématique
-              des Brasseries en utilisant des ingrédients 100% végétarien. Dans
-              cet optique éco-responsable, l'Endive fait beaucoup en matière
-              anti-gaspillage.
-            </p>
+            <p>L'Endive se lance le défi de concilier le style fort de la restauration française avec la conscience écologique du moment, la nourriture végan. Le restaurant revisite les plats emblématique des Brasseries en utilisant des ingrédients 100% végétarien. Dans cet optique éco-responsable, l'Endive fait beaucoup en matière anti-gaspillage.</p>
           </div>
           <div class="imageGrid hiddenMobile">
-            <div class="spot1"><img src="" /></div>
-            <div class="spot2"><img src="" /></div>
-            <div class="spot3"><img src="" /></div>
+            <div class="spot1"><img src="img/endive1.png" alt="Image du restaurant L\'Endive"/></div>
+            <div class="spot2"><img src="img/endive1.png" alt="Image du restaurant L\'Endive"/></div>
+            <div class="spot3"><img src="img/endive1.png" alt="Image du restaurant L\'Endive"/></div>
           </div>
           <button class="returnButton">Retour</button>
         </article>
@@ -487,35 +392,28 @@
         <article id="marioArticle" class="presentation">
           <h2>Pizza Mario</h2>
           <div class="general">
-            <img src="" />
+            <img src="img/mario1.png" alt="Image du restaurant Pizza Mario"/>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(? avis)</p>
             <p>&ldquo;&nbsp;La pizza mieux qu'en Italie.&nbsp;&rdquo;</p>
           </div>
           <div class="infos">
             <p><span>Tags :</span> Pizzeria, Italien</p>
-            <p>
-              <span>Adresse :</span> 36 Av. des Paulines, 63100 Clermont-Ferrand
+            <p><span>Adresse :</span> 36 Av. des Paulines, 63100 Clermont-Ferrand
             </p>
             <p>&#128382; 06 39 49 39 49</p>
-            <p>
-              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
-              puis de 18h à 23h
-            </p>
+            <p><span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h, puis de 18h à 23h</p>
             <p><span>Service :</span> Sur place</p>
             <p><span>Prix :</span> Menus à partir de 15&euro;</p>
             <p>Propose quelques plats végétariens</p>
           </div>
           <div class="presentationText">
-            <p>
-              Les ingrédients pour les pizzas de chez Mario sont choisis avec
-              soin.
-            </p>
+            <p>Les ingrédients pour les pizzas de chez Mario sont choisis avec soin.</p>
           </div>
           <div class="imageGrid hiddenMobile">
-            <div class="spot1"><img src="" /></div>
-            <div class="spot2"><img src="" /></div>
-            <div class="spot3"><img src="" /></div>
+            <div class="spot1"><img src="img/mario2.png" alt="Image du restaurant Pizza Mario"/></div>
+            <div class="spot2"><img src="img/mario3.png" alt="Image du restaurant Pizza Mario"/></div>
+            <div class="spot3"><img src="img/mario4.png" alt="Image du restaurant Pizza Mario"/></div>
           </div>
           <button class="returnButton">Retour</button>
         </article>
@@ -523,36 +421,27 @@
         <article id="louisArticle" class="presentation">
           <h2>Chez Louis</h2>
           <div class="general">
-            <img src="" />
+            <img src=img/louis1.png" alt="Image du restaurant Chez Louis"/>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(? avis)</p>
             <p>&ldquo;&nbsp;La cuisine à la Française.&nbsp;&rdquo;</p>
           </div>
           <div class="infos">
             <p><span>Tags :</span> Cafétéria</p>
-            <p>
-              <span>Adresse :</span> 175 Bd Gustave Flaubert, 63000
-              Clermont-Ferrand
-            </p>
+            <p><span>Adresse :</span> 175 Bd Gustave Flaubert, 63000 Clermont-Ferrand</p>
             <p>&#128382; 06 39 49 39 49</p>
-            <p>
-              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
-              puis de 18h à 23h
-            </p>
+            <p><span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h, puis de 18h à 23h</p>
             <p><span>Service :</span> Sur place</p>
             <p><span>Prix :</span> Menus à partir de 10&euro;</p>
             <p>Propose quelques plats végétariens</p>
           </div>
           <div class="presentationText">
-            <p>
-              Chez Louis vous propose des plats variés avec des ingrédients
-              frais et faits maison.
-            </p>
+            <p>Chez Louis vous propose des plats variés avec des ingrédients frais et faits maison.</p>
           </div>
           <div class="imageGrid hiddenMobile">
-            <div class="spot1"><img src="" /></div>
-            <div class="spot2"><img src="" /></div>
-            <div class="spot3"><img src="" /></div>
+            <div class="spot1"><img src="img/louis2.png" alt="Image du restaurant Chez Louis"/></div>
+            <div class="spot2"><img src="img/louis3.png" alt="Image du restaurant Chez Louis"/></div>
+            <div class="spot3"><img src="img/louis4.png" alt="Image du restaurant Chez Louis"/></div>
           </div>
           <button class="returnButton">Retour</button>
         </article>
@@ -560,21 +449,16 @@
         <article id="empereurArticle" class="presentation">
           <h2>L'Empereur</h2>
           <div class="general">
-            <img src="" />
+            <img src="img/empereur1.png" alt="Image du restaurant L\'Empereur"/>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(? avis)</p>
             <p>&ldquo;&nbsp;Le chic à la Française.&nbsp;&rdquo;</p>
           </div>
           <div class="infos">
             <p><span>Tags :</span> Gastronomique</p>
-            <p>
-              <span>Adresse :</span> 16 Rue Claussmann, 63000 Clermont-Ferrand
-            </p>
+            <p><span>Adresse :</span> 16 Rue Claussmann, 63000 Clermont-Ferrand</p>
             <p>&#128382; 06 39 49 39 49</p>
-            <p>
-              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
-              puis de 18h à 23h
-            </p>
+            <p><span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h, puis de 18h à 23h</p>
             <p><span>Service :</span> Sur place</p>
             <p><span>Prix :</span> Menus à partir de 40&euro;</p>
             <p>Propose quelques plats végétariens</p>
@@ -583,9 +467,9 @@
             <p>Cuisine innovante à la limite de la cuisine fusion.</p>
           </div>
           <div class="imageGrid hiddenMobile">
-            <div class="spot1"><img src="" /></div>
-            <div class="spot2"><img src="" /></div>
-            <div class="spot3"><img src="" /></div>
+            <div class="spot1"><img src="img/empereur2.png" alt="Image du restaurant L\'Empereur"/></div>
+            <div class="spot2"><img src="img/empereur3.png" alt="Image du restaurant L\'Empereur"/></div>
+            <div class="spot3"><img src="img/empereur4.png" alt="Image du restaurant L\'Empereur"/></div>
           </div>
           <button class="returnButton">Retour</button>
         </article>
@@ -593,42 +477,31 @@
         <article id="clubArticle" class="presentation">
           <h2>Club Kebab</h2>
           <div class="general">
-            <img src="" />
+            <img src="img/kebab1.png" alt="Image du restaurant Club Kebab"/>
             <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
             <p>(? avis)</p>
-            <p>
-              &ldquo;&nbsp;Le meilleur Kebab de la région&nbsp;!&nbsp;&rdquo;
-            </p>
+            <p>&ldquo;&nbsp;Le meilleur Kebab de la région&nbsp;!&nbsp;&rdquo;</p>
           </div>
           <div class="infos">
             <p><span>Tags :</span> Kebab, Burger</p>
-            <p>
-              <span>Adresse :</span> 23 Av. de la Margeride, 63000
-              Clermont-Ferrand
-            </p>
+            <p><span>Adresse :</span> 23 Av. de la Margeride, 63000 Clermont-Ferrand</p>
             <p>&#128382; 06 39 49 39 49</p>
-            <p>
-              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
-              puis de 18h à 23h
-            </p>
+            <p><span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h, puis de 18h à 23h</p>
             <p><span>Service :</span> Sur place</p>
             <p><span>Prix :</span> Menus à partir de 10&euro;</p>
             <p>Propose quelques plats végétariens</p>
           </div>
           <div class="presentationText">
-            <p>
-              Club Kebab vous propose une sélection des meilleurs kebabs de la
-              région, ainsi que de très bons clubs sandwichs. Le tout avec des
-              ingrédients de qualité.
-            </p>
+            <p>Club Kebab vous propose une sélection des meilleurs kebabs de la région, ainsi que de très bons clubs sandwichs. Le tout avec des ingrédients de qualité.</p>
           </div>
           <div class="imageGrid hiddenMobile">
-            <div class="spot1"><img src="" /></div>
-            <div class="spot2"><img src="" /></div>
-            <div class="spot3"><img src="" /></div>
+            <div class="spot1"><img src="img/kebab2.png" alt="Image du restaurant Club Kebab"/></div>
+            <div class="spot2"><img src="img/kebab3.png" alt="Image du restaurant Club Kebab"/></div>
+            <div class="spot3"><img src="img/kebab4.png" alt="Image du restaurant Club Kebab"/></div>
           </div>
           <button class="returnButton">Retour</button>
         </article>
+        
         <article id="antilopeArticle" class="presentation">
           <h2>Antilope Grill</h2>
           <div class="general">
