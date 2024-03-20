@@ -19,14 +19,14 @@
   padding: 0;
 }
 
-@media screen and (width >= 1024px) {
-  .hidden {
+@media screen and (width < 1024px) {
+  .hiddenMobile {
     display: none;
   }
 }
 
-@media screen and (width < 1024px) {
-  .hiddenMobile {
+@media screen and (width >= 1024px) {
+  .hidden {
     display: none;
   }
 }
@@ -43,6 +43,11 @@ body {
   background-position: bottom;
   font-family: var(--main-font);
 }
+/* Body Layout (Mobile)
+   --------------------- */
+
+/* Body Layout (Tablet)
+   --------------------- */
 
 /* Body Layout (Desktop)
    --------------------- */
@@ -78,13 +83,13 @@ header {
 }
 
 /* Header Layout (Mobile)
-   ---------------------- */
+   --------------------- */
 
-@media screen and (width < 1024px) {
-  header {
-    height: 25%;
-  }
-}
+/* Header Layout (Tablet)
+   --------------------- */
+
+/* Header Layout (Desktop)
+   --------------------- */
 
 /* Nav Layout
    ----------
@@ -124,7 +129,10 @@ nav {
   border-radius: 5px;
 }
 
-/* Icons & Nav Layout (Tablet)
+/* Nav Layout (Mobile)
+   ------------------- */
+
+/* Nav Layout (Tablet)
    ------------------- */
 
 @media screen and (width >= 1024px) {
@@ -142,16 +150,6 @@ nav {
   .item .label {
     display: inline;
   }
-  .icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .app-icon {
-    width: auto;
-    height: 150px;
-  }  
 }
 
 /* Nav Layout (Desktop)
@@ -174,22 +172,11 @@ nav {
     border-bottom: 3px solid var(--primary-color);
     border-radius: 10px;
   }
-  .icons {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .app-icon {
-    width: auto;
-    height: 150px;
-    margin: 0 50px;
-  }
-  
 }
 
-/* Main Mobile Layout
-  -------------------
-  ------------------- */
+/* Mobile Main Layout
+   ------------------
+   ------------------ */
 
 @media screen and (width < 1024px) {
   #catchphrase {
@@ -318,12 +305,12 @@ nav {
   }
 }
 
-/* Stickers Slider Layout
-  -----------------------
-  ----------------------- */
+/* Filter Form Layout (Desktop)
+   ---------------------------- */
 
-/* Stickers Slider Layout (Mobile)
-  -------------------------------- */
+/* Mobile Stickers Slider Layout
+  ------------------------------
+  ------------------------------ */
 
 @media screen and (width < 1024px) {
   #stickersSlider {
@@ -470,10 +457,10 @@ nav {
   }
 }
 
-/* Stickers Slider Layout (Tablet)
-  -------------------------------- */
+/* Stickers Slider Layout (Desktop)
+  --------------------------------- */
 
-@media screen and (width >= 1024px) {
+@media screen and (width >= 1200px) {
   #stickersSlider {
     display: grid;
     grid-template-columns: 0.09fr 1fr 0.09fr;
@@ -614,83 +601,78 @@ nav {
   }
 }
 
-/* Presentation Window Layout
-   --------------------------
-   -------------------------- */
+/* Mobile Presentation Window Layout
+   ---------------------------------
+   --------------------------------- */
 
-/* Presentation Window Layout (Mobile)
-   ----------------------------------- */
+#presentationWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 85%;
+  border-radius: 1rem;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  margin: auto;
+  padding: 1rem;
+}
 
-@media screen and (width < 1024px) {
-  #presentationWindow {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 85%;
-    border-radius: 1rem;
-    background-color: var(--primary-color);
-    color: var(--primary-text-color);
-    margin: auto;
-    padding: 1rem;
-  }
+#presentationWindow article {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
 
-  #presentationWindow article {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-  }
+#presentationWindow article img {
+  width: 100%;
+  margin-top: 0.5rem;
+}
 
-  #presentationWindow article img {
-    width: 100%;
-    margin-top: 0.5rem;
-  }
+.general p:nth-of-type(1) {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
 
-  .general p:nth-of-type(1) {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-  }
+.general p:nth-of-type(2) {
+  font-style: italic;
+}
 
-  .general p:nth-of-type(2) {
-    font-style: italic;
-  }
+.general p:nth-of-type(3) {
+  font-size: 1.3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 
-  .general p:nth-of-type(3) {
-    font-size: 1.3rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
+.infos {
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 
-  .infos {
-    background-color: var(--primary-color);
-    border-radius: 1rem;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
+.infos span {
+  font-weight: 600;
+}
 
-  .infos span {
-    font-weight: 600;
-  }
+.presentationText {
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  overflow: auto;
+}
 
-  .presentationText {
-    background-color: var(--primary-color);
-    border-radius: 1rem;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    overflow: auto;
-  }
-
-  #presentationWindow button {
-    margin-top: 0.5rem;
-    padding: 0.3rem 0 0.4rem 0;
-    background-color: var(--secondary-color);
-    border: none;
-    border-radius: 1rem;
-    color: var(--secondary-text-color);
-    font-size: 1rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
-  }
+#presentationWindow button {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0 0.4rem 0;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 1rem;
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
 }
