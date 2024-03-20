@@ -278,7 +278,7 @@ nav {
 /* Filter Form Layout (Tablet)
    --------------------------- */
 
-@media screen and (width >= 1024px) {
+@media screen and (width >= 1024px) and (width <= 1200px) {
   #filterForm {
     background-color: var(--primary-color);
     margin: 3rem;
@@ -286,6 +286,11 @@ nav {
     grid-template-areas: "left right";
     grid-template-columns: repeat(2, 1fr);
     font-size: 1.3rem;
+    border-radius: 1rem;
+  }
+
+  fieldset {
+    border-radius: 1rem;
   }
 
   #restaurantTypes {
@@ -303,14 +308,99 @@ nav {
     padding: 1rem;
     margin: 1rem 1rem 1rem 0;
   }
+  #filterOptions select {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #modalities {
+    padding-top: 0.5rem;
+  }
+
+  #modalities div {
+    padding: 0 0 0.5rem 0.5rem;
+  }
+
+  #searchButton {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0 0.4rem 0;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 1rem;
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  }
 }
 
 /* Filter Form Layout (Desktop)
    ---------------------------- */
 
-/* Mobile Stickers Slider Layout
-  ------------------------------
-  ------------------------------ */
+@media screen and (width > 1200px) {
+  #filterForm {
+    background-color: var(--primary-color);
+    margin: 3rem;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.3rem;
+    border-radius: 1rem;
+  }
+
+  fieldset {
+    border-radius: 1rem;
+  }
+
+  #restaurantTypes {
+    grid-area: left;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  #restaurantTypes div {
+    margin-bottom: 0.5rem;
+  }
+
+  #filterOptions {
+    grid-area: right;
+    padding: 1rem;
+    margin: 1rem 1rem 1rem 0;
+  }
+  #filterOptions select {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #modalities {
+    padding-top: 0.5rem;
+  }
+
+  #modalities div {
+    padding: 0 0 0.5rem 0.5rem;
+  }
+
+  #searchButton {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0 0.4rem 0;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 1rem;
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  }
+}
+
+/* Stickers Slider Layout
+   ----------------------
+   ---------------------- */
+
+/* Stickers Slider Layout (Mobile)
+  --------------------------------- */
 
 @media screen and (width < 1024px) {
   #stickersSlider {
@@ -457,10 +547,155 @@ nav {
   }
 }
 
+/* Stickers Slider Layout (Tablet)
+  --------------------------------- */
+
+@media screen and (width >= 1024px) and (width <= 1200px) {
+  #stickersSlider {
+    display: grid;
+    grid-template-columns: 0.09fr 1fr 0.09fr;
+  }
+
+  #stickersSlider.hidden {
+    display: grid;
+    grid-template-columns: 0.09fr 1fr 0.09fr;
+  }
+
+  #leftStickerSpot,
+  #rightStickerSpot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #leftStickerSpot {
+    grid-row: 1 / span 3;
+    grid-column: 1;
+  }
+
+  #rightStickerSpot {
+    grid-row: 1 / span 3;
+    grid-column: 3;
+  }
+
+  #stickersSlider button.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 650;
+    background-color: var(--secondary-color);
+    border: 0.15rem solid var(--secondary-color);
+    color: var(--secondary-text-color);
+  }
+
+  #stickersSlider button.arrow:hover {
+    background-color: var(--secondary-text-color);
+    border: 0.15rem solid var(--secondary-text-color);
+    color: var(--secondary-color);
+  }
+
+  #stickersGrid {
+    display: grid;
+    grid-template-areas: "a b c d" "e f g h" "i j . .";
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .slot1 {
+    grid-area: a;
+  }
+
+  .slot2 {
+    grid-area: b;
+  }
+
+  .slot3 {
+    grid-area: c;
+  }
+
+  .slot4 {
+    grid-area: d;
+  }
+
+  .slot5 {
+    grid-area: e;
+    display: none;
+  }
+
+  .slot6 {
+    grid-area: f;
+    display: none;
+  }
+
+  .slot7 {
+    grid-area: g;
+    display: none;
+  }
+
+  .slot8 {
+    grid-area: h;
+    display: none;
+  }
+
+  .slot9 {
+    grid-area: i;
+    display: none;
+  }
+
+  .slot10 {
+    grid-area: j;
+    display: none;
+  }
+
+  .sticker {
+    background-color: var(--primary-color);
+    height: 25rem;
+    border-radius: 1rem;
+  }
+
+  .sticker p {
+    text-align: center;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .sticker p:nth-of-type(1) {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .sticker p:nth-of-type(2) {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+  }
+
+  .sticker p:nth-of-type(3) {
+    font-style: italic;
+  }
+
+  .sticker p:nth-of-type(4) {
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .sticker p:nth-of-type(5) {
+    font-style: italic;
+  }
+
+  .sticker img {
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+  }
+}
+
 /* Stickers Slider Layout (Desktop)
   --------------------------------- */
 
-@media screen and (width >= 1200px) {
+@media screen and (width > 1200px) {
   #stickersSlider {
     display: grid;
     grid-template-columns: 0.09fr 1fr 0.09fr;
@@ -601,78 +836,236 @@ nav {
   }
 }
 
-/* Mobile Presentation Window Layout
-   ---------------------------------
-   --------------------------------- */
+/* Presentation Window Layout
+   --------------------------
+   -------------------------- */
 
-#presentationWindow {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  height: 85%;
-  border-radius: 1rem;
-  background-color: var(--primary-color);
-  color: var(--primary-text-color);
-  margin: auto;
-  padding: 1rem;
+/* Presentation Window Layout (Mobile)
+   ----------------------------------- */
+
+@media screen and (width < 1024px) {
+  #presentationWindow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 85%;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    margin: auto;
+    padding: 1rem;
+  }
+
+  #presentationWindow article {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #presentationWindow article img {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .general p:nth-of-type(1) {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+  }
+
+  .general p:nth-of-type(2) {
+    font-style: italic;
+  }
+
+  .general p:nth-of-type(3) {
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .infos {
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .infos span {
+    font-weight: 600;
+  }
+
+  .presentationText {
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    overflow: auto;
+  }
+
+  #presentationWindow button {
+    margin-top: 0.5rem;
+    padding: 0.3rem 0 0.4rem 0;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 1rem;
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  }
 }
 
-#presentationWindow article {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+/* Presentation Window Layout (Tablet)
+   ----------------------------------- */
+
+@media screen and (width >= 1024px) and (width <= 1200px) {
+  #presentationWindow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 85%;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    margin: auto;
+    padding: 1rem;
+  }
+
+  #presentationWindow article {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #presentationWindow article img {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .general p:nth-of-type(1) {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+  }
+
+  .general p:nth-of-type(2) {
+    font-style: italic;
+  }
+
+  .general p:nth-of-type(3) {
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .infos {
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .infos span {
+    font-weight: 600;
+  }
+
+  .presentationText {
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    overflow: auto;
+  }
+
+  #presentationWindow button {
+    margin-top: 0.5rem;
+    padding: 0.3rem 0 0.4rem 0;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 1rem;
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  }
 }
 
-#presentationWindow article img {
-  width: 100%;
-  margin-top: 0.5rem;
-}
+/* Presentation Window Layout (Desktop)
+   ------------------------------------ */
+@media screen and (width > 1200px) {
+  #presentationWindow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 85%;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    margin: auto;
+    padding: 1rem;
+  }
 
-.general p:nth-of-type(1) {
-  color: var(--secondary-color);
-  font-size: 1.5rem;
-}
+  #presentationWindow article {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
 
-.general p:nth-of-type(2) {
-  font-style: italic;
-}
+  #presentationWindow article img {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 
-.general p:nth-of-type(3) {
-  font-size: 1.3rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
+  .general p:nth-of-type(1) {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+  }
 
-.infos {
-  background-color: var(--primary-color);
-  border-radius: 1rem;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-}
+  .general p:nth-of-type(2) {
+    font-style: italic;
+  }
 
-.infos span {
-  font-weight: 600;
-}
+  .general p:nth-of-type(3) {
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 
-.presentationText {
-  background-color: var(--primary-color);
-  border-radius: 1rem;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  overflow: auto;
-}
+  .infos {
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
 
-#presentationWindow button {
-  margin-top: 0.5rem;
-  padding: 0.3rem 0 0.4rem 0;
-  background-color: var(--secondary-color);
-  border: none;
-  border-radius: 1rem;
-  color: var(--secondary-text-color);
-  font-size: 1rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  .infos span {
+    font-weight: 600;
+  }
+
+  .presentationText {
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    overflow: auto;
+  }
+
+  #presentationWindow button {
+    margin-top: 0.5rem;
+    padding: 0.3rem 0 0.4rem 0;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 1rem;
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  }
 }
