@@ -66,6 +66,17 @@ header {
   text-align: center;
 }
 
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.app-icon {
+  width: auto;
+  height: 150px;
+}
+
 /* Header Layout (Mobile)
    ---------------------- */
 
@@ -113,7 +124,7 @@ nav {
   border-radius: 5px;
 }
 
-/* Nav Layout (Tablet)
+/* Icons & Nav Layout (Tablet)
    ------------------- */
 
 @media screen and (width >= 1024px) {
@@ -131,6 +142,16 @@ nav {
   .item .label {
     display: inline;
   }
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .app-icon {
+    width: auto;
+    height: 150px;
+  }  
 }
 
 /* Nav Layout (Desktop)
@@ -153,6 +174,17 @@ nav {
     border-bottom: 3px solid var(--primary-color);
     border-radius: 10px;
   }
+  .icons {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .app-icon {
+    width: auto;
+    height: 150px;
+    margin: 0 50px;
+  }
+  
 }
 
 /* Main Mobile Layout
