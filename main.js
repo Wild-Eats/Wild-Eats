@@ -2,43 +2,76 @@
 // -----------------------
 
 class Restaurant {
-
   constructor(slug) {
-    this.slug = slug
-    this.sticker = document.getElementById(`${this.slug}Sticker`)
-    this.article = document.getElementById(`${this.slug}Article`)
-    this.rating = this.article.children[1].children[1].textContent.length
-    this.tags = this.article.children[2].children[0].textContent.substring(7).split(', ')
-    this.proximity = 0
-    this.price = 0
-    this.vegan = this.idVegan()
-    this.service = []
+    this.slug = slug;
+    this.sticker = document.getElementById(`${this.slug}Sticker`);
+    this.article = document.getElementById(`${this.slug}Article`);
+    this.rating = this.article.children[1].children[1].textContent.length;
+    this.tags = this.article.children[2].children[0].textContent
+      .substring(7)
+      .split(", ");
+    this.proximity = 0;
+    this.price = 0;
+    this.vegan = this.idVegan();
+    this.service = [];
   }
 
   idVegan() {
     switch (this.article.children[2].children[6].textContent) {
       case "Pas de plat végétarien":
-        return 0
+        return 0;
       case "Propose quelques plats végétariens":
-        return 1
+        return 1;
       case "Propose plusieurs menus végétariens et vegans":
-        return 2
+        return 2;
       case "Plats et menus vegans uniquement":
-        return 3
+        return 3;
       default:
-        break
+        break;
     }
   }
-
 }
 
-const slugs = ["steaks", "rapid", "fugiyama", "sombrero", "endive", "mario", "louis", "empereur", "club", "antilope", "casa", "nonabat", "king", "green", "schnell", "jackpot", "course", "lotus", "bamaco", "luigi", "ffk", "grange", "pekin", "bistrot", "criee", "kitchen", "etoile", "salad", "kmburger", "gourmandise", "soixante", "latines"]
-const restaurants = []
+const slugs = [
+  "steaks",
+  "rapid",
+  "fugiyama",
+  "sombrero",
+  "endive",
+  "mario",
+  "louis",
+  "empereur",
+  "club",
+  "antilope",
+  "casa",
+  "nonabat",
+  "king",
+  "green",
+  "schnell",
+  "jackpot",
+  "course",
+  "lotus",
+  "bamako",
+  "luigi",
+  "ffk",
+  "grange",
+  "pekin",
+  "bistrot",
+  "criee",
+  "kitchen",
+  "etoile",
+  "salad",
+  "kmburger",
+  "gourmandise",
+  "soixante",
+  "latines",
+];
+const restaurants = [];
 for (let slug of slugs) {
-  restaurants.push(new Restaurant(slug))
+  restaurants.push(new Restaurant(slug));
 }
 
-console.log(restaurants)
+console.log(restaurants);
 
 // Stickers Slider Feature
 // -----------------------
@@ -55,7 +88,7 @@ const schnellSticker = document.getElementById("schnellSticker");
 const jackpotSticker = document.getElementById("jackpotSticker");
 const courseSticker = document.getElementById("courseSticker");
 const lotusSticker = document.getElementById("lotusSticker");
-const bamacoSticker = document.getElementById("bamacoSticker");
+const bamakoSticker = document.getElementById("bamakoSticker");
 
 const stickerResults = [
   antilopeSticker,
@@ -67,7 +100,7 @@ const stickerResults = [
   jackpotSticker,
   courseSticker,
   lotusSticker,
-  bamacoSticker,
+  bamakoSticker,
 ];
 
 const results = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -146,7 +179,7 @@ const schnellArticle = document.getElementById("schnellArticle");
 const jackpotArticle = document.getElementById("jackpotArticle");
 const courseArticle = document.getElementById("courseArticle");
 const lotusArticle = document.getElementById("lotusArticle");
-const bamacoArticle = document.getElementById("bamacoArticle");
+const bamakoArticle = document.getElementById("bamakoArticle");
 
 const presentationWindow = document.createElement("div");
 presentationWindow.setAttribute("id", "presentationWindow");
