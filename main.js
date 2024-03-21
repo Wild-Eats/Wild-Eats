@@ -80,9 +80,16 @@ for (let slug of slugs) {
 }
 
 // console.log(restaurants);
-const stickerResults = []
+let stickerResults = []
 
 function topRestaurants() {
+  
+  const stickers = document.getElementById('stickersGrid')
+  stickerResults = []
+ 
+  while (stickers.firstChild) {
+    stickers.removeChild(stickers.firstChild);
+  }
 
   let selection = restaurants.slice()
   const proximity = document.getElementById('proximitySelect').value
@@ -171,12 +178,25 @@ function topRestaurants() {
     return result
   })
 
+  selection.sort((a, b) => b.rating - a.rating)
+
+  while (selection.length > 10) {
+    selection.pop()
+  }
+
+  for (let select of selection) {
+      stickerResults.push(select.sticker)
+  }
+
+  for (let i = 0; i < stickerResults.length; i++) {
+    stickerResults[i].classList.add(`slot${i+1}`)
+    stickers.appendChild(stickerResults[i])
+  }
+
   console.log(selection)
+  console.log(stickerResults)
   
 }
-
-// console.log(document.getElementById('proximitySelect').value)
-topRestaurants()
 
 // Stickers Slider Feature
 // -----------------------
@@ -212,6 +232,7 @@ const results = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function stickerSlide(direction) {
   for (let stick of stickerResults) {
+    console.log(stick)
     stick.classList.remove(
       "slot1",
       "slot2",
@@ -240,10 +261,12 @@ function stickerSlide(direction) {
 }
 
 leftSticker.addEventListener("click", () => {
+  console.log('Left')
   stickerSlide(1);
 });
 
 rightSticker.addEventListener("click", () => {
+  console.log('Right')
   stickerSlide(-1);
 });
 
@@ -257,10 +280,15 @@ const stickersSlider = document.getElementById("stickersSlider");
 const searchButton = document.getElementById("searchButton");
 
 searchButton.addEventListener("click", () => {
-  catchphrase.classList.add("hiddenMobile");
-  filterForm.classList.add("hiddenMobile");
-  mobileFilterBar.classList.remove("hiddenMobile");
-  stickersSlider.classList.remove("hiddenMobile");
+  topRestaurants()
+  if (stickerResults.length > 0) {
+    catchphrase.classList.add("hiddenMobile");
+    filterForm.classList.add("hiddenMobile");
+    mobileFilterBar.classList.remove("hiddenMobile");
+    stickersSlider.classList.remove("hiddenMobile");
+  } else {
+    // Afficher modal message qui va avec
+  }
 });
 
 mobileFilterBar.addEventListener("click", () => {
