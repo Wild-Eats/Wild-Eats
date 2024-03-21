@@ -79,19 +79,39 @@ for (let slug of slugs) {
   restaurants.push(new Restaurant(slug));
 }
 
-// console.log(restaurants);
+
+const stickers = document.getElementById('stickersGrid')
+
 let stickerResults = []
+
+let selection = restaurants.slice()
+
+selection.sort((a, b) => b.rating - a.rating)
+
+while (selection.length > 10) {
+  selection.pop()
+}
+
+for (let select of selection) {
+    stickerResults.push(select.sticker)
+}
+
+for (let i = 0; i < stickerResults.length; i++) {
+  stickerResults[i].classList.add(`slot${i+1}`)
+  stickers.appendChild(stickerResults[i])
+}
+
+
 
 function topRestaurants() {
   
-  const stickers = document.getElementById('stickersGrid')
   stickerResults = []
  
   while (stickers.firstChild) {
     stickers.removeChild(stickers.firstChild);
   }
 
-  let selection = restaurants.slice()
+  selection = restaurants.slice()
   const proximity = document.getElementById('proximitySelect').value
   selection = selection.filter((restaurant) => {
     switch (proximity) {
@@ -188,14 +208,29 @@ function topRestaurants() {
       stickerResults.push(select.sticker)
   }
 
+  results = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  for (let restaurant of restaurants) {
+    restaurant.sticker.classList.remove(
+      "slot1",
+      "slot2",
+      "slot3",
+      "slot4",
+      "slot5",
+      "slot6",
+      "slot7",
+      "slot8",
+      "slot9",
+      "slot10"
+    );
+  }
+
   for (let i = 0; i < stickerResults.length; i++) {
     stickerResults[i].classList.add(`slot${i+1}`)
     stickers.appendChild(stickerResults[i])
   }
 
-  console.log(selection)
-  console.log(stickerResults)
-  
+
 }
 
 // Stickers Slider Feature
@@ -204,35 +239,10 @@ function topRestaurants() {
 const leftSticker = document.getElementById("leftSticker");
 const rightSticker = document.getElementById("rightSticker");
 
-// const antilopeSticker = document.getElementById("antilopeSticker");
-// const casaSticker = document.getElementById("casaSticker");
-// const nonabatSticker = document.getElementById("nonabatSticker");
-// const kingSticker = document.getElementById("kingSticker");
-// const greenSticker = document.getElementById("greenSticker");
-// const schnellSticker = document.getElementById("schnellSticker");
-// const jackpotSticker = document.getElementById("jackpotSticker");
-// const courseSticker = document.getElementById("courseSticker");
-// const lotusSticker = document.getElementById("lotusSticker");
-// const bamakoSticker = document.getElementById("bamakoSticker");
-
-// const stickerResults = [
-//   antilopeSticker,
-//   casaSticker,
-//   nonabatSticker,
-//   kingSticker,
-//   greenSticker,
-//   schnellSticker,
-//   jackpotSticker,
-//   courseSticker,
-//   lotusSticker,
-//   bamakoSticker,
-// ];
-
-const results = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let results = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function stickerSlide(direction) {
   for (let stick of stickerResults) {
-    console.log(stick)
     stick.classList.remove(
       "slot1",
       "slot2",

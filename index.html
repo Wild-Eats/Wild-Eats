@@ -30,10 +30,12 @@
 
   <body>
     <header>
-
       <div class="icons">
+
+
         <div><img src="img/wildeats.png" alt="Wild Eats icon" class="app-icon"></div>
         <div><img src="img/wildeats-text.png" alt="Wild Eats icon text" class="app-icon-text"></div>
+
       </div>
 
       <nav>
@@ -65,7 +67,7 @@
         <fieldset id="restaurantTypes">
           <legend>Choisissez un ou plusieurs types d'établissement :</legend>
           <div>
-            <input type="checkbox" id="fast-food" name="fast-food"/>
+            <input type="checkbox" id="fast-food" name="fast-food" />
             <label for="fast-food">Fast-food</label>
           </div>
           <div>
@@ -77,7 +79,11 @@
             <label for="kebab">Kebab</label>
           </div>
           <div>
+
+
+
             <input type="checkbox" id="italian" name="italian"/>
+
             <label for="italian">Italien</label>
           </div>
           <div>
@@ -85,11 +91,11 @@
             <label for="mexican">Mexicain</label>
           </div>
           <div>
-            <input type="checkbox" id="asian" name="asian"/>
+            <input type="checkbox" id="asian" name="asian" />
             <label for="asian">Asiatique</label>
           </div>
           <div>
-            <input type="checkbox" id="african" name="african"/>
+            <input type="checkbox" id="african" name="african" />
             <label for="african">Africain</label>
           </div>
           <div>
@@ -148,15 +154,15 @@
           <fieldset id="modalities">
             <legend>Modalités de service ?</legend>
             <div>
-              <input type="checkbox" id="spot" name="spot" checked/>
+              <input type="checkbox" id="spot" name="spot" checked />
               <label for="spot">Sur place</label>
             </div>
             <div>
-              <input type="checkbox" id="takeAway" name="takeAway" checked/>
+              <input type="checkbox" id="takeAway" name="takeAway" checked />
               <label for="takeAway">&Agrave; emporter</label>
             </div>
             <div>
-              <input type="checkbox" id="delivery" name="delivery" checked/>
+              <input type="checkbox" id="delivery" name="delivery" checked />
               <label for="delivery">Livraison</label>
             </div>
           </fieldset>
@@ -175,105 +181,7 @@
         <div id="rightStickerSpot">
           <button id="rightSticker" class="arrow">&#11166;</button>
         </div>
-        <div id="stickersGrid">
-          <!-- <div class="sticker slot1" id="antilopeSticker">
-            <img src="img/antilope-01.jpeg" />
-            <p>Antilope Grill</p>
-            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
-            <p>(658 avis)</p>
-            <p>
-              &ldquo; Venez déguster les meilleurs plats de l'ouest
-              sauvage&nbsp;! &rdquo;
-            </p>
-            <p>Cliquez pour plus d'informations&nbsp;!</p>
-          </div>
-          <div class="sticker slot2" id="casaSticker">
-            <img src="img/casa-01.jpg" />
-            <p>La Casa de Juan</p>
-            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
-            <p>(658 avis)</p>
-            <p>&ldquo; Le Mexique au bout de VOTRE rue&nbsp;! &rdquo;</p>
-            <p>Cliquez pour plus d'informations&nbsp;!</p>
-          </div>
-          <div class="sticker slot3" id="nonabatSticker">
-            <img src="img/nonabat-01.jpeg" />
-            <p>Le Non-Abattoir</p>
-            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
-            <p>(658 avis)</p>
-            <p>
-              &ldquo; Vous détestez la cruauté envers les animaux&nbsp;? Nous
-              aussi. &rdquo;
-            </p>
-            <p>Cliquez pour plus d'informations&nbsp;!</p>
-          </div>
-          <div class="sticker slot4" id="kingSticker">
-            <img src="img/king-01.jpeg" />
-            <p>Le King's Pub</p>
-            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
-            <p>(658 avis)</p>
-            <p>
-              &ldquo; Quoi de plus naturel qu'une pub pour un pub&nbsp;? &rdquo;
-            </p>
-            <p>Cliquez pour plus d'informations&nbsp;!</p>
-          </div>
-          <div class="sticker slot5" id="greenSticker">
-            <img src="img/green-01.jpeg" />
-            <p>MacGreen</p>
-            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
-            <p>(658 avis)</p>
-            <p>
-              &ldquo; Ce n'est pas parce qu'on est pressé qu'on doit manger de
-              la viande&nbsp;! &rdquo;
-            </p>
-            <p>Cliquez pour plus d'informations&nbsp;!</p>
-          </div>
-          <div class="sticker slot6" id="schnellSticker">
-            <img src="img/schnell-01.jpeg" />
-            <p>Schnell</p>
-            <p>&bigstar;&bigstar;</p>
-            <p>(658 avis)</p>
-            <p>&ldquo; J'ai pas le time&nbsp;!!!! &rdquo;</p>
-            <p>Cliquez pour plus d'informations&nbsp;!</p>
-          </div>
-          <div class="sticker slot7" id="jackpotSticker">
-            <img src="img/jackpot-01.jpg" />
-            <p>Cafeteria Jackpot</p>
-            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
-            <p>(658 avis)</p>
-            <p>
-              &ldquo; &Ccedil;a ne coute pas plus cher de bien manger. &rdquo;
-            </p>
-            <p>Cliquez pour plus d'informations&nbsp;!</p>
-          </div>
-          <div class="sticker slot8" id="courseSticker">
-            <img src="img/course-01.jpg" />
-            <p>La Course</p>
-            <p>&bigstar;&bigstar;&bigstar;</p>
-            <p>(658 avis)</p>
-            <p>&ldquo; La bonne bidoche&nbsp;? C'est là. &rdquo;</p>
-            <p>Cliquez pour plus d'informations&nbsp;!</p>
-          </div>
-          <div class="sticker slot9" id="lotusSticker">
-            <img src="img/lotus-01.jpeg" />
-            <p>Le Lotus Bleu</p>
-            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
-            <p>(658 avis)</p>
-            <p>
-              &ldquo; Lao-Tzeu l'a dit&nbsp;: il faut trouver la voie... &rdquo;
-            </p>
-            <p>Cliquez pour plus d'informations&nbsp;!</p>
-          </div>
-          <div class="sticker slot10" id="bamakoSticker">
-            <img src="img/bamako-01.jpg" />
-            <p>Le Dimanche à Bamako</p>
-            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
-            <p>(658 avis)</p>
-            <p>
-              &ldquo; Spécialités du Mali et de toute l'Afrique&nbsp;! &rdquo;
-            </p>
-            <p>Cliquez pour plus d'informations&nbsp;!</p>
-          </div> -->
-        </div>
+        <div id="stickersGrid"></div>
       </section>
 
       <section class="restaurants hidden hiddenMobile">
@@ -1871,7 +1779,7 @@
 
       <section class="hidden hiddenMobile">
         <div class="sticker" id="steaksSticker">
-          <img />
+          <img src="img/grill-steack1.png" />
           <p>Grill Steaks</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(125 avis)</p>
@@ -1881,7 +1789,7 @@
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
         <div class="sticker" id="rapidSticker">
-          <img />
+          <img src="img/rapid-diner1.png" />
           <p>Rapid Diner</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(1337 avis)</p>
@@ -1891,7 +1799,7 @@
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
         <div class="sticker" id="fugiyamaSticker">
-          <img />
+          <img src="img/fugiyama1.png" />
           <p>Le Fugiyama</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(6145 avis)</p>
@@ -1899,7 +1807,7 @@
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
         <div class="sticker" id="sombreroSticker">
-          <img />
+          <img src="img/sombrero1.png" />
           <p>Sombrero</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(123 avis)</p>
@@ -1907,7 +1815,7 @@
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
         <div class="sticker" id="endiveSticker">
-          <img />
+          <img src="img/endive1.png" />
           <p>L'Endive</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(800 avis)</p>
@@ -1915,7 +1823,7 @@
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
         <div class="sticker" id="marioSticker">
-          <img />
+          <img src="img/antilope-01.jpeg" />
           <p>Pizza Mario</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(99 avis)</p>
@@ -1923,7 +1831,7 @@
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
         <div class="sticker" id="louisSticker">
-          <img />
+          <img src="img/mario1.png" />
           <p>Chez Louis</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(498 avis)</p>
@@ -1931,7 +1839,7 @@
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
         <div class="sticker" id="empereurSticker">
-          <img />
+          <img src="img/empereur1.png" />
           <p>L'Empereur</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(4000 avis)</p>
@@ -1939,7 +1847,7 @@
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
         <div class="sticker" id="clubSticker">
-          <img />
+          <img src="img/kebab1.png" />
           <p>Club Kebab</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(987 avis)</p>
@@ -1953,7 +1861,8 @@
           <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(658 avis)</p>
           <p>
-            &ldquo;&nbsp;Venez déguster les meilleurs plats de l'ouest sauvage&nbsp;!&nbsp;&rdquo;
+            &ldquo;&nbsp;Venez déguster les meilleurs plats de l'ouest
+            sauvage&nbsp;!&nbsp;&rdquo;
           </p>
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
@@ -1963,7 +1872,9 @@
           <p>La Casa de Juan</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(1215 avis)</p>
-          <p>&ldquo;&nbsp;Le Mexique au bout de VOTRE rue&nbsp;!&nbsp;&rdquo;</p>
+          <p>
+            &ldquo;&nbsp;Le Mexique au bout de VOTRE rue&nbsp;!&nbsp;&rdquo;
+          </p>
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
 
@@ -1973,7 +1884,8 @@
           <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(29 avis)</p>
           <p>
-            &ldquo;&nbsp;Vous détestez la cruauté envers les animaux&nbsp;? Nous aussi.&nbsp;&rdquo;
+            &ldquo;&nbsp;Vous détestez la cruauté envers les animaux&nbsp;? Nous
+            aussi.&nbsp;&rdquo;
           </p>
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
@@ -1983,7 +1895,10 @@
           <p>Le King's Pub</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(745 avis)</p>
-          <p>&ldquo;&nbsp;Quoi de plus naturel qu'une pub pour un pub&nbsp;?&nbsp;&rdquo;</p>
+          <p>
+            &ldquo;&nbsp;Quoi de plus naturel qu'une pub pour un
+            pub&nbsp;?&nbsp;&rdquo;
+          </p>
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
 
@@ -1993,8 +1908,8 @@
           <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(255 avis)</p>
           <p>
-            &ldquo;&nbsp;Ce n'est pas parce qu'on est pressé qu'on doit manger de
-            la viande&nbsp;!&nbsp;&rdquo;
+            &ldquo;&nbsp;Ce n'est pas parce qu'on est pressé qu'on doit manger
+            de la viande&nbsp;!&nbsp;&rdquo;
           </p>
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
@@ -2014,7 +1929,8 @@
           <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(7777 avis)</p>
           <p>
-            &ldquo;&nbsp;&Ccedil;a ne coute pas plus cher de bien manger.&nbsp;&rdquo;
+            &ldquo;&nbsp;&Ccedil;a ne coute pas plus cher de bien
+            manger.&nbsp;&rdquo;
           </p>
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
@@ -2033,7 +1949,10 @@
           <p>Le Lotus Bleu</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(2467 avis)</p>
-          <p>&ldquo;&nbsp;Lao-Tzeu l'a dit&nbsp;: il faut trouver la voie...&nbsp;&rdquo;</p>
+          <p>
+            &ldquo;&nbsp;Lao-Tzeu l'a dit&nbsp;: il faut trouver la
+            voie...&nbsp;&rdquo;
+          </p>
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
 
@@ -2042,7 +1961,10 @@
           <p>Le Dimanche à Bamako</p>
           <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
           <p>(813 avis)</p>
-          <p>&ldquo;&nbsp;Spécialités du Mali et de toute l'Afrique&nbsp;!&nbsp;&rdquo;</p>
+          <p>
+            &ldquo;&nbsp;Spécialités du Mali et de toute
+            l'Afrique&nbsp;!&nbsp;&rdquo;
+          </p>
           <p>Cliquez pour plus d'informations&nbsp;!</p>
         </div>
 
