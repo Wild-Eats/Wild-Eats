@@ -87,9 +87,17 @@ header {
 
 /* Header Layout (Tablet)
    --------------------- */
-
-/* Header Layout (Desktop)
+   
+   /* Header Layout (Desktop)
    --------------------- */
+@media screen and (width >= 1024px) {
+  .icons {
+    justify-content: flex-start;
+  }
+  .app-icon {
+    margin: 0 25px;
+  }
+}
 
 /* Nav Layout
    ----------
