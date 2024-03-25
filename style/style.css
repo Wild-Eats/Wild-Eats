@@ -3,9 +3,9 @@
    ------------ */
 
 :root {
-  --primary-color: #EBF5FB;
-  --secondary-color: #3498DB;
-  --tertiary-color: #1B4F72;
+  --primary-color: #ebf5fb;
+  --secondary-color: #3498db;
+  --tertiary-color: #1b4f72;
   --primary-text-color: #000;
   --secondary-text-color: #fff;
   --background-image: url("../img/app-background.jpg");
@@ -193,23 +193,23 @@ nav {
    ------------------
    ------------------ */
 
-   main {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    display: grid;
-    grid-template-rows: auto 1fr;
-    gap: 10px;
-    overflow-y: scroll;
-   }
+main {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  overflow-y: scroll;
+}
 
-  #catchphrase {
-    color: var(--secondary-text-color);
-    margin-top: -20px;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 1rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
-    font-size: 12px;
+#catchphrase {
+  color: var(--secondary-text-color);
+  margin-top: -20px;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  font-size: 12px;
 }
 
 @media screen and (width >= 1024px) {
@@ -261,86 +261,86 @@ nav {
 /* Filter Form Layout (Mobile)
    --------------------------- */
 
-  #filterForm {
-    height: auto;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.25) inset;
-    margin: auto 1rem;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
+#filterForm {
+  height: auto;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.25) inset;
+  margin: auto 1rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-  fieldset {
-    border-radius: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-  }
+fieldset {
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
 
-  fieldset > legend {
-    font-size: 14px;
-  }
+fieldset > legend {
+  font-size: 14px;
+}
 
-  fieldset label {
-    font-size: 12px;
-  }
+fieldset label {
+  font-size: 12px;
+}
 
-  #filterForm.hiddenMobile {
-    display: none;
-  }
+#filterForm.hiddenMobile {
+  display: none;
+}
 
-  #restaurantTypes {
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    display: grid;
-    grid-template: repeat(12, auto) / repeat(2, 1fr);
-  }
+#restaurantTypes {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  display: grid;
+  grid-template: repeat(12, auto) / repeat(2, 1fr);
+}
 
-  #restaurantTypes > div,
-  #modalities > div {
-    margin: 2px;
-    display: flex;
-    align-items: center;
-  }
+#restaurantTypes > div,
+#modalities > div {
+  margin: 2px;
+  display: flex;
+  align-items: center;
+}
 
-  #restaurantTypes label,
-  #modalities label {
-    margin-left: 5px;
-  }
+#restaurantTypes label,
+#modalities label {
+  margin-left: 5px;
+}
 
-  #filterOptions {
-    width: 100%;
-    grid-area: right;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-  }
+#filterOptions {
+  width: 100%;
+  grid-area: right;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
 
-  #filterOptions select {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
+#filterOptions select {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
 
-  #modalities {
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-  }
+#modalities {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
 
-  #searchButton {
-    width: 100%;
-    margin-top: 0.5rem;
-    padding: 0.3rem 0 0.4rem 0;
-    background-color: var(--secondary-color);
-    border: none;
-    border-radius: 1rem;
-    color: var(--secondary-text-color);
-    font-size: 1rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
-  }
+#searchButton {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0 0.4rem 0;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 1rem;
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+}
 
-  /* Filter Form Layout (Tablet)
+/* Filter Form Layout (Tablet)
    --------------------------- */
 
 @media screen and (width >= 1024px) {
@@ -558,7 +558,6 @@ nav {
   #stickersSlider.hidden {
     display: grid;
     grid-template-columns: 0.09fr 1fr 0.09fr;
-
   }
 
   #leftStickerSpot,
@@ -868,6 +867,7 @@ nav {
 
   #presentationWindow article img {
     width: 100%;
+    max-width: 400px;
     margin-top: 0.5rem;
   }
 
@@ -907,7 +907,8 @@ nav {
 
   #presentationWindow button {
     margin-top: 0.5rem;
-    padding: 0.3rem 0 0.4rem 0;
+    margin: auto;
+    padding: 0.5rem 2rem 0.5rem 2rem;
     background-color: var(--secondary-color);
     border: none;
     border-radius: 1rem;
@@ -931,8 +932,8 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    height: 85%;
+    width: 95%;
+    height: 90%;
     border-radius: 1rem;
     background-color: var(--primary-color);
     color: var(--primary-text-color);
@@ -952,11 +953,12 @@ nav {
 
   #presentationWindow h2 {
     grid-area: title;
+    font-size: 3rem;
   }
 
   #presentationWindow article img {
     width: 100%;
-    margin-top: 0.5rem;
+    max-width: 300px;
   }
 
   .general {
@@ -975,15 +977,16 @@ nav {
   .general p:nth-of-type(3) {
     font-size: 1.3rem;
     padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
   }
 
   .infos {
     grid-area: infos;
     background-color: var(--primary-color);
     border-radius: 1rem;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .infos span {
@@ -994,18 +997,20 @@ nav {
     grid-area: text;
     background-color: var(--primary-color);
     border-radius: 1rem;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     overflow: auto;
   }
 
   #presentationWindow .returnButton {
     grid-area: return;
-    margin-top: 0.5rem;
-    padding: 0.3rem 0 0.4rem 0;
+    margin: auto;
+    padding: 0.5rem 2rem 0.5rem 2rem;
     background-color: var(--secondary-color);
     border: none;
-    border-radius: 1rem;
+    border-radius: 2rem;
     color: var(--secondary-text-color);
     font-size: 1rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
@@ -1017,21 +1022,20 @@ nav {
     grid-template-areas: "a" "b" "c";
     grid-template-columns: 1fr;
     gap: 0.2rem;
-    margin-top: 1rem;
   }
 
-  .leftGallerySpot,
-  .rightGallerySpot {
+  .upGallerySpot,
+  .downGallerySpot {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .leftGallerySpot {
+  .upGallerySpot {
     grid-area: a;
   }
 
-  .rightGallerySpot {
+  .downGallerySpot {
     grid-area: c;
   }
 
@@ -1083,14 +1087,15 @@ nav {
 
 /* Presentation Window Layout (Desktop)
    ------------------------------------ */
+
 @media screen and (width > 1200px) {
   #presentationWindow {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    height: 85%;
+    width: 95%;
+    height: 90%;
     border-radius: 1rem;
     background-color: var(--primary-color);
     color: var(--primary-text-color);
@@ -1102,13 +1107,24 @@ nav {
     width: 100%;
     height: 100%;
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: "title title title" "general infos infos" "text text image" ". return .";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  #presentationWindow h2 {
+    grid-area: title;
+    font-size: 3rem;
   }
 
   #presentationWindow article img {
     width: 100%;
-    margin-top: 0.5rem;
+    max-width: 300px;
+  }
+
+  .general {
+    grid-area: general;
   }
 
   .general p:nth-of-type(1) {
@@ -1123,14 +1139,16 @@ nav {
   .general p:nth-of-type(3) {
     font-size: 1.3rem;
     padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
   }
 
   .infos {
+    grid-area: infos;
     background-color: var(--primary-color);
     border-radius: 1rem;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .infos span {
@@ -1138,21 +1156,93 @@ nav {
   }
 
   .presentationText {
+    grid-area: text;
     background-color: var(--primary-color);
     border-radius: 1rem;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     overflow: auto;
   }
 
-  #presentationWindow button {
-    margin-top: 0.5rem;
-    padding: 0.3rem 0 0.4rem 0;
+  #presentationWindow .returnButton {
+    grid-area: return;
+    margin: auto;
+    padding: 0.5rem 2rem 0.5rem 2rem;
     background-color: var(--secondary-color);
     border: none;
     border-radius: 1rem;
     color: var(--secondary-text-color);
     font-size: 1rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+  }
+
+  .imageGrid {
+    grid-area: image;
+    display: grid;
+    grid-template-areas: "a" "b" "c";
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .upGallerySpot,
+  .downGallerySpot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .upGallerySpot {
+    grid-area: a;
+  }
+
+  .downGallerySpot {
+    grid-area: c;
+  }
+
+  .imageGrid button.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 650;
+    background-color: var(--secondary-color);
+    border: 0.15rem solid var(--secondary-color);
+    color: var(--secondary-text-color);
+  }
+
+  .imageGrid button.arrow:hover {
+    background-color: var(--secondary-text-color);
+    border: 0.15rem solid var(--secondary-text-color);
+    color: var(--secondary-color);
+  }
+
+  .galleryGrid {
+    grid-area: b;
+    display: grid;
+    grid-template-areas: "a" "b" "c";
+    grid-template-columns: 1fr;
+  }
+
+  .galleryGrid img {
+    width: 100%;
+  }
+
+  .spot1 {
+    grid-area: a;
+  }
+
+  .spot2 {
+    grid-area: b;
+    display: none;
+  }
+
+  .spot3 {
+    grid-area: c;
+    display: none;
   }
 }
