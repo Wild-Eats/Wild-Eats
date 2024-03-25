@@ -283,7 +283,6 @@ rightSticker.addEventListener("click", () => {
 // Mobile Search Filter Bar Feature
 // --------------------------------
 
-const catchphrase = document.getElementById("catchphrase");
 const mobileFilterBar = document.getElementById("mobileFilterBar");
 const filterForm = document.getElementById("filterForm");
 const stickersSlider = document.getElementById("stickersSlider");
@@ -292,7 +291,6 @@ const searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click", () => {
   topRestaurants()
   if (stickerResults.length > 0) {
-    catchphrase.classList.add("hiddenMobile");
     filterForm.classList.add("hiddenMobile");
     mobileFilterBar.classList.remove("hiddenMobile");
     stickersSlider.classList.remove("hiddenMobile");
@@ -302,7 +300,6 @@ searchButton.addEventListener("click", () => {
 });
 
 mobileFilterBar.addEventListener("click", () => {
-  catchphrase.classList.remove("hiddenMobile");
   filterForm.classList.remove("hiddenMobile");
   mobileFilterBar.classList.add("hiddenMobile");
   stickersSlider.classList.add("hiddenMobile");
