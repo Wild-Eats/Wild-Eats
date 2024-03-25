@@ -55,6 +55,7 @@ body::-webkit-scrollbar,
 main::-webkit-scrollbar {
   display: none;
 }
+
 /* Body Layout (Mobile)
    --------------------- */
 
@@ -247,6 +248,7 @@ main {
 
 @media screen and (width < 1024px) {
   #mobileFilterBar {
+    height: 30px;
     background-color: var(--secondary-color);
     color: var(--secondary-text-color);
     margin: 1rem;
@@ -264,6 +266,10 @@ main {
 
 /* Filter Form Layout (Mobile)
    --------------------------- */
+
+#filterForm.hiddenMobile {
+  display: none;
+}
 
 #filterForm {
   height: auto;
@@ -354,6 +360,10 @@ fieldset label {
     grid-template: repeat(2, auto) / 1fr 2fr;
     gap: 10px;
     align-items: flex-start;
+  }
+
+  #filterForm.hiddenMobile {
+    display: grid;
   }
 
   #restaurantTypes {
