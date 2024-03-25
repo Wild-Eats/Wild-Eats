@@ -60,8 +60,8 @@
     </header>
 
     <main>
-      <section id="catchphrase" class="hidden">
-        <h1>L'application essentielle des wilders pour bien manger&nbsp;!</h1>
+      <section id="catchphrase">
+        <h1>L'app des wilders pour bien manger&nbsp;!</h1>
       </section>
 
       <section id="mobileFilterBar" class="hidden hiddenMobile">
@@ -70,7 +70,7 @@
 
       <section id="filterForm">
         <fieldset id="restaurantTypes">
-          <legend>Choisissez un ou plusieurs types d'établissement :</legend>
+          <legend>Choisissez un ou plusieurs types d'établissement</legend>
           <div>
             <input type="checkbox" id="fast-food" name="fast-food" />
             <label for="fast-food">Fast-food</label>
@@ -110,7 +110,7 @@
           </div>
           <div>
             <input type="checkbox" id="gastro" name="gastro" />
-            <label for="gastro">Gastronomique</label>
+            <label for="gastro">Gastro</label>
           </div>
           <div>
             <input type="checkbox" id="diner" name="diner" />
@@ -123,7 +123,22 @@
         </fieldset>
 
         <fieldset id="filterOptions">
-          <legend>Configurez vos options de recherche :</legend>
+          <legend>Options de recherche</legend>
+          <fieldset id="modalities">
+            <legend>Modalités de service</legend>
+            <div>
+              <input type="checkbox" id="spot" name="spot" checked />
+              <label for="spot">Sur place</label>
+            </div>
+            <div>
+              <input type="checkbox" id="takeAway" name="takeAway" checked />
+              <label for="takeAway">&Agrave; emporter</label>
+            </div>
+            <div>
+              <input type="checkbox" id="delivery" name="delivery" checked />
+              <label for="delivery">Livraison</label>
+            </div>
+          </fieldset>
           <div>
             <label for="veggieSelect">Végétarien/Vegan ?</label>
             <select id="veggieSelect">
@@ -153,27 +168,12 @@
               <option value="proximity4">Moins de 10min (à pied)</option>
             </select>
           </div>
-          <fieldset id="modalities">
-            <legend>Modalités de service ?</legend>
-            <div>
-              <input type="checkbox" id="spot" name="spot" checked />
-              <label for="spot">Sur place</label>
-            </div>
-            <div>
-              <input type="checkbox" id="takeAway" name="takeAway" checked />
-              <label for="takeAway">&Agrave; emporter</label>
-            </div>
-            <div>
-              <input type="checkbox" id="delivery" name="delivery" checked />
-              <label for="delivery">Livraison</label>
-            </div>
-          </fieldset>
-          <input
-            id="searchButton"
-            type="submit"
-            value="Lancer la recherche&nbsp;!"
-          />
         </fieldset>
+        <input
+          id="searchButton"
+          type="submit"
+          value="Lancer la recherche&nbsp;!"
+        />
       </section>
 
       <section id="stickersSlider" class="hiddenMobile">
