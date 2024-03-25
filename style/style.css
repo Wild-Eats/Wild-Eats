@@ -3,8 +3,10 @@
    ------------ */
 
 :root {
-  --primary-color: #fffffff1;
-  --secondary-color: #4ba6ff;
+
+  --primary-color: #EBF5FB;
+  --secondary-color: #3498DB;
+  --tertiary-color: #1B4F72;
   --primary-text-color: #000;
   --secondary-text-color: #fff;
   --background-image: url("../img/app-background.jpg");
@@ -42,6 +44,13 @@ body {
   background-size: auto 100%;
   background-position: bottom;
   font-family: var(--main-font);
+  display: grid;
+  grid-template-rows: auto 1fr 50px;
+}
+
+body::-webkit-scrollbar,
+main::-webkit-scrollbar {
+  display: none;
 }
 /* Body Layout (Mobile)
    --------------------- */
@@ -66,9 +75,8 @@ header {
   width: 100%;
   height: auto;
   padding: 10px;
-  background: var(--secondary-color);
-  color: var(--secondary-text-color);
-  text-align: center;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .icons {
@@ -79,7 +87,12 @@ header {
 
 .app-icon {
   width: auto;
-  height: 150px;
+  height: 75px;
+}
+
+.app-icon-text {
+  width: auto;
+  height: 50px;
 }
 
 /* Header Layout (Mobile)
@@ -108,6 +121,7 @@ nav {
   height: auto;
   margin-left: -10px;
   padding: 10px;
+  color: var(--secondary-text-color);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -117,14 +131,13 @@ nav {
 }
 
 .item {
-  padding: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
 .item span {
-  font-size: 24px;
+  font-size: 20px;
   padding: 5px;
 }
 
@@ -149,14 +162,11 @@ nav {
     height: 100%;
     right: 0;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
   }
   .item {
     width: 100%;
-  }
-  .item .label {
-    display: inline;
   }
 }
 
@@ -173,12 +183,10 @@ nav {
   }
   .item {
     width: auto;
+    margin: 25px;
   }
-  .item:hover {
-    margin-top: 3px;
-    background: transparent;
-    border-bottom: 3px solid var(--primary-color);
-    border-radius: 10px;
+  .item > .label {
+    display: inline-block;
   }
 }
 
@@ -186,15 +194,47 @@ nav {
    ------------------
    ------------------ */
 
-@media screen and (width < 1024px) {
+   main {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+    overflow-y: scroll;
+   }
+
   #catchphrase {
-    background-color: var(--secondary-color);
     color: var(--secondary-text-color);
-    margin: 1rem;
+    margin-top: -20px;
     padding: 1rem;
     text-align: center;
     border-radius: 1rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+    font-size: 12px;
+}
+
+@media screen and (width >= 1024px) {
+  #catchphrase {
+    height: 99px;
+    color: var(--secondary-text-color);
+    margin: 0;
+    padding: 0 5rem;
+    text-align: center;
+    border-radius: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    inset: 0 0 auto auto;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  #catchphrase {
+    height: auto;
+    align-items: flex-end;
+    top: 50px;
   }
 }
 
@@ -210,7 +250,7 @@ nav {
     padding: 0.5rem;
     border-radius: 1rem;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 12px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
   }
 }
@@ -222,18 +262,30 @@ nav {
 /* Filter Form Layout (Mobile)
    --------------------------- */
 
-@media screen and (width < 1024px) {
   #filterForm {
+    height: auto;
     background-color: var(--primary-color);
-    margin: 1rem;
-    display: grid;
-    grid-template-areas: "left right";
-    grid-template-columns: 0.8fr 1fr;
-    border-radius: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.25) inset;
+    margin: auto 1rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   fieldset {
     border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+  }
+
+  fieldset > legend {
+    font-size: 14px;
+  }
+
+  fieldset label {
+    font-size: 12px;
   }
 
   #filterForm.hiddenMobile {
@@ -241,33 +293,40 @@ nav {
   }
 
   #restaurantTypes {
-    grid-area: left;
-    padding: 0.5rem 0.5rem 0 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
     margin: 0.5rem;
+    display: grid;
+    grid-template: repeat(12, auto) / repeat(2, 1fr);
   }
 
-  #restaurantTypes div {
-    margin-bottom: 0.5rem;
+  #restaurantTypes > div,
+  #modalities > div {
+    margin: 2px;
+    display: flex;
+    align-items: center;
+  }
+
+  #restaurantTypes label,
+  #modalities label {
+    margin-left: 5px;
   }
 
   #filterOptions {
+    width: 100%;
     grid-area: right;
     padding: 0.5rem;
-    margin: 0.5rem 0.5rem 0.5rem 0;
+    margin: 0.5rem 0;
   }
 
   #filterOptions select {
     width: 100%;
-    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
 
   #modalities {
-    padding-top: 0.5rem;
-  }
-
-  #modalities div {
-    padding: 0 0 0.5rem 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
   }
 
   #searchButton {
@@ -281,125 +340,55 @@ nav {
     font-size: 1rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
   }
-}
 
-/* Filter Form Layout (Tablet)
+  /* Filter Form Layout (Tablet)
    --------------------------- */
 
-@media screen and (width >= 1024px) and (width <= 1200px) {
+@media screen and (width >= 1024px) {
   #filterForm {
-    background-color: var(--primary-color);
-    margin: 3rem;
+    margin-bottom: 20px;
     display: grid;
-    grid-template-areas: "left right";
-    grid-template-columns: repeat(2, 1fr);
-    font-size: 1.3rem;
-    border-radius: 1rem;
-  }
-
-  fieldset {
-    border-radius: 1rem;
+    grid-template: repeat(2, auto) / 1fr 2fr;
+    gap: 10px;
+    align-items: flex-start;
   }
 
   #restaurantTypes {
-    grid-area: left;
-    padding: 1rem;
-    margin: 1rem;
-  }
-
-  #restaurantTypes div {
-    margin-bottom: 0.5rem;
+    height: 100%;
+    margin: 0;
+    grid-area: 1 / 1 / 2 / 2;
   }
 
   #filterOptions {
-    grid-area: right;
-    padding: 1rem;
-    margin: 1rem 1rem 1rem 0;
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 0;
+    display: grid;
+    grid-template: repeat(3, auto) / 1fr 3fr;
+    gap: 10px;
   }
+
   #filterOptions select {
-    width: 100%;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   #modalities {
-    padding-top: 0.5rem;
-  }
-
-  #modalities div {
-    padding: 0 0 0.5rem 0.5rem;
+    grid-area: 1 / 1 / 4 / 2;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
   #searchButton {
-    width: 100%;
-    margin-top: 0.5rem;
-    padding: 0.3rem 0 0.4rem 0;
-    background-color: var(--secondary-color);
-    border: none;
-    border-radius: 1rem;
-    color: var(--secondary-text-color);
-    font-size: 1rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+    grid-area: 2 / 1 / 3 / 3;
+    width: auto;
   }
 }
 
-/* Filter Form Layout (Desktop)
-   ---------------------------- */
-
-@media screen and (width > 1200px) {
+@media screen and (width >= 1200px) {
   #filterForm {
-    background-color: var(--primary-color);
-    margin: 3rem;
-    display: grid;
-    grid-template-areas: "left right";
-    grid-template-columns: repeat(2, 1fr);
-    font-size: 1.3rem;
-    border-radius: 1rem;
-  }
-
-  fieldset {
-    border-radius: 1rem;
-  }
-
-  #restaurantTypes {
-    grid-area: left;
-    padding: 1rem;
-    margin: 1rem;
-  }
-
-  #restaurantTypes div {
-    margin-bottom: 0.5rem;
-  }
-
-  #filterOptions {
-    grid-area: right;
-    padding: 1rem;
-    margin: 1rem 1rem 1rem 0;
-  }
-  #filterOptions select {
-    width: 100%;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  #modalities {
-    padding-top: 0.5rem;
-  }
-
-  #modalities div {
-    padding: 0 0 0.5rem 0.5rem;
-  }
-
-  #searchButton {
-    width: 100%;
-    margin-top: 0.5rem;
-    padding: 0.3rem 0 0.4rem 0;
-    background-color: var(--secondary-color);
-    border: none;
-    border-radius: 1rem;
-    color: var(--secondary-text-color);
-    font-size: 1rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 
@@ -430,12 +419,12 @@ nav {
   }
 
   #leftStickerSpot {
-    grid-row: 1 / span 3;
+    grid-row: 1 / 2;
     grid-column: 1;
   }
 
   #rightStickerSpot {
-    grid-row: 1 / span 3;
+    grid-row: 1 / 2;
     grid-column: 3;
   }
 
@@ -460,6 +449,7 @@ nav {
   }
 
   #stickersGrid {
+    margin: auto 0;
     display: grid;
     grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h" "i" "j";
     grid-template-columns: 1fr;
@@ -560,6 +550,8 @@ nav {
 
 @media screen and (width >= 1024px) and (width <= 1200px) {
   #stickersSlider {
+    grid-row: 2 / 3;
+    margin: auto 0;
     display: grid;
     grid-template-columns: 0.09fr 1fr 0.09fr;
   }
@@ -567,6 +559,7 @@ nav {
   #stickersSlider.hidden {
     display: grid;
     grid-template-columns: 0.09fr 1fr 0.09fr;
+
   }
 
   #leftStickerSpot,
@@ -577,12 +570,12 @@ nav {
   }
 
   #leftStickerSpot {
-    grid-row: 1 / span 3;
+    grid-row: 1 / 2;
     grid-column: 1;
   }
 
   #rightStickerSpot {
-    grid-row: 1 / span 3;
+    grid-row: 1 / 2;
     grid-column: 3;
   }
 
@@ -610,7 +603,7 @@ nav {
     display: grid;
     grid-template-areas: "a b c d" "e f g h" "i j . .";
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .slot1 {
@@ -722,12 +715,12 @@ nav {
   }
 
   #leftStickerSpot {
-    grid-row: 1 / span 3;
+    grid-row: 1 / 2;
     grid-column: 1;
   }
 
   #rightStickerSpot {
-    grid-row: 1 / span 3;
+    grid-row: 1 / 2;
     grid-column: 3;
   }
 
@@ -755,7 +748,7 @@ nav {
     display: grid;
     grid-template-areas: "a b c d e" "f g h i j";
     grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
+    gap: 0.5rem;
   }
 
   .slot1 {
@@ -805,7 +798,7 @@ nav {
 
   .sticker {
     background-color: var(--primary-color);
-    height: 25rem;
+    height: 100%;
     border-radius: 1rem;
   }
 
@@ -931,6 +924,11 @@ nav {
    ----------------------------------- */
 
 @media screen and (width >= 1024px) and (width <= 1200px) {
+  body {
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 50px;
+  }
+
   #presentationWindow {
     position: fixed;
     top: 50%;
