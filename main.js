@@ -207,12 +207,32 @@ function topRestaurants() {
   });
 
   selection.sort((a, b) => b.rating - a.rating);
+
+  for (let restaurant of restaurants) {
+    restaurant.sticker.classList.remove(
+      "number1",
+      "number2",
+      "number3",
+      "number4",
+      "number5",
+      "number6",
+      "number7",
+      "number8",
+      "number9",
+      "number10"
+    );
+  }
+
+  for (let i = 0; i < selection.length && i < 10; i++) {
+    selection[i].sticker.classList.add(`number${i + 1}`);
+  }
+
   restaurants.sort((a, b) => b.rating - a.rating);
 
   while (selection.length < 10) {
     for (let restaurant of restaurants) {
       if (selection.length < 10) {
-        let match = false
+        let match = false;
         for (let select of selection) {
           if (select.slug === restaurant.slug) {
             match = true;
@@ -222,7 +242,7 @@ function topRestaurants() {
           selection.push(restaurant);
         }
       } else {
-        break ;
+        break;
       }
     }
   }
