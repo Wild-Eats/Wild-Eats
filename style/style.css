@@ -3,13 +3,21 @@
    ------------ */
 
 :root {
-  --primary-color: #ebf5fb;
   --secondary-color: #3498db;
-  --tertiary-color: #1b4f72;
-  --primary-text-color: #000;
-  --secondary-text-color: #fff;
   --background-image: url("../img/app-background.jpg");
   --main-font: sans-serif;
+}
+
+.light-mode {
+  --primary-color: #ebf5fb;
+  --primary-text-color: #000;
+  --secondary-text-color: #fff;
+}
+
+.dark-mode {
+  --primary-color: #1b4f72;
+  --primary-text-color: #fff;
+  --secondary-text-color: #000;
 }
 
 *,
@@ -44,6 +52,7 @@ body {
   background-size: auto 100%;
   background-position: bottom;
   font-family: var(--main-font);
+  overflow: hidden;
   display: grid;
   grid-template-rows: auto 1fr 50px;
 }
@@ -122,7 +131,7 @@ nav {
   height: auto;
   margin-left: -10px;
   padding: 10px;
-  color: var(--secondary-text-color);
+  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -131,22 +140,72 @@ nav {
   bottom: 0;
 }
 
-.item {
+.item,
+.modes {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
 }
 
-.item span {
+.modes {
+  display: none;
+  position: absolute;
+  right: -60px;
+}
+
+@media screen and (width >= 1024px) {
+  .item:nth-of-type(2) {
+    display: none;
+  }
+  .item:nth-of-type(3) {
+    position: relative;
+  }
+  .modes {
+    flex-direction: column;
+    top: 30px;
+    right: -30px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .item:nth-of-type(3) {
+    position: relative;
+  }
+  .modes {
+    flex-direction: row;
+    top: 30px;
+    right: -85px;
+  }
+}
+
+.modes.active {
+  display: flex;
+  animation: display-menu 0.4s ease-in-out forwards;
+}
+
+@keyframes display-menu {
+  from {
+    right: -60px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.item > span,
+.mode > span {
   font-size: 20px;
   padding: 5px;
 }
 
-.item .label {
+.item > .label {
   display: none;
 }
 
-.item:hover {
+.item > span:hover,
+.mode > span:hover,
+.active > span {
   background: var(--secondary-color);
   border-radius: 5px;
 }
@@ -205,7 +264,7 @@ main {
 }
 
 #catchphrase {
-  color: var(--secondary-text-color);
+  color: #fff;
   margin-top: -20px;
   padding: 1rem;
   text-align: center;
@@ -217,7 +276,7 @@ main {
 @media screen and (width >= 1024px) {
   #catchphrase {
     height: 99px;
-    color: var(--secondary-text-color);
+    color: #fff;
     margin: 0;
     padding: 0 5rem;
     text-align: center;
@@ -233,6 +292,7 @@ main {
 
 @media screen and (width >= 1200px) {
   #catchphrase {
+    padding: 0 7rem;
     height: auto;
     align-items: flex-end;
     top: 50px;
@@ -247,7 +307,7 @@ main {
   #mobileFilterBar {
     height: 30px;
     background-color: var(--secondary-color);
-    color: var(--secondary-text-color);
+    color: #fff;
     margin: 0 auto;
     padding: 0.3rem 1rem 0.4rem 1rem;
     border-radius: 1rem;
@@ -270,6 +330,7 @@ main {
 
 #filterForm {
   height: auto;
+  color: var(--primary-text-color);
   background-color: var(--primary-color);
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.25) inset;
@@ -342,7 +403,7 @@ fieldset label {
   background-color: var(--secondary-color);
   border: none;
   border-radius: 1rem;
-  color: var(--secondary-text-color);
+  color: #fff;
   font-size: 1rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
 }
@@ -467,6 +528,7 @@ fieldset label {
 
   #stickersGrid {
     margin: auto 0;
+    color: var(--primary-text-color);
     display: grid;
     grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h" "i" "j";
     grid-template-columns: 1fr;
@@ -686,6 +748,7 @@ fieldset label {
     grid-template-areas: "a b c d" "e f g h" "i j . .";
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    color: var(--primary-text-color);
   }
 
   .slot1 {
@@ -897,6 +960,7 @@ fieldset label {
     grid-template-areas: "a b c d e" "f g h i j";
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
+    color: var(--primary-text-color);
   }
 
   .slot1 {
@@ -1130,7 +1194,7 @@ fieldset label {
     background-color: var(--secondary-color);
     border: none;
     border-radius: 1rem;
-    color: var(--secondary-text-color);
+    color: #fff;
     font-size: 1rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
   }
@@ -1229,7 +1293,7 @@ fieldset label {
     background-color: var(--secondary-color);
     border: none;
     border-radius: 2rem;
-    color: var(--secondary-text-color);
+    color: #fff;
     font-size: 1rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
   }
@@ -1391,7 +1455,7 @@ fieldset label {
     background-color: var(--secondary-color);
     border: none;
     border-radius: 1rem;
-    color: var(--secondary-text-color);
+    color: #fff;
     font-size: 1rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
   }

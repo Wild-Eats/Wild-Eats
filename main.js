@@ -410,3 +410,38 @@ homeButton.addEventListener("click", () => {
   }
   location.reload();
 });
+
+const researchButton = document.getElementsByClassName('item')[1]
+researchButton.addEventListener('click', () => {
+  filterForm.classList.remove("hiddenMobile");
+  mobileFilterBar.classList.add("hiddenMobile");
+  stickersSlider.classList.add("hiddenMobile");
+})
+
+const menuButton = document.getElementsByClassName('item')[2]
+menuButton.addEventListener('click', () => {
+  const modes = menuButton.getElementsByClassName('modes')[0]
+  modes.classList.contains('active') ? modes.classList.remove('active') : modes.classList.add('active')
+})
+
+const lightMode = document.getElementsByClassName('light')[0]
+lightMode.addEventListener('click', () => {
+  const darkMode = document.getElementsByClassName('dark')[0]
+  if (!lightMode.classList.contains('active') && darkMode.classList.contains('active')) {
+    darkMode.classList.remove('active')
+    document.body.classList.remove('dark-mode')
+    lightMode.classList.add('active')
+    document.body.classList.add('light-mode')
+  }
+})
+
+const darkMode = document.getElementsByClassName('dark')[0]
+darkMode.addEventListener('click', () => {
+  const lightMode = document.getElementsByClassName('light')[0]
+  if (!darkMode.classList.contains('active') && lightMode.classList.contains('active')) {
+    lightMode.classList.remove('active')
+    document.body.classList.remove('light-mode')
+    darkMode.classList.add('active')
+    document.body.classList.add('dark-mode')
+  }
+})
