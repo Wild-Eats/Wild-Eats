@@ -442,6 +442,7 @@ homeButton.addEventListener("click", () => {
   veggie.value = "veggie1";
   let budget = document.getElementById("budgetSelect");
   budget.value = "budget1";
+  searchButton.disabled = true;
   location.reload();
 });
 
