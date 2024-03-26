@@ -1,1 +1,2621 @@
+<!DOCTYPE html>
 
+<html lang="fr">
+  <head>
+    <title>Wild Eats</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="L'application essentielle des wilders pour bien manger."
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Pierre, Marcelin, Fréd" />
+
+    <meta property="og:title" content="Wild Eats" />
+    <meta property="og:image" content="img/app-background.jpg" />
+    <meta
+      property="og:description"
+      content="L'application essentielle des wilders pour bien manger."
+    />
+
+    <link rel="shortcut icon" href="img/wildeats.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body class="light-mode">
+    <header>
+      <div class="icons">
+        <div>
+          <img src="img/wildeats.png" alt="Wild Eats icon" class="app-icon" />
+        </div>
+        <div>
+          <img
+            src="img/wildeats-text.png"
+            alt="Wild Eats icon text"
+            class="app-icon-text"
+          />
+        </div>
+      </div>
+
+      <nav>
+        <div class="item">
+          <span class="material-symbols-rounded">home</span>
+          <span class="label">Accueil</span>
+        </div>
+        <div class="item">
+          <span class="material-symbols-rounded">search</span>
+          <span class="label">Recherche</span>
+        </div>
+        <div class="item">
+          <span class="material-symbols-rounded">menu</span>
+          <span class="label">Menu</span>
+          <div class="modes">
+            <div class="mode light active"><span class="material-symbols-rounded">light_mode</span></div>
+            <div class="mode dark"><span class="material-symbols-rounded">dark_mode</span></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="catchphrase">
+        <h1>L'app des wilders pour bien manger&nbsp;!</h1>
+      </section>
+
+      <section id="mobileFilterBar" class="hidden hiddenMobile">
+        Revenir aux options de recherche
+      </section>
+
+      <section id="filterForm">
+        <fieldset id="restaurantTypes">
+          <legend>Choisissez un ou plusieurs types d'établissement</legend>
+          <div>
+            <input type="checkbox" id="fast-food" name="fast-food" />
+            <label for="fast-food">Fast-food</label>
+          </div>
+          <div>
+            <input type="checkbox" id="burger" name="burger" />
+            <label for="burger">Burger</label>
+          </div>
+          <div>
+            <input type="checkbox" id="kebab" name="kebab" />
+            <label for="kebab">Kebab</label>
+          </div>
+          <div>
+            <input type="checkbox" id="italian" name="italian" />
+
+            <label for="italian">Italien</label>
+          </div>
+          <div>
+            <input type="checkbox" id="mexican" name="mexican" />
+            <label for="mexican">Mexicain</label>
+          </div>
+          <div>
+            <input type="checkbox" id="asian" name="asian" />
+            <label for="asian">Asiatique</label>
+          </div>
+          <div>
+            <input type="checkbox" id="african" name="african" />
+            <label for="african">Africain</label>
+          </div>
+          <div>
+            <input type="checkbox" id="pizzeria" name="pizzeria" />
+            <label for="pizzeria">Pizzeria</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brewery" name="brewery" />
+            <label for="brewery">Brasserie</label>
+          </div>
+          <div>
+            <input type="checkbox" id="gastro" name="gastro" />
+            <label for="gastro">Gastronomique</label>
+          </div>
+          <div>
+            <input type="checkbox" id="diner" name="diner" />
+            <label for="diner">Cafétéria</label>
+          </div>
+          <div>
+            <input type="checkbox" id="vegan" name="vegan" />
+            <label for="vegan">Vegan</label>
+          </div>
+        </fieldset>
+
+        <fieldset id="filterOptions">
+          <legend>Options de recherche</legend>
+          <fieldset id="modalities">
+            <legend>Modalités de service</legend>
+            <div>
+              <input type="checkbox" id="spot" name="spot" checked />
+              <label for="spot">Sur place</label>
+            </div>
+            <div>
+              <input type="checkbox" id="takeAway" name="takeAway" checked />
+              <label for="takeAway">&Agrave; emporter</label>
+            </div>
+            <div>
+              <input type="checkbox" id="delivery" name="delivery" checked />
+              <label for="delivery">Livraison</label>
+            </div>
+          </fieldset>
+          <div>
+            <label for="veggieSelect">Végétarien/Vegan ?</label>
+            <select id="veggieSelect">
+              <option value="veggie1">Peu importe</option>
+              <option value="veggie2">Quelques plats végé</option>
+              <option value="veggie3">Plusieurs plats/menus végé</option>
+              <option value="veggie4">Vegan ou rien !</option>
+            </select>
+          </div>
+          <div>
+            <label for="budgetSelect">Pour quel budget ?</label>
+            <select id="budgetSelect">
+              <option value="budget1">Peu importe</option>
+              <option value="budget2">Moins de 30&euro; par personne</option>
+              <option value="budget3">Moins de 20&euro; par personne</option>
+              <option value="budget4">Moins de 10&euro; par personne</option>
+            </select>
+          </div>
+          <div>
+            <label for="proximitySelect"
+              >&Agrave; quelle distance du campus ?</label
+            >
+            <select id="proximitySelect">
+              <option value="proximity1">Peu importe</option>
+              <option value="proximity2">Moins de 30min (voiture)</option>
+              <option value="proximity3">Moins de 20min (tram/bus)</option>
+              <option value="proximity4">Moins de 10min (à pied)</option>
+            </select>
+          </div>
+        </fieldset>
+        <input
+          id="searchButton"
+          type="submit"
+          value="Lancer la recherche&nbsp;!"
+          disabled />
+      </section>
+
+      <div class="modal-type-empty">Merci de sélectionner au moins un type de restaurant</div>
+
+      <section id="stickersSlider" class="hiddenMobile">
+        <div id="leftStickerSpot">
+          <button id="leftSticker" class="arrow">&#11164;</button>
+        </div>
+        <div id="rightStickerSpot">
+          <button id="rightSticker" class="arrow">&#11166;</button>
+        </div>
+        <div id="stickersGrid"></div>
+      </section>
+
+      <section class="restaurants hidden hiddenMobile">
+        <article id="steaksArticle" class="presentation">
+          <h2>Grill Steaks</h2>
+          <div class="general">
+            <img
+              src="img/grill-steack1.png"
+              alt="Image du restaurant Grill Steaks"
+            />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(253 avis)</p>
+            <p>
+              &ldquo;&nbsp;Le choix de la viande de qualité&nbsp;!&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Brasserie</p>
+            <p>
+              <span>Adresse :</span> 101 Bd Gustave Flaubert, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 15&euro;</p>
+            <p>Pas de plat végétarien</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Grill Steaks est un restaurant de grill. Viandes cuites au feu de
+              bois pour une viande grillé avec un goût incomparable.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/grill-steack2.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/grill-steack3.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/grill-steack4.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>3</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="rapidArticle" class="presentation">
+          <h2>Rapid Diner</h2>
+          <div class="general">
+            <img
+              src="img/rapid-diner1.png"
+              alt="Image du restaurant Rapid Diner"
+            />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(150 avis)</p>
+            <p>
+              &ldquo;&nbsp;De bons plats rapides aux meilleurs
+              prix.&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Burger, Fast-food</p>
+            <p>
+              <span>Adresse :</span> 10 Bd Léon Malfreyt, 63000 Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p>
+              <span>Service :</span> Sur place, &Agrave; emporter, Livraison
+            </p>
+            <p><span>Prix :</span> Menus à partir de 10&euro;</p>
+            <p>Propose plusieurs menus végétariens et vegans</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Rapid Diner est dans la lignée des Diners américains, mais à la
+              française. Ce restaurant propose des hamburgers avec des
+              ingrédients locaux et adapte ses recettes par rapports à ces
+              ingrédients de proximité. Pour les amateurs de la nourriture
+              vegan, Rapid Diner pense également à vous en proposant dans ces
+              menus, différents choix garantis 100% végétarien.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/rapid-diner2.png"
+                  alt="Image du restaurant Rapid Diner"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/rapid-diner3.png"
+                  alt="Image du restaurant Rapid Diner"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/rapid-diner4.png"
+                  alt="Image du restaurant Rapid Diner"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>0</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="fugiyamaArticle" class="presentation">
+          <h2>Le Fugiyama</h2>
+          <div class="general">
+            <img
+              src="img/fugiyama1.png"
+              alt="Image du restaurant Le Fugiyama"
+            />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(582 avis)</p>
+            <p>&ldquo;&nbsp;Du Japon dans vos assiettes&nbsp;!&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Gastronomique, Asiatique</p>
+            <p>
+              <span>Adresse :</span> 52 Rue des Gras, 63000 Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 20&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Les saveurs des sauces soja, des sushis, et autres sont
+              disponibles près de chez vous. Plusieurs formules disponibles pour
+              être adaptées à tous.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/fugiyama2.png"
+                  alt="Image du restaurant Le Fugiyama"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/fugiyama3.png"
+                  alt="Image du restaurant Le Fugiyama"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/fugiyama4.png"
+                  alt="Image du restaurant Le Fugiyama"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>1</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="sombreroArticle" class="presentation">
+          <h2>Sombrero</h2>
+          <div class="general">
+            <img
+              src="img/sombrero1.png"
+              alt="Image du restaurant Le Sombrero"
+            />
+            <p>&bigstar;&bigstar;&bigstar;</p>
+            <p>(123 avis)</p>
+            <p>&ldquo;&nbsp;Saveurs mexicaines.&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Gastronomique, Mexicain</p>
+            <p>
+              <span>Adresse :</span> 9 Rue des Vieillards, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 10&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Le mexique s'invite à Clermont-Ferrand et vous partage ses
+              saveurs, ses épices, en quelques mots&nbsp;: sa folie.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/sombrero2.png"
+                  alt="Image du restaurant Le Sombrero"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/sombrero3.png"
+                  alt="Image du restaurant Le Sombrero"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/sombrero4.png"
+                  alt="Image du restaurant Le Sombrero"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>2</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="endiveArticle" class="presentation">
+          <h2>L'Endive</h2>
+          <div class="general">
+            <img src="img/endive1.png" alt="Image du restaurant L'Endive" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(800 avis)</p>
+            <p>&ldquo;&nbsp;La force nous vient de la nature.&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Brasserie, Vegan</p>
+            <p>
+              <span>Adresse :</span> 10 Rue Jules Verne, 63100 Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 15&euro;</p>
+            <p>Plats et menus vegans uniquement</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              L'Endive se lance le défi de concilier le style fort de la
+              restauration française avec la conscience écologique du moment, la
+              nourriture végan. Le restaurant revisite les plats emblématique
+              des Brasseries en utilisant des ingrédients 100% végétarien. Dans
+              cet optique éco-responsable, l'Endive fait beaucoup en matière
+              anti-gaspillage.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/endive2.png" alt="Image du restaurant L'Endive" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/endive3.png" alt="Image du restaurant L'Endive" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/endive4.png" alt="Image du restaurant L'Endive" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>0</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="marioArticle" class="presentation">
+          <h2>Pizza Mario</h2>
+          <div class="general">
+            <img src="img/mario1.png" alt="Image du restaurant Pizza Mario" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(99 avis)</p>
+            <p>&ldquo;&nbsp;La pizza mieux qu'en Italie.&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Pizzeria, Italien</p>
+            <p>
+              <span>Adresse :</span> 36 Av. des Paulines, 63100 Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 15&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Les ingrédients pour les pizzas de chez Mario sont choisis avec
+              soin.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/mario2.png"
+                  alt="Image du restaurant Pizza Mario"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/mario3.png"
+                  alt="Image du restaurant Pizza Mario"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/mario4.png"
+                  alt="Image du restaurant Pizza Mario"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="louisArticle" class="presentation">
+          <h2>Chez Louis</h2>
+          <div class="general">
+            <img src="img/louis1.png" alt="Image du restaurant Chez Louis" />
+            <p>&bigstar;&bigstar;&bigstar;</p>
+            <p>(498 avis)</p>
+            <p>&ldquo;&nbsp;La cuisine à la Française.&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Cafétéria</p>
+            <p>
+              <span>Adresse :</span> 175 Bd Gustave Flaubert, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 10&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Chez Louis vous propose des plats variés avec des ingrédients
+              frais et faits maison.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/louis2.png"
+                  alt="Image du restaurant Chez Louis"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/louis3.png"
+                  alt="Image du restaurant Chez Louis"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/louis4.png"
+                  alt="Image du restaurant Chez Louis"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>3</p>
+            <p>3</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="empereurArticle" class="presentation">
+          <h2>L'Empereur</h2>
+          <div class="general">
+            <img
+              src="img/empereur1.png"
+              alt="Image du restaurant L\'Empereur"
+            />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(4000 avis)</p>
+            <p>&ldquo;&nbsp;Le chic à la Française.&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Gastronomique</p>
+            <p>
+              <span>Adresse :</span> 16 Rue Claussmann, 63000 Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 40&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>Cuisine innovante à la limite de la cuisine fusion.</p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/empereur2.png"
+                  alt="Image du restaurant L\'Empereur"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/empereur3.png"
+                  alt="Image du restaurant L\'Empereur"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/empereur4.png"
+                  alt="Image du restaurant L\'Empereur"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>0</p>
+            <p>0</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="clubArticle" class="presentation">
+          <h2>Club Kebab</h2>
+          <div class="general">
+            <img src="img/kebab1.png" alt="Image du restaurant Club Kebab" />
+            <p>&bigstar;&bigstar;&bigstar;</p>
+            <p>(987 avis)</p>
+            <p>
+              &ldquo;&nbsp;Le meilleur Kebab de la région&nbsp;!&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Kebab, Burger</p>
+            <p>
+              <span>Adresse :</span> 23 Av. de la Margeride, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 10&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Club Kebab vous propose une sélection des meilleurs kebabs de la
+              région, ainsi que de très bons clubs sandwichs. Le tout avec des
+              ingrédients de qualité.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/kebab2.png"
+                  alt="Image du restaurant Club Kebab"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/kebab3.png"
+                  alt="Image du restaurant Club Kebab"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/kebab4.png"
+                  alt="Image du restaurant Club Kebab"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>3</p>
+            <p>3</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="antilopeArticle" class="presentation">
+          <h2>Antilope Grill</h2>
+          <div class="general">
+            <img src="img/antilope-01.jpeg" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(658 avis)</p>
+            <p>
+              &ldquo;&nbsp;Venez déguster les meilleurs plats de l'ouest
+              sauvage&nbsp;!&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Brasserie, Burger</p>
+            <p>
+              <span>Adresse :</span> 111 Bd Gustave Flaubert, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 15&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Bienvenue chez Antilope Grill, le restaurant qui fleure bon
+              l'ouest sauvage&nbsp;! Si vous avez toujours rêvé de déguster les
+              recettes venues tout droit de l'époque des garçons vachers et des
+              natifs américains, vous êtes au bon endroit&nbsp;! Notre équipe en
+              uniforme typique se prépare déjà à vous accueillir avec le
+              sourire&nbsp;!
+            </p>
+            <p>
+              Ne manquez pas d'essayer nos fabuleuses grillades qui ont fait
+              notre réputation, comme par exemple nos délicieux ribs sauce
+              barbecue, ou encore notre pavé de rumsteak, qui ravira les
+              papilles des amateurs de bonne viande&nbsp;! Bien évidemment, nous
+              avons aussi toute une selection de burgers aussi divers que
+              savoureux. Et si vous préférez vous passer de bonnes protéines
+              animales, pas de panique&nbsp;! Nous proposons aussi quelques
+              plats végétariens qui ne manqueront pas de vous enchanter, tout en
+              restant fidèle à l'esprit Antilope Grill&nbsp;!
+            </p>
+            <p>
+              Cerise sur le gateau, notre établissement est avant tout un espace
+              de partage pour toute la famille&nbsp;! Vous pourrez réserver une
+              partie de notre restaurant pour vos charmants bambins puissent
+              venir y fêter leur anniversaire, au son de notre célebrissime
+              hymne&nbsp;! Chez Antilope Grill, on ne lésine pas sur les belles
+              valeurs familiales.
+            </p>
+            <p>
+              Alors n'hésitez plus, et venez prendre votre prochain repas chez
+              nous&nbsp;: pas besoin de traverser l'Atlantique pour accomplir le
+              rêve américain&nbsp;!
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/antilope-02.jpeg" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/antilope-03.jpeg" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/antilope-04.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>3</p>
+            <p>1</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="casaArticle" class="presentation">
+          <h2>La Casa de Juan</h2>
+          <div class="general">
+            <img src="img/casa-01.jpg" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(1215 avis)</p>
+            <p>
+              &ldquo;&nbsp;Le Mexique au bout de VOTRE rue&nbsp;!&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Brasserie, Mexicain</p>
+            <p>
+              <span>Adresse :</span> 20 rue de la Gantière, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> Du lundi au vendredi, de 11h à
+              15h, puis de 18h à 23h
+            </p>
+            <p>
+              <span>Service :</span> Sur place, &Agrave; emporter, Livraison
+            </p>
+            <p><span>Prix :</span> Menus à partir de 8&euro;50</p>
+            <p>Propose plusieurs menus végétariens et vegans</p>
+          </div>
+          <div class="presentationText">
+            <p>&iexcl;Ola, Gringo!</p>
+            <p>
+              Tu as déjà gouté à la cuisine mexicaine&nbsp;? Si ce n'est pas le
+              cas, viens la découvrir à La Casa de Juan&nbsp;! Ambiance de
+              fiesta et régalade seront au rendez-vous, tu peux me faire
+              confiance&nbsp;!
+            </p>
+            <p>
+              Tu n'es pas fan de nourriture épicée&nbsp;? Aucun problème&nbsp;!
+              La cuisine mexicaine sait aussi faire preuve de douceur, et notre
+              chef, "El Famoso Juan", est impatient de te le prouver&nbsp;! Et
+              si les expériences "piquantes" ne te font pas peur, il se fera un
+              plaisir de te servir son incroyable guacamole maison, ou ses
+              légendaires nachos&nbsp;!
+            </p>
+            <p>
+              Alors, Gringo, qu'est-ce que tu fais encore là&nbsp;? La Casa de
+              Juan n'attend plus que toi&nbsp;! Et n'oublie pas, on a de quoi
+              faire en sorte que toutes les bourses se sentent
+              &iexcl;'Estupendamente'!
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/casa-02.jpeg" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/casa-03.jpeg" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/casa-04.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>3</p>
+            <p>3</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+        <article id="nonabatArticle" class="presentation">
+          <h2>Le Non-Abattoir</h2>
+          <div class="general">
+            <img src="img/nonabat-01.jpeg" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(29 avis)</p>
+            <p>
+              &ldquo;&nbsp;Vous détestez la cruauté envers les animaux&nbsp;?
+              Nous aussi.&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Gastronomique, Vegan</p>
+            <p><span>Adresse :</span> 3 Rue Blatin, 63000 Clermont-Ferrand</p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> Les mardis et jeudis
+              uniquement, de 12h04 à 13h59, puis de 19h17 à 21h02
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 49&euro;95</p>
+            <p>Plats et menus vegans uniquement</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Vous en avez assez de ces soi-disant "restaurants" qui n'ont rien
+              d'autre à vous proposer que des morceaux de cadavres
+              d'animaux&nbsp;? Vous n'êtes plus seul. Le Non-Abattoir vous
+              invite à l'une de ses tables, et vous offre la certitude qu'aucun
+              des plats qui vous seront servis n'aura provoquer la moindre
+              souffrance à une créature vivante. C'est ce que nous appelons
+              notre "Garantie Non-Abattive".
+            </p>
+            <p>
+              Oubliez vos préjugés sur la cuisine vegane, et venez sans plus
+              attendre déguster l'un de nos menus gastronomiques inoubliables.
+              Vous ne le regretterez pas.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/nonabat-02.jpeg" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/nonabat-03.jpeg" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/nonabat-04.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>0</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+        <article id="kingArticle" class="presentation">
+          <h2>Le King's Pub</h2>
+          <div class="general">
+            <img src="img/king-01.jpeg" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(745 avis)</p>
+            <p>
+              &ldquo;&nbsp;Quoi de plus naturel qu'une pub pour un
+              pub&nbsp;?&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Brasserie, Burger</p>
+            <p>
+              <span>Adresse :</span> 4 Rue de l'Eminee, 63000 Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> Du lundi au samedi, de 11h à
+              15h, puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place, &Agrave; emporter</p>
+            <p><span>Prix :</span> Menus à partir de 12&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Si vous vous régalez déjà à l'idée de déguster une bonne pinte
+              dans un endroit cosy, alors venez nous rejoindre au King's Pub.
+              Notre pub traditionnel irlandais fait aussi brasserie, et n'a
+              qu'une hâte, c'est de vous accueillir à sa table.
+            </p>
+            <p>
+              Au menu, une grande variété de salades, de burgers, et autres
+              grillades, pour tous les gouts et toutes les bourses. En plus, si
+              vous venez en soirée, nous proposons régulièrement des petits
+              concerts organisés avec de talentueux artistes locaux.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/king-02.jpeg" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/king-03.jpeg" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/king-04.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>2</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+        <article id="greenArticle" class="presentation">
+          <h2>MacGreen</h2>
+          <div class="general">
+            <img src="img/green-01.jpeg" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(255 avis)</p>
+            <p>
+              &ldquo;&nbsp;Ce n'est pas parce qu'on est pressé qu'on doit manger
+              de la viande&nbsp;!&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Fast-food, Burger, Vegan</p>
+            <p>
+              <span>Adresse :</span> 14 Bd Gustave Flaubert, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 23h
+            </p>
+            <p>
+              <span>Service :</span> Sur place, &Agrave; emporter, Livraison
+            </p>
+            <p><span>Prix :</span>Menus à partir de 10&euro;</p>
+            <p>Plats et menus vegans uniquement</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Vous croyez qu'un fast-food ne peut pas être entièrement
+              vegan&nbsp;? Et bien MacGreen est là pour vous prouver le
+              contraire&nbsp;! Découvrez dès maintenant notre toute nouvelle
+              chaine de restauration, rapide mais responsable.
+            </p>
+            <p>
+              Au programme, des burgers, des pizzas, mais aussi des kebabs et
+              tacos, tous à base de produits végétaux exclusivement. Devenez
+              vous aussi un adepte du MacSoja, ou le déjà célèbre MacTofu&nbsp;!
+              Et détrompez-vous&nbsp;: ce n'est pas parce que c'est vegan que
+              c'est hors de prix, bien au contraire&nbsp;! Vous trouverez
+              forcément le menu qui conviendra à votre porte-feuille.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/green-02.jpeg" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/green-03.jpeg" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/green-04.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>3</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+        <article id="schnellArticle" class="presentation">
+          <h2>Schnell</h2>
+          <div class="general">
+            <img src="img/schnell-01.jpeg" />
+            <p>&bigstar;&bigstar;</p>
+            <p>(666 avis)</p>
+            <p>&ldquo;&nbsp;J'ai pas le time&nbsp;!!!!&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Fast-food, Burger</p>
+            <p>
+              <span>Adresse :</span> 28 Av des Etats-Unis, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, 24 heures sur
+              24
+            </p>
+            <p><span>Service :</span> Sur place, &Agrave; emporter</p>
+            <p><span>Prix :</span> Menus à partir de 3&euro;</p>
+            <p>Pas de plat végétarien</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Faire de la pub ça prend du temps, et chez Schnell, on en a
+              pas&nbsp;!!!!
+            </p>
+            <p>
+              Venez manger chez nous, c'est pas cher, c'est rapide, c'est
+              Schnell&nbsp;!!!!
+            </p>
+            <p>Schnell&nbsp;!!!!</p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/schnell-02.jpeg" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/schnell-03.jpeg" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/schnell-04.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>3</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+        <article id="jackpotArticle" class="presentation">
+          <h2>Cafétéria Jackpot</h2>
+          <div class="general">
+            <img src="img/jackpot-01.jpg" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(7777 avis)</p>
+            <p>
+              &ldquo;&nbsp;&Ccedil;a ne coute pas plus cher de bien
+              manger.&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Cafétéria</p>
+            <p>
+              <span>Adresse :</span> 16 Avenue Marx Dormoy, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 9&euro;99</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Plus qu'une grande surface, Jackpot s'engage, avec sa franchise de
+              cafeteria à travers toute la France. Simplicité, Bonne humeur, et
+              produits de qualités pour un cout parfaitement abordables, telles
+              sont nos lignes de conduite.
+            </p>
+            <p>
+              Nos menus changent toutes les semaines, afin de vous offrir des
+              expériences variées, mais toujours à petits prix. Nous proposons
+              aussi régulièrement des plats venus du monde entier, ou même de
+              nombreuses spécialités régionales françaises.
+            </p>
+            <p>
+              Chacun de nos restaurants offre aussi un vaste espace de jeu
+              réservé aux enfants, au sein duquel ils pourront évaluer en
+              sécurité, afin que vous puissiez savourer votre repas en toute
+              tranquillité. N'attendez plus, et venez avec toute votre famille
+              chez Jackpot Cafeteria.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/jackpot-02.jpg" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/jackpot-03.jpeg" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/jackpot-04.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>3</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+        <article id="courseArticle" class="presentation">
+          <h2>La Course</h2>
+          <div class="general">
+            <img src="img/course-01.jpg" />
+            <p>&bigstar;&bigstar;&bigstar;</p>
+            <p>(1320 avis)</p>
+            <p>&ldquo;&nbsp;La bonne bidoche&nbsp;? C'est là.&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Brasserie</p>
+            <p>
+              <span>Adresse :</span> 4 Av. de la République, 63100
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> Tous les jours sauf le mardi,
+              de 11h à 15h, puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 20&euro;</p>
+            <p>Pas de plat végétarien</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Par ici si tu aimes la viande, l'ami&nbsp;! &Agrave; la Course,
+              non seulement on adore ça, mais en plus, on en a fait une
+              spécialité. Non, plus que ça, une profession de foi&nbsp;! Ici, on
+              vend de la viande au poids, mais que de la très bonne viande,
+              alors si tu comptes nous demander une cuisson plus longue que
+              saignante, tu peux faire demi-tour et rentrer chez toi. Et oui, on
+              est comme ça, à la Course, le patron a son petit caractère, et
+              t'as intérêt à faire avec&nbsp;!
+            </p>
+            <p>
+              Mais si toi aussi t'es un vrai amateur de bidoche de qualité, tu
+              seras toujours le bienvenu, et tu seras comme chez toi dans notre
+              restaurant, qui, comme chacun sait, est une véritable institution
+              clermontoise depuis plus d'un quart de siècle.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/course-02.jpeg" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/course-03.jpg" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/course-04.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>0</p>
+            <p>1</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+        <article id="lotusArticle" class="presentation">
+          <h2>Le Lotus Bleu</h2>
+          <div class="general">
+            <img src="img/lotus-01.jpeg" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(2467 avis)</p>
+            <p>
+              &ldquo;&nbsp;Lao-Tzeu l'a dit&nbsp;: il faut trouver la
+              voie...&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Fast-food, Asiatique</p>
+            <p>
+              <span>Adresse :</span> 8 Bd. Berthelot, 63000 Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, 24 heures sur
+              24
+            </p>
+            <p><span>Service :</span> Livraison</p>
+            <p><span>Prix :</span> Menus à partir de 1O&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Service de livraison de très bonne qualité. Retrouvez les plats
+              typiques de toute l'Asie. Livraison rapide sur tout
+              Clermont-Ferrand et alentours.
+            </p>
+            <p>
+              Retrouvez les menus que vous préférez, comme par exemple le
+              populaire B12. La maison propose aussi de très bonnes ouiches
+              lorraines, mais vous déconseille la mousse au chocolat du patron.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/lotus-02.jpeg" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/lotus-03.jpeg" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/lotus-04.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+        <article id="bamakoArticle" class="presentation">
+          <h2>Le Dimanche à Bamako</h2>
+          <div class="general">
+            <img src="img/bamako-01.jpg" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(813 avis)</p>
+            <p>
+              &ldquo;&nbsp;Spécialités du Mali et de toute
+              l'Afrique&nbsp;!&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Gastronomique, Africain</p>
+            <p><span>Adresse :</span> 128 Av. de la Margeride</p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> Tous les jours sauf le
+              mercredi, de 11h à 15h, puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 15&euro;</p>
+            <p>Propose plusieurs menus végétariens et vegans</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Découvrez ou redécouvrez la subtile et succulente cuisine du Mali.
+              Que vous souhaitiez passer un repas agréable entre amis, en
+              famille, ou que vous préfériez gouter des plats de haute
+              gastronomie africaine, le Dimanche à Bamako est l'établissement
+              qu'il vous faut.
+            </p>
+            <p>
+              Nos recettes à la fois traditionnelles et exotiques vous
+              transporteront vers des plaisirs dont vous ne soupçonniez même pas
+              l'existence.
+            </p>
+            <p>
+              Le Dimanche à Bamako, c'est la table d'Afrique à portée de
+              main&nbsp;!
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/bamako-02.jpeg" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/bamako-03.jpeg" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/bamako-04.jpg" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>3</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+        <article id="luigiArticle" class="presentation">
+          <h2>L.U.I.G.I.</h2>
+          <div class="general">
+            <img src="img/luigi-01.jpeg" />
+            <p>&bigstar;&bigstar;</p>
+            <p>(3112 avis)</p>
+            <p>&ldquo;&nbsp;Elle. Hue. Hi. Jet. Hi.&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Fast-food, Pizzeria, Italien</p>
+            <p>
+              <span>Adresse :</span> 8 place Hippolyte Renoux, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> Du mardi au vendredi, de 11h à
+              15h, puis de 18h à 23h
+            </p>
+            <p>
+              <span>Service :</span> Sur place, &Agrave; emporter, Livraison
+            </p>
+            <p><span>Prix :</span> Menus à partir de 19&euro;99</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Chez L.U.I.G.I., c'est l'Italie&nbsp;!!! La pizza, la pasta, la
+              bonne humeur, et on vous parle avec les mains (supplément
+              payant)&nbsp;!
+            </p>
+            <p>
+              Venez profiter de la musique de l'Italie, de l'ambiance de
+              l'Italie, de la nourriture de l'Italie, de la chaleur de l'Italie,
+              du parfum de l'Italie, de la luminosité de l'Italie, mais surtout,
+              de l'esprit de l'Italie&nbsp;!
+            </p>
+            <p>
+              Notre chef vous propose toutes les spécialité italiennes, et bien
+              plus encore. (Services de plomberie disponibles uniquement les
+              mardis matins et le week-end, consultez nos tarifs avant
+              d'appeler.)
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/luigi-02.jpeg" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/luigi-03.jpeg" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/luigi-04.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>1</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+        <article id="ffkArticle" class="presentation">
+          <h2>Fat & Furious Kebab</h2>
+          <div class="general">
+            <img src="img/ffk-01.jpg" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(113 avis)</p>
+            <p>&ldquo;&nbsp;Salade tomate oignon, chef.&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p>
+              <span>Tags :</span> Fast-food, Kebab, Burger, Pizzeria, Asiatique
+            </p>
+            <p>
+              <span>Adresse :</span> 21 Avenue de la Margeride, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 6h à minuit
+            </p>
+            <p><span>Service :</span> Sur place, &Agrave; emporter</p>
+            <p><span>Prix :</span> Menus à partir de 7&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              FFK, le meilleur kebab de tout Clermont, tout simplement. Ici tu
+              viens, tu es reçu comme notre meilleur client, et si tu veux une
+              galette mayo-algérienne six viandes avec frites, on te fera un
+              prix comme si t'étais un habitué. C'est la maison, c'est la
+              famille. On est comme ça chez FFK.
+            </p>
+            <p>
+              Kebab, Tacos, Burgers, Pizzas, Sushis, Moussaka grecque
+              traditionnelle, tout ça au même endroit, et au meilleur prix, pas
+              d'embrouilles. Si tu prends un menu à plus de 15 euros, on t'offre
+              la boisson, bouteille 1.5 litres, ça nous fait plaisir.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img src="img/ffk-02.jpeg" />
+              </div>
+              <div class="picture2 spot2">
+                <img src="img/ffk-03.jpeg" />
+              </div>
+              <div class="picture3 spot3">
+                <img src="img/ffk-04.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>3</p>
+            <p>3</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+        <article id="grangeArticle" class="presentation">
+          <h2>Resto Africain</h2>
+          <div class="general">
+            <img src="img/LaGrangeAfricaine.jpg" alt="La Grange Africaine" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(65 avis)</p>
+            <p>
+              &ldquo;&nbsp;La meilleure cuisine Africaine&nbsp;!&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Brasserie, Africain</p>
+            <p>
+              <span>Adresse :</span> 4 Pl. du Marché aux Poissons, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 10&euro;</p>
+            <p>Pas de plat végétarien</p>
+          </div>
+          <div class="presentationText">
+            <p>Bien manger pour la santé.</p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/grill-steack2.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/grill-steack3.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/grill-steack4.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="pekinArticle" class="presentation">
+          <h2>Hong-Kong Express</h2>
+          <div class="general">
+            <img src="img/PékinExpress.jpg" alt="Pékin Express" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(29 avis)</p>
+            <p>
+              &ldquo;&nbsp;La meilleure cuisine Asiatique de
+              Clermont.&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Brasserie, Asiatique</p>
+            <p><span>Adresse :</span> 5 bd Gergovia, 63000 Clermont Ferrand</p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 10&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>Plats locaux.</p>
+          </div>
+
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/grill-steack2.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/grill-steack3.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/grill-steack4.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="bistrotArticle" class="presentation">
+          <h2>Le Bistrot d'en Face</h2>
+          <div class="general">
+            <img src="img/Bistro.jpg" alt="Le Bistro" />
+            <p>&bigstar;&bigstar;&bigstar;</p>
+            <p>(696 avis)</p>
+            <p>
+              &ldquo;&nbsp;Cuisine Française et Européenne&nbsp;!&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Brasserie</p>
+            <p>
+              <span>Adresse :</span> 16 rue des minimes, 63000 Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 15&euro;</p>
+            <p>Propose plusieurs menus végétariens et vegans</p>
+          </div>
+          <div class="presentationText">
+            <p>Bon accueil et service impeccable.</p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/grill-steack2.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/grill-steack3.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/grill-steack4.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="crieeArticle" class="presentation">
+          <h2>Le Port</h2>
+          <div class="general">
+            <img src="img/LaCriée.jpg" alt="La Criée" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(648 avis)</p>
+            <p>
+              &ldquo;&nbsp;Cuisine Française, fruits de mer et
+              poisson.&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Gastronomique</p>
+            <p>
+              <span>Adresse :</span> 21 Av. Ernest Cristal, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 20&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>Endroit très agréable et joli cadre.</p>
+          </div>
+
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/grill-steack2.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/grill-steack3.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/grill-steack4.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>2</p>
+            <p>1</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="kitchenArticle" class="presentation">
+          <h2>La Cuisine</h2>
+          <div class="general">
+            <img src="img/LeKitchen.jpg" alt="Le Kitchen" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(514 avis)</p>
+            <p>&ldquo;&nbsp;Cuisine Française, Européenne.&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Brasserie</p>
+            <p>
+              <span>Adresse :</span> 29 Rue des Chaussetiers, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 15&euro;</p>
+            <p>Pas de plat végétarien</p>
+          </div>
+          <div class="presentationText">
+            <p>Endroit chaleureux et plats copieux.</p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/grill-steack2.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/grill-steack3.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/grill-steack4.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="etoileArticle" class="presentation">
+          <h2>L'Etoile de Casablanca</h2>
+          <div class="general">
+            <img src="img/LEtoiledeFès.jpeg" alt="L'Etoile de Fès" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(194 avis)</p>
+            <p>&ldquo;&nbsp;Méditerranée. Moyen-Orient. Maroc.&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Gastronomique</p>
+            <p>
+              <span>Adresse :</span> 10 Rue Sainte Rose, 63000 Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place, &Agrave; emporter</p>
+            <p><span>Prix :</span> Menus à partir de 10&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>Endroit chaleureux et plats à emporter</p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/grill-steack2.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/grill-steack3.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/grill-steack4.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>0</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="saladArticle" class="presentation">
+          <h2>Wild Salad</h2>
+          <div class="general">
+            <img src="img/EatSalad.jpg" alt="Eat Salad" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(565 avis)</p>
+            <p>&ldquo;&nbsp;Bar à salade sur mesure&nbsp;!&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Fast-food, Vegan</p>
+            <p>
+              <span>Adresse :</span> 16 rue Lucie et Raymond Aubrac, 63100
+              Clermont Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p>
+              <span>Service :</span> Sur place, &Agrave; emporter, Livraison
+            </p>
+            <p><span>Prix :</span> Menus à partir de 10&euro;</p>
+            <p>Plats et menus vegans uniquement</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Wild Salad vous propose des salades fraîches et variées, avec des
+              ingrédients frais et de qualité. Teneur élevée en vitamines et
+              oligo-éléments.
+            </p>
+          </div>
+
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/grill-steack2.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/grill-steack3.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/grill-steack4.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>0</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="kmburgerArticle" class="presentation">
+          <h2>Kilo Burger</h2>
+          <div class="general">
+            <img src="img/KmBurger.jpg" alt="Km Burger" />
+            <p>&bigstar;&bigstar;&bigstar;</p>
+            <p>(350 avis)</p>
+            <p>
+              &ldquo;&nbsp;Burgers authentiques 100% Faits Maison.&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Fast-food, Burger</p>
+            <p>
+              <span>Adresse :</span> 48 Rue Jules Guesde, 63000 Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p>
+              <span>Service :</span> Sur place, &Agrave; emporter, Livraison
+            </p>
+            <p><span>Prix :</span> Menus à partir de 10&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Retrouvez et commandez plus rapidement vos produits de qualité.
+            </p>
+            <p>Possibilité de livraison à domicile.</p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/grill-steack2.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/grill-steack3.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/grill-steack4.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>2</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="gourmandiseArticle" class="presentation">
+          <h2>Le Péché Gourmand</h2>
+          <div class="general">
+            <img src="img/LaGourmandise.jpg" alt="La Gourmandise" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(1249 avis)</p>
+            <p>&ldquo;&nbsp;Cuisine Française, Européenne.&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Brasserie</p>
+            <p>
+              <span>Adresse :</span> 4 Pl. du Marché aux Poissons, 63000
+              Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 15&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Le Péché Gourmand est un restaurant à vin mêlant finesse et
+              tradition, au cœur de Clermont-Ferrand.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/grill-steack2.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/grill-steack3.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/grill-steack4.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>1</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="soixanteArticle" class="presentation">
+          <h2>Restaurant 63</h2>
+          <div class="general">
+            <img src="img/Restaurant62.jpg" alt="Restaurant 62" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(788 avis)</p>
+            <p>
+              &ldquo;&nbsp;Une cuisine instinctive et créative au coeur de
+              Clermont.&nbsp;&rdquo;
+            </p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Gastronomique</p>
+            <p>
+              <span>Adresse :</span> 62 Rue Fontgiève, 63000 Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 25&euro;</p>
+            <p>Propose plusieurs menus végétariens et vegans</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Une cuisine sans frontière inspirée par les produits de saison.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/grill-steack2.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/grill-steack3.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/grill-steack4.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>0</p>
+            <p>0</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+
+        <article id="latinesArticle" class="presentation">
+          <h2>Terres du Soleil</h2>
+          <div class="general">
+            <img src="img/TerresLatines.jpg" alt="Terres Latines" />
+            <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+            <p>(1495 avis)</p>
+            <p>&ldquo;&nbsp;Cuisines du soleil.&nbsp;&rdquo;</p>
+          </div>
+          <div class="infos">
+            <p><span>Tags :</span> Gastronomique, Mexicain, Italien</p>
+            <p>
+              <span>Adresse :</span> 12 Boulevard Desaix, 63000 Clermont-Ferrand
+            </p>
+            <p>&#128382; 06 39 49 39 49</p>
+            <p>
+              <span>Horaires d'ouverture :</span> 7 jours sur 7, de 11h à 15h,
+              puis de 18h à 23h
+            </p>
+            <p><span>Service :</span> Sur place</p>
+            <p><span>Prix :</span> Menus à partir de 35&euro;</p>
+            <p>Propose quelques plats végétariens</p>
+          </div>
+          <div class="presentationText">
+            <p>
+              Cuisines Italienne, Espagnole, Mexicaine... En bref, Ensoleillées.
+            </p>
+            <p>
+              Top pour diner à l'abri du vent ou de la pluie, tout en étant à
+              l'extérieur.
+            </p>
+          </div>
+          <div class="imageGrid hiddenMobile">
+            <div class="upGallerySpot">
+              <button class="upGallery arrow">&#11165;</button>
+            </div>
+            <div class="downGallerySpot">
+              <button class="downGallery arrow">&#11167;</button>
+            </div>
+            <div class="galleryGrid">
+              <div class="picture1 spot1">
+                <img
+                  src="img/grill-steack2.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture2 spot2">
+                <img
+                  src="img/grill-steack3.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+              <div class="picture3 spot3">
+                <img
+                  src="img/grill-steack4.png"
+                  alt="Image du restaurant Grill Steaks"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden hiddenMobile">
+            <p>1</p>
+            <p>0</p>
+          </div>
+          <button class="returnButton">Retour</button>
+        </article>
+      </section>
+
+      <section class="hidden hiddenMobile">
+        <div class="sticker" id="steaksSticker">
+          <img src="img/grill-steack1.png" />
+          <p>Grill Steaks</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(253 avis)</p>
+          <p>
+            &ldquo;&nbsp;Le choix de la viande de qualité&nbsp;!&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="rapidSticker">
+          <img src="img/rapid-diner1.png" />
+          <p>Rapid Diner</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(150 avis)</p>
+          <p>
+            &ldquo;&nbsp;De bons plats rapides aux meilleurs prix.&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="fugiyamaSticker">
+          <img src="img/fugiyama1.png" />
+          <p>Le Fugiyama</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(582 avis)</p>
+          <p>&ldquo;&nbsp;Du Japon dans vos assiettes&nbsp;!&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="sombreroSticker">
+          <img src="img/sombrero1.png" />
+          <p>Sombrero</p>
+          <p>&bigstar;&bigstar;&bigstar;</p>
+          <p>(123 avis)</p>
+          <p>&ldquo;&nbsp;Saveurs mexicaines.&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="endiveSticker">
+          <img src="img/endive1.png" />
+          <p>L'Endive</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(800 avis)</p>
+          <p>&ldquo;&nbsp;La force nous vient de la nature.&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="marioSticker">
+          <img src="img/mario1.png" />
+          <p>Pizza Mario</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(99 avis)</p>
+          <p>&ldquo;&nbsp;La pizza mieux qu'en Italie.&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="louisSticker">
+          <img src="img/louis1.png" />
+          <p>Chez Louis</p>
+          <p>&bigstar;&bigstar;&bigstar;</p>
+          <p>(498 avis)</p>
+          <p>&ldquo;&nbsp;La cuisine à la Française.&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="empereurSticker">
+          <img src="img/empereur1.png" />
+          <p>L'Empereur</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(4000 avis)</p>
+          <p>&ldquo;&nbsp;Le chic à la Française.&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="clubSticker">
+          <img src="img/kebab1.png" />
+          <p>Club Kebab</p>
+          <p>&bigstar;&bigstar;&bigstar;</p>
+          <p>(987 avis)</p>
+          <p>&ldquo;&nbsp;Le meilleur Kebab de la région&nbsp;!&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="antilopeSticker">
+          <img src="img/antilope-01.jpeg" />
+          <p>Antilope Grill</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(658 avis)</p>
+          <p>
+            &ldquo;&nbsp;Venez déguster les meilleurs plats de l'ouest
+            sauvage&nbsp;!&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="casaSticker">
+          <img src="img/casa-01.jpg" />
+          <p>La Casa de Juan</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(1215 avis)</p>
+          <p>
+            &ldquo;&nbsp;Le Mexique au bout de VOTRE rue&nbsp;!&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="nonabatSticker">
+          <img src="img/nonabat-01.jpeg" />
+          <p>Le Non-Abattoir</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(29 avis)</p>
+          <p>
+            &ldquo;&nbsp;Vous détestez la cruauté envers les animaux&nbsp;? Nous
+            aussi.&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="kingSticker">
+          <img src="img/king-01.jpeg" />
+          <p>Le King's Pub</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(745 avis)</p>
+          <p>
+            &ldquo;&nbsp;Quoi de plus naturel qu'une pub pour un
+            pub&nbsp;?&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="greenSticker">
+          <img src="img/green-01.jpeg" />
+          <p>MacGreen</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(255 avis)</p>
+          <p>
+            &ldquo;&nbsp;Ce n'est pas parce qu'on est pressé qu'on doit manger
+            de la viande&nbsp;!&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="schnellSticker">
+          <img src="img/schnell-01.jpeg" />
+          <p>Schnell</p>
+          <p>&bigstar;&bigstar;</p>
+          <p>(666 avis)</p>
+          <p>&ldquo;&nbsp;J'ai pas le time&nbsp;!!!!&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="jackpotSticker">
+          <img src="img/jackpot-01.jpg" />
+          <p>Cafeteria Jackpot</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(7777 avis)</p>
+          <p>
+            &ldquo;&nbsp;&Ccedil;a ne coute pas plus cher de bien
+            manger.&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="courseSticker">
+          <img src="img/course-01.jpg" />
+          <p>La Course</p>
+          <p>&bigstar;&bigstar;&bigstar;</p>
+          <p>(1320 avis)</p>
+          <p>&ldquo;&nbsp;La bonne bidoche&nbsp;? C'est là.&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="lotusSticker">
+          <img src="img/lotus-01.jpeg" />
+          <p>Le Lotus Bleu</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(2467 avis)</p>
+          <p>
+            &ldquo;&nbsp;Lao-Tzeu l'a dit&nbsp;: il faut trouver la
+            voie...&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="bamakoSticker">
+          <img src="img/bamako-01.jpg" />
+          <p>Le Dimanche à Bamako</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(813 avis)</p>
+          <p>
+            &ldquo;&nbsp;Spécialités du Mali et de toute
+            l'Afrique&nbsp;!&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+
+        <div class="sticker" id="luigiSticker">
+          <img src="img/luigi-01.jpeg" />
+          <p>L.U.I.G.I.</p>
+          <p>&bigstar;&bigstar;</p>
+          <p>(3112 avis)</p>
+          <p>&ldquo;&nbsp;Elle. Hue. Hi. Jet. Hi.&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="ffkSticker">
+          <img src="img/ffk-01.jpg" />
+          <p>Fat & Furious Kebab</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(113 avis)</p>
+          <p>&ldquo;&nbsp;Salade tomate oignon, chef.&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="grangeSticker">
+          <img src="img/LaGrangeAfricaine.jpg" />
+          <p>Resto Africain</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(65 avis)</p>
+          <p>&ldquo;&nbsp;La meilleure cuisine Africaine&nbsp;!&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="pekinSticker">
+          <img src="img/PékinExpress.jpg" />
+          <p>Hong-Kong Express</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(29 avis)</p>
+          <p>
+            &ldquo;&nbsp;La meilleure cuisine Asiatique de
+            Clermont.&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="bistrotSticker">
+          <img src="img/Bistro.jpg" />
+          <p>Le Bistrot d'en Face</p>
+          <p>&bigstar;&bigstar;&bigstar;</p>
+          <p>(696 avis)</p>
+          <p>
+            &ldquo;&nbsp;Cuisine Française et Européenne&nbsp;!&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="crieeSticker">
+          <img src="img/LaCriée.jpg" />
+          <p>Le Port</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(648 avis)</p>
+          <p>
+            &ldquo;&nbsp;Cuisine Française, fruits de mer et
+            poisson.&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="kitchenSticker">
+          <img src="img/LeKitchen.jpg" />
+          <p>La Cuisine</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(514 avis)</p>
+          <p>&ldquo;&nbsp;Cuisine Française, Européenne.&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="etoileSticker">
+          <img src="img/LEtoiledeFès.jpeg" />
+          <p>L'Etoile de Casablanca</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(194 avis)</p>
+          <p>&ldquo;&nbsp;Méditerranée. Moyen-Orient. Maroc.&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="saladSticker">
+          <img src="img/EatSalad.jpg" />
+          <p>Wild Salad</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(565 avis)</p>
+          <p>&ldquo;&nbsp;Bar à salade sur mesure&nbsp;!&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="kmburgerSticker">
+          <img src="img/KmBurger.jpg" />
+          <p>Kilo Burger</p>
+          <p>&bigstar;&bigstar;&bigstar;</p>
+          <p>(350 avis)</p>
+          <p>
+            &ldquo;&nbsp;Burgers authentiques 100% Faits Maison.&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="gourmandiseSticker">
+          <img src="img/LaGourmandise.jpg" />
+          <p>Le Péché Gourmand</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(1249 avis)</p>
+          <p>&ldquo;&nbsp;Cuisine Française et Européenne.&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="soixanteSticker">
+          <img src="img/Restaurant62.jpg" />
+          <p>Restaurant 63</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(788 avis)</p>
+          <p>
+            &ldquo;&nbsp;Une cuisine instinctive et créative au coeur de
+            Clermont.&nbsp;&rdquo;
+          </p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+        <div class="sticker" id="latinesSticker">
+          <img src="img/TerresLatines.jpg" />
+          <p>Terres du Soleil</p>
+          <p>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</p>
+          <p>(1495 avis)</p>
+          <p>&ldquo;&nbsp;Cuisines du soleil.&nbsp;&rdquo;</p>
+          <p>Cliquez pour plus d'informations&nbsp;!</p>
+        </div>
+      </section>
+    </main>
+    <footer class="hidden hiddenMobile">Footer placeholder</footer>
+    <script src="main.js"></script>
+  </body>
+</html>
