@@ -356,15 +356,15 @@ searchButton.addEventListener("click", () => {
   }
 });
 
-searchButton.addEventListener('mouseover', () => {
+searchButton.addEventListener("mouseover", () => {
   if (searchButton.disabled) {
-    const modalFilter = document.getElementsByClassName('modal-type-empty')[0]
-    modalFilter.classList.add('active')
+    const modalFilter = document.getElementsByClassName("modal-type-empty")[0];
+    modalFilter.classList.add("active");
     setTimeout(() => {
-      modalFilter.classList.remove('active')
-    }, 2500)
+      modalFilter.classList.remove("active");
+    }, 2500);
   }
-})
+});
 
 mobileFilterBar.addEventListener("click", () => {
   filterForm.classList.remove("hiddenMobile");
@@ -430,6 +430,18 @@ homeButton.addEventListener("click", () => {
   for (let box of checkBoxes) {
     box.checked = false;
   }
+  let checkBoxes2 = filterForm.querySelectorAll(
+    `#modalities input[type="checkbox"]`
+  );
+  for (let box of checkBoxes2) {
+    box.checked = true;
+  }
+  let proximity = document.getElementById("proximitySelect");
+  proximity.value = "proximity1";
+  let veggie = document.getElementById("veggieSelect");
+  veggie.value = "veggie1";
+  let budget = document.getElementById("budgetSelect");
+  budget.value = "budget1";
   location.reload();
 });
 
