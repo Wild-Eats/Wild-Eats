@@ -293,10 +293,11 @@ main {
 
 @media screen and (width >= 1200px) {
   #catchphrase {
-    padding: 0 7rem;
-    height: auto;
-    align-items: flex-end;
-    top: 50px;
+    width: 500px;
+    height: 30px;
+    padding: 1rem;
+    display: block;
+    inset: 0 auto auto 260px;
   }
 }
 
