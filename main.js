@@ -344,6 +344,14 @@ searchButton.addEventListener("click", () => {
   }
 });
 
+searchButton.addEventListener('mouseover', () => {
+  const modalFilter = document.getElementsByClassName('modal-type-empty')[0]
+  modalFilter.classList.add('active')
+  setTimeout(() => {
+    modalFilter.classList.remove('active')
+  }, 2500)
+})
+
 mobileFilterBar.addEventListener("click", () => {
   filterForm.classList.remove("hiddenMobile");
   mobileFilterBar.classList.add("hiddenMobile");
@@ -445,3 +453,20 @@ darkMode.addEventListener('click', () => {
     document.body.classList.add('dark-mode')
   }
 })
+
+const checkbox = document.querySelectorAll('#restaurantTypes input[type="checkbox"]')
+for (let box of checkbox) {
+  box.addEventListener('change', () => {
+    let check = false
+    for (let i = 0; i < checkbox.length; i++) {
+      if (checkbox[i].checked) {
+        check = true
+      }
+    }
+    if (check) {
+      searchButton.disabled = false
+    } else {
+      searchButton.disabled = true
+    }
+  })
+}
