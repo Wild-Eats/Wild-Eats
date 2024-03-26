@@ -390,6 +390,7 @@ fieldset label {
 #filterOptions select {
   width: 100%;
   margin-bottom: 0.5rem;
+  font-size: 12px;
 }
 
 #modalities {
@@ -467,6 +468,14 @@ fieldset label {
     display: grid;
   }
 
+  fieldset > legend {
+    font-size: 16px;
+  }
+  
+  fieldset label {
+    font-size: 14px;
+  }  
+
   #restaurantTypes {
     height: 100%;
     margin: 0;
@@ -482,6 +491,7 @@ fieldset label {
   }
 
   #filterOptions select {
+    font-size: 14px;
     margin-bottom: 0;
   }
 
