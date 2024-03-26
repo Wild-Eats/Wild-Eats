@@ -356,13 +356,15 @@ searchButton.addEventListener("click", () => {
   }
 });
 
-searchButton.addEventListener("mouseover", () => {
-  const modalFilter = document.getElementsByClassName("modal-type-empty")[0];
-  modalFilter.classList.add("active");
-  setTimeout(() => {
-    modalFilter.classList.remove("active");
-  }, 2500);
-});
+searchButton.addEventListener('mouseover', () => {
+  if (searchButton.disabled) {
+    const modalFilter = document.getElementsByClassName('modal-type-empty')[0]
+    modalFilter.classList.add('active')
+    setTimeout(() => {
+      modalFilter.classList.remove('active')
+    }, 2500)
+  }
+})
 
 mobileFilterBar.addEventListener("click", () => {
   filterForm.classList.remove("hiddenMobile");
