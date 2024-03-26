@@ -4,6 +4,7 @@
 
 :root {
   --secondary-color: #3498db;
+  --secondary-text-color: #fff;
   --background-image: url("../img/app-background.jpg");
   --main-font: sans-serif;
 }
@@ -11,13 +12,13 @@
 .light-mode {
   --primary-color: #ebf5fb;
   --primary-text-color: #000;
-  --secondary-text-color: #fff;
+  /* --secondary-text-color: #fff; */
 }
 
 .dark-mode {
   --primary-color: #1b4f72;
   --primary-text-color: #fff;
-  --secondary-text-color: #000;
+  /* --secondary-text-color: #000; */
 }
 
 *,
@@ -1593,5 +1594,75 @@ fieldset label {
   .spot3 {
     grid-area: c;
     display: none;
+  }
+}
+
+/* Void Window Layout
+   ------------------
+   ------------------ */
+
+/* Void Window Layout (Mobile)
+   --------------------------- */
+
+@media screen and (width < 1024px) {
+  #voidWindow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    min-width: 300px;
+    height: auto;
+    border-radius: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    font-size: 1.3rem;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+/* Void Window Layout (Tablet)
+   --------------------------- */
+
+@media screen and (width >= 1024px) and (width <= 1200px) {
+  #voidWindow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    min-width: 400px;
+    height: auto;
+    border-radius: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+/* Void Window Layout (Desktop)
+   --------------------------- */
+
+@media screen and (width > 1200px) {
+  #voidWindow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    min-width: 400px;
+    height: auto;
+    border-radius: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
   }
 }
