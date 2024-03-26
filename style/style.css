@@ -408,6 +408,41 @@ fieldset label {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
 }
 
+
+#searchButton:disabled {
+  position: relative;
+  background: #ccc;
+}
+
+.modal-type-empty {
+  max-width: 76%;
+  margin: 0 12%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  position: absolute;
+  inset: auto auto 50px auto;
+  display: none;
+}
+
+.modal-type-empty.active {
+  display: block;
+  animation: modal-filter 2.5s ease-in-out forwards;
+}
+
+@keyframes modal-filter {
+  0%, 100% {
+    opacity: 0;
+    bottom: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+    bottom: 50px;
+  }
+}
+
 @media screen and (width < 1024px) {
   #filterForm {
     grid-row-start: 2;
@@ -461,12 +496,34 @@ fieldset label {
     grid-area: 2 / 1 / 3 / 3;
     margin-top: 0;
   }
+
+  .modal-type-empty {
+    max-width: 200px;
+    inset: 2.5rem auto auto 200px;
+  }
+  .modal-type-empty.active {
+    animation: modal-filter-tablet 2.5s ease-in-out forwards;
+  }
+  @keyframes modal-filter-tablet {
+    0%, 100% {
+      opacity: 0;
+      top: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+      top: 2.5rem;
+    }
+  }  
+
 }
 
 @media screen and (width >= 1200px) {
   #filterForm {
     max-width: 1200px;
     margin: 0 auto;
+  }
+  .modal-type-empty {
+    max-width: 500px;
   }
 }
 
