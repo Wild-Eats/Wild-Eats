@@ -62,7 +62,7 @@ main::-webkit-scrollbar {
 /* Body Layout (Desktop)
    --------------------- */
 
-@media screen and (width > 1200px) {
+@media screen and (width > 1350px) {
   body {
     background-size: 100% auto;
   }
@@ -350,7 +350,7 @@ fieldset label {
 @media screen and (width < 1024px) {
   #filterForm {
     grid-row-start: 2;
-    grid-row-end: 4;  
+    grid-row-end: 4;
   }
 }
 
