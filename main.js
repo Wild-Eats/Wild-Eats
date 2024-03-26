@@ -207,6 +207,25 @@ function topRestaurants() {
   });
 
   selection.sort((a, b) => b.rating - a.rating);
+  restaurants.sort((a, b) => b.rating - a.rating);
+
+  while (selection.length < 10) {
+    for (let restaurant of restaurants) {
+      if (selection.length < 10) {
+        let match = false
+        for (let select of selection) {
+          if (select.slug === restaurant.slug) {
+            match = true;
+          }
+        }
+        if (!match) {
+          selection.push(restaurant);
+        }
+      } else {
+        break ;
+      }
+    }
+  }
 
   while (selection.length > 10) {
     selection.pop();
