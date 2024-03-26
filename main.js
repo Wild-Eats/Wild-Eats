@@ -362,4 +362,12 @@ for (let restaurant of restaurants) {
 
 const homeButton = document.getElementsByClassName("item")[0];
 
-homeButton.addEventListener("click", () => {});
+homeButton.addEventListener("click", () => {
+  let checkBoxes = filterForm.querySelectorAll(
+    `#restaurantTypes input[type="checkbox"]`
+  );
+  for (let box of checkBoxes) {
+    box.checked = false;
+  }
+  location.reload();
+});
