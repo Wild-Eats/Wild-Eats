@@ -94,7 +94,7 @@ for (let slug of slugs) {
 const stickers = document.getElementById("stickersGrid");
 
 let stickerResults = [];
-
+let emptySearch = false;
 let selection = restaurants.slice();
 
 selection.sort((a, b) => b.rating - a.rating);
@@ -114,6 +114,7 @@ for (let i = 0; i < stickerResults.length; i++) {
 
 function topRestaurants() {
   stickerResults = [];
+  emptySearch = false;
 
   while (stickers.firstChild) {
     stickers.removeChild(stickers.firstChild);
@@ -205,6 +206,10 @@ function topRestaurants() {
     }
     return result;
   });
+
+  if (selection.length === 0) {
+    emptySearch = true;
+  }
 
   selection.sort((a, b) => b.rating - a.rating);
 
@@ -335,12 +340,19 @@ const searchButton = document.getElementById("searchButton");
 
 searchButton.addEventListener("click", () => {
   topRestaurants();
-  if (stickerResults.length > 0) {
+  if (emptySearch === false) {
     filterForm.classList.add("hiddenMobile");
     mobileFilterBar.classList.remove("hiddenMobile");
     stickersSlider.classList.remove("hiddenMobile");
   } else {
-    // Afficher modal message qui va avec
+    const voidWindow = document.createElement("div");
+    voidWindow.setAttribute("id", "voidWindow");
+    document.body.appendChild(voidWindow);
+    voidWindow.textContent =
+      "Malheureusement, aucun établissement ne semble correspondre à vos critères de recherche ! Merci de réessayer avec d'autres, peut-être un peu plus larges...";
+    setTimeout(() => {
+      document.body.removeChild(voidWindow);
+    }, 4000);
   }
 });
 
@@ -419,39 +431,48 @@ homeButton.addEventListener("click", () => {
   location.reload();
 });
 
-const researchButton = document.getElementsByClassName('item')[1]
-researchButton.addEventListener('click', () => {
+const researchButton = document.getElementsByClassName("item")[1];
+researchButton.addEventListener("click", () => {
   filterForm.classList.remove("hiddenMobile");
   mobileFilterBar.classList.add("hiddenMobile");
   stickersSlider.classList.add("hiddenMobile");
-})
+});
 
-const menuButton = document.getElementsByClassName('item')[2]
-menuButton.addEventListener('click', () => {
-  const modes = menuButton.getElementsByClassName('modes')[0]
-  modes.classList.contains('active') ? modes.classList.remove('active') : modes.classList.add('active')
-})
+const menuButton = document.getElementsByClassName("item")[2];
+menuButton.addEventListener("click", () => {
+  const modes = menuButton.getElementsByClassName("modes")[0];
+  modes.classList.contains("active")
+    ? modes.classList.remove("active")
+    : modes.classList.add("active");
+});
 
-const lightMode = document.getElementsByClassName('light')[0]
-lightMode.addEventListener('click', () => {
-  const darkMode = document.getElementsByClassName('dark')[0]
-  if (!lightMode.classList.contains('active') && darkMode.classList.contains('active')) {
-    darkMode.classList.remove('active')
-    document.body.classList.remove('dark-mode')
-    lightMode.classList.add('active')
-    document.body.classList.add('light-mode')
+const lightMode = document.getElementsByClassName("light")[0];
+lightMode.addEventListener("click", () => {
+  const darkMode = document.getElementsByClassName("dark")[0];
+  if (
+    !lightMode.classList.contains("active") &&
+    darkMode.classList.contains("active")
+  ) {
+    darkMode.classList.remove("active");
+    document.body.classList.remove("dark-mode");
+    lightMode.classList.add("active");
+    document.body.classList.add("light-mode");
   }
-})
+});
 
-const darkMode = document.getElementsByClassName('dark')[0]
-darkMode.addEventListener('click', () => {
-  const lightMode = document.getElementsByClassName('light')[0]
-  if (!darkMode.classList.contains('active') && lightMode.classList.contains('active')) {
-    lightMode.classList.remove('active')
-    document.body.classList.remove('light-mode')
-    darkMode.classList.add('active')
-    document.body.classList.add('dark-mode')
+const darkMode = document.getElementsByClassName("dark")[0];
+darkMode.addEventListener("click", () => {
+  const lightMode = document.getElementsByClassName("light")[0];
+  if (
+    !darkMode.classList.contains("active") &&
+    lightMode.classList.contains("active")
+  ) {
+    lightMode.classList.remove("active");
+    document.body.classList.remove("light-mode");
+    darkMode.classList.add("active");
+    document.body.classList.add("dark-mode");
   }
+<<<<<<< Updated upstream
 })
 
 const checkbox = document.querySelectorAll('#restaurantTypes input[type="checkbox"]')
@@ -470,3 +491,6 @@ for (let box of checkbox) {
     }
   })
 }
+=======
+});
+>>>>>>> Stashed changes
